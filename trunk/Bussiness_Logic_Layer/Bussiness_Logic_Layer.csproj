@@ -39,8 +39,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserBUS.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Data_Acccess_Layer\Data_Acccess_Layer.csproj">
+      <Project>{e1ec9899-613a-4b34-8e04-323457ae3850}</Project>
+      <Name>Data_Acccess_Layer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Value_Object_Layer\Value_Object_Layer.csproj">
+      <Project>{9ce7478b-5435-4cfa-a8af-00f56bc9ada6}</Project>
+      <Name>Value_Object_Layer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
