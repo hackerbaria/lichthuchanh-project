@@ -21,16 +21,31 @@ namespace Presentation_Layer
             _userBUS = new UserBUS();
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void btnThoat_Click(object sender, EventArgs e)
         {
-            UserVO _userVO = new UserVO();
-            _userVO = _userBUS.getUserEmailByName(txtUsername.Text);
-            if (_userVO.Password == null)
-                MessageBox.Show("No Match Found!", "Not Found",
-            MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+        }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            int quyen = 1;
+            if (chkAddmin.Checked == true)
+                quyen = 1;
             else
-                MessageBox.Show(_userVO.Password, "Result",
-            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                quyen = 2;
+            UserVO user = _userBUS.getUserEmailByName(txtTenDangNhap.Text, txtMatKhau.Text, quyen);
+            if (user.TenDangNhap != null)
+            {
+                FormMain fm = new FormMain();
+                fm.ShowDialog();
+            }
+            else
+                MessageBox.Show("Xem lai thong tin dang nhap", "Thong bao");
+        }
+
+        private void chkAddmin_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

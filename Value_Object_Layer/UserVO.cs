@@ -8,27 +8,28 @@ namespace Value_Object_Layer
 {
     public class UserVO
     {
-        private String username;
+        private String tenDangNhap;
 
-        public String Username
+        public String TenDangNhap
         {
-            get { return username; }
-            set { username = value; }
+            get { return tenDangNhap; }
+            set { tenDangNhap = value; }
         }
-        private String password;
+        private String matKhau;
 
-        public String Password
+        public String MatKhau
         {
-            get { return password; }
-            set { password = value; }
+            get { return matKhau; }
+            set { matKhau = value; }
         }
-        private int role;
+        private int quyen;
 
-        public int Role
+        public int Quyen
         {
-            get { return role; }
-            set { role = value; }
+            get { return quyen; }
+            set { quyen = value; }
         }
+        
         public UserVO()
         {
 

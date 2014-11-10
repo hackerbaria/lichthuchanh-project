@@ -21,20 +21,23 @@ namespace Bussiness_Logic_Layer
         /// <method>
         /// Get User Email By Firstname or Lastname and return VO
         /// </method>
-        public UserVO getUserEmailByName(string name)
+        public UserVO getUserEmailByName(string tenDangNhap, string matKhau, int quyen)
         {
             UserVO userVO = new UserVO();
             DataTable dataTable = new DataTable();
 
-            dataTable = _userDAO.searchByName(name);
-
-            foreach (DataRow dr in dataTable.Rows)
+            dataTable = _userDAO.searchByName(tenDangNhap,matKhau,quyen);
+            if(dataTable != null)
             {
-                userVO.Username = dr[0].ToString();
-                userVO.Password = dr[1].ToString();
-                userVO.Role = int.Parse(dr[2].ToString());
-               
+                foreach (DataRow dr in dataTable.Rows)
+                {
+                    userVO.TenDangNhap = dr[0].ToString();
+                    userVO.MatKhau = dr[1].ToString();
+                    userVO.Quyen = int.Parse(dr[2].ToString());
+
+                }
             }
+                
             return userVO;
         }
 
