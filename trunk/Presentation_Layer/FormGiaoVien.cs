@@ -25,7 +25,10 @@ namespace Presentation_Layer
         private void FormGiaoVien_Load(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
+           d
+            //UserVO user = _userBUS.getUserEmailByName(txtTenDangNhap.Text, txtMatKhau.Text, quyen);
             DGVGiaoVien.DataSource = dt;
+            
         }
     }
 }
