@@ -25,12 +25,10 @@ namespace Data_Acccess_Layer
         /// </method>
         public DataTable searchByName(string _username)
         {
-            string query = string.Format("select * from [t01_user] where t01_firstname like @t01_firstname or t01_lastname like @t01_lastname ");
-            SqlParameter[] sqlParameters = new SqlParameter[2];
-            sqlParameters[0] = new SqlParameter("@t01_firstname", SqlDbType.VarChar);
+            string query = string.Format("select * from Account where username = @username ");
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@username", SqlDbType.VarChar);
             sqlParameters[0].Value = Convert.ToString(_username);
-            sqlParameters[1] = new SqlParameter("@t01_lastname", SqlDbType.VarChar);
-            sqlParameters[1].Value = Convert.ToString(_username);
             return conn.executeSelectQuery(query, sqlParameters);
         }
 
