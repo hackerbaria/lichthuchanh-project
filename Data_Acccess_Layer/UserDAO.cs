@@ -19,7 +19,7 @@ namespace Data_Acccess_Layer
         {
             conn = new DBConnection();
         }
-
+       
         /// <method>
         /// Get User Email By Firstname or Lastname and return DataTable
         /// </method>

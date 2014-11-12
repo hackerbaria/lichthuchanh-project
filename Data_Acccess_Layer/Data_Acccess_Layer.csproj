@@ -37,6 +37,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="Value_Object_Layer">
+      <HintPath>..\Value_Object_Layer\bin\Debug\Value_Object_Layer.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnection.cs" />

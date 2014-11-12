@@ -68,6 +68,35 @@ namespace Data_Acccess_Layer
             }
             return dataTable;
         }
+
+
+        public DataTable executeSelectQueryNoParam(String _query)
+        {
+            SqlCommand myCommand = new SqlCommand();
+            DataTable dataTable = new DataTable();
+            dataTable = null;
+            DataSet ds = new DataSet();
+            try
+            {
+                myCommand.Connection = openConnection();
+                myCommand.CommandText = _query;
+                myCommand.ExecuteNonQuery();
+                myAdapter.SelectCommand = myCommand;
+                myAdapter.Fill(ds);
+                dataTable = ds.Tables[0];
+            }
+            catch (SqlException e)
+            {
+                Console.Write("Error - Connection.executeSelectQueryNoParam - Query: "
+                    + _query + " \nException: " + e.StackTrace.ToString());
+                return null;
+            }
+            finally
+            {
+
+            }
+            return dataTable;
+        }
      
 
         /// <method>
