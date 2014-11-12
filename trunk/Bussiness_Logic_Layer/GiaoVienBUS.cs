@@ -12,12 +12,25 @@ namespace Bussiness_Logic_Layer
     public class GiaoVienBUS
     {
         private GiaoVienDAO _GiaoVienDAO;
-
+        
         public GiaoVienBUS()
         {
             _GiaoVienDAO = new GiaoVienDAO();
         }
-        public GiaoVienVO getGiaoVien(string maGV, string tenGV, string diaChi,string sdt)
+
+        public DataTable getAllGiaoVien()
+        {
+            return _GiaoVienDAO.GetAllGiaoVien();
+        }
+        public bool themGiaoVien(GiaoVienVO gV)
+        {
+       
+            bool a= _GiaoVienDAO.InsertGiaoVien(gV);
+            if (a == true)
+                return true;
+            return false;
+        }
+        /*public GiaoVienVO getGiaoVien(string maGV, string tenGV, string diaChi,string sdt)
         {
             GiaoVienVO GvVO = new GiaoVienVO();
             DataTable dataTable = new DataTable();
@@ -34,8 +47,8 @@ namespace Bussiness_Logic_Layer
                 }
             }
 
-            return userVO;
-        }
+            //return userVO;
+        }*/
 
     }
 }
