@@ -29,11 +29,15 @@
         private void InitializeComponent()
         {
             this.DGVGiaoVien = new System.Windows.Forms.DataGridView();
+            this.MaGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.btnThemGV = new System.Windows.Forms.Button();
-            this.btnXoaG = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnSuaGV = new System.Windows.Forms.Button();
+            this.btnXoaGV = new System.Windows.Forms.Button();
+            this.btnQuayLai = new System.Windows.Forms.Button();
             this.txtSoDienThoai = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtTenGV = new System.Windows.Forms.TextBox();
@@ -42,10 +46,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.MaGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGVGiaoVien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,130 +64,6 @@
             this.DGVGiaoVien.Size = new System.Drawing.Size(796, 283);
             this.DGVGiaoVien.TabIndex = 0;
             this.DGVGiaoVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVGiaoVien_CellContentClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(157, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(321, 29);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Bảng Thông Tin Giáo Viên";
-            // 
-            // btnThemGV
-            // 
-            this.btnThemGV.Location = new System.Drawing.Point(40, 485);
-            this.btnThemGV.Name = "btnThemGV";
-            this.btnThemGV.Size = new System.Drawing.Size(108, 23);
-            this.btnThemGV.TabIndex = 2;
-            this.btnThemGV.Text = "Thêm Giáo Viên";
-            this.btnThemGV.UseVisualStyleBackColor = true;
-            this.btnThemGV.Click += new System.EventHandler(this.btnThemGV_Click);
-            // 
-            // btnXoaG
-            // 
-            this.btnXoaG.Location = new System.Drawing.Point(174, 485);
-            this.btnXoaG.Name = "btnXoaG";
-            this.btnXoaG.Size = new System.Drawing.Size(104, 23);
-            this.btnXoaG.TabIndex = 3;
-            this.btnXoaG.Text = "Sửa Giáo Viên";
-            this.btnXoaG.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(312, 485);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(110, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Xóa Giáo Viên";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(460, 485);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(107, 23);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Quay Lại";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // txtSoDienThoai
-            // 
-            this.txtSoDienThoai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.txtSoDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoDienThoai.Location = new System.Drawing.Point(557, 129);
-            this.txtSoDienThoai.Name = "txtSoDienThoai";
-            this.txtSoDienThoai.Size = new System.Drawing.Size(244, 26);
-            this.txtSoDienThoai.TabIndex = 22;
-            // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(557, 97);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(244, 26);
-            this.txtDiaChi.TabIndex = 23;
-            // 
-            // txtTenGV
-            // 
-            this.txtTenGV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.txtTenGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenGV.Location = new System.Drawing.Point(162, 127);
-            this.txtTenGV.Name = "txtTenGV";
-            this.txtTenGV.Size = new System.Drawing.Size(224, 26);
-            this.txtTenGV.TabIndex = 24;
-            // 
-            // txtMaGV
-            // 
-            this.txtMaGV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.txtMaGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaGV.Location = new System.Drawing.Point(162, 96);
-            this.txtMaGV.Name = "txtMaGV";
-            this.txtMaGV.Size = new System.Drawing.Size(224, 26);
-            this.txtMaGV.TabIndex = 25;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(30, 130);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(133, 20);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Tên Giáo Viên :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(30, 100);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 20);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Mã Giáo Viên :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(419, 100);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 20);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Địa Chỉ :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(419, 131);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 20);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Số Điện Thoại :";
             // 
             // MaGV
             // 
@@ -214,11 +92,167 @@
             this.SoDienThoai.Name = "SoDienThoai";
             this.SoDienThoai.Width = 150;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(276, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(321, 29);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Bảng Thông Tin Giáo Viên";
+            // 
+            // btnThemGV
+            // 
+            this.btnThemGV.Location = new System.Drawing.Point(40, 485);
+            this.btnThemGV.Name = "btnThemGV";
+            this.btnThemGV.Size = new System.Drawing.Size(108, 23);
+            this.btnThemGV.TabIndex = 2;
+            this.btnThemGV.Text = "Thêm";
+            this.btnThemGV.UseVisualStyleBackColor = true;
+            this.btnThemGV.Click += new System.EventHandler(this.btnThemGV_Click);
+            // 
+            // btnSuaGV
+            // 
+            this.btnSuaGV.Location = new System.Drawing.Point(293, 485);
+            this.btnSuaGV.Name = "btnSuaGV";
+            this.btnSuaGV.Size = new System.Drawing.Size(104, 23);
+            this.btnSuaGV.TabIndex = 3;
+            this.btnSuaGV.Text = "Sửa";
+            this.btnSuaGV.UseVisualStyleBackColor = true;
+            this.btnSuaGV.Click += new System.EventHandler(this.btnSuaGV_Click);
+            // 
+            // btnXoaGV
+            // 
+            this.btnXoaGV.Location = new System.Drawing.Point(166, 485);
+            this.btnXoaGV.Name = "btnXoaGV";
+            this.btnXoaGV.Size = new System.Drawing.Size(110, 23);
+            this.btnXoaGV.TabIndex = 4;
+            this.btnXoaGV.Text = "Xóa";
+            this.btnXoaGV.UseVisualStyleBackColor = true;
+            this.btnXoaGV.Click += new System.EventHandler(this.btnXoaGV_Click);
+            // 
+            // btnQuayLai
+            // 
+            this.btnQuayLai.Location = new System.Drawing.Point(647, 485);
+            this.btnQuayLai.Name = "btnQuayLai";
+            this.btnQuayLai.Size = new System.Drawing.Size(107, 23);
+            this.btnQuayLai.TabIndex = 5;
+            this.btnQuayLai.Text = "Quay Lại";
+            this.btnQuayLai.UseVisualStyleBackColor = true;
+            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
+            // 
+            // txtSoDienThoai
+            // 
+            this.txtSoDienThoai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.txtSoDienThoai.Enabled = false;
+            this.txtSoDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoDienThoai.Location = new System.Drawing.Point(544, 129);
+            this.txtSoDienThoai.Name = "txtSoDienThoai";
+            this.txtSoDienThoai.Size = new System.Drawing.Size(244, 26);
+            this.txtSoDienThoai.TabIndex = 22;
+            this.txtSoDienThoai.TextChanged += new System.EventHandler(this.txtSoDienThoai_TextChanged);
+            // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.txtDiaChi.Enabled = false;
+            this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi.Location = new System.Drawing.Point(544, 97);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(244, 26);
+            this.txtDiaChi.TabIndex = 23;
+            this.txtDiaChi.TextChanged += new System.EventHandler(this.txtDiaChi_TextChanged);
+            // 
+            // txtTenGV
+            // 
+            this.txtTenGV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.txtTenGV.Enabled = false;
+            this.txtTenGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenGV.Location = new System.Drawing.Point(154, 128);
+            this.txtTenGV.Name = "txtTenGV";
+            this.txtTenGV.Size = new System.Drawing.Size(224, 26);
+            this.txtTenGV.TabIndex = 24;
+            this.txtTenGV.TextChanged += new System.EventHandler(this.txtTenGV_TextChanged);
+            // 
+            // txtMaGV
+            // 
+            this.txtMaGV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.txtMaGV.Enabled = false;
+            this.txtMaGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaGV.Location = new System.Drawing.Point(154, 97);
+            this.txtMaGV.Name = "txtMaGV";
+            this.txtMaGV.Size = new System.Drawing.Size(224, 26);
+            this.txtMaGV.TabIndex = 25;
+            this.txtMaGV.TextChanged += new System.EventHandler(this.txtMaGV_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(22, 131);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(133, 20);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Tên Giáo Viên :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(22, 101);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(127, 20);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Mã Giáo Viên :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(406, 100);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(77, 20);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Địa Chỉ :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(406, 131);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(132, 20);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Số Điện Thoại :";
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(420, 485);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(84, 23);
+            this.btnLuu.TabIndex = 26;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Location = new System.Drawing.Point(510, 485);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(87, 23);
+            this.btnHuy.TabIndex = 27;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            // 
             // FormGiaoVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 520);
+            this.Controls.Add(this.btnHuy);
+            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.txtSoDienThoai);
             this.Controls.Add(this.txtDiaChi);
             this.Controls.Add(this.txtTenGV);
@@ -227,9 +261,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.btnXoaG);
+            this.Controls.Add(this.btnQuayLai);
+            this.Controls.Add(this.btnXoaGV);
+            this.Controls.Add(this.btnSuaGV);
             this.Controls.Add(this.btnThemGV);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DGVGiaoVien);
@@ -247,9 +281,9 @@
         private System.Windows.Forms.DataGridView DGVGiaoVien;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnThemGV;
-        private System.Windows.Forms.Button btnXoaG;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnSuaGV;
+        private System.Windows.Forms.Button btnXoaGV;
+        private System.Windows.Forms.Button btnQuayLai;
         private System.Windows.Forms.TextBox txtSoDienThoai;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.TextBox txtTenGV;
@@ -262,5 +296,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoDienThoai;
+        private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.Button btnHuy;
     }
 }
