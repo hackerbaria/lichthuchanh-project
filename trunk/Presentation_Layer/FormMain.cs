@@ -22,5 +22,23 @@ namespace Presentation_Layer
             FormGiaoVien fgv = new FormGiaoVien();
             fgv.ShowDialog();
         }
+
+        private void btnLopHoc_Click(object sender, EventArgs e)
+        {
+            FormLopHoc flh = new FormLopHoc();
+            flh.ShowDialog();
+        }
+
+        private void btnPhongHoc_Click(object sender, EventArgs e)
+        {
+            FormPhongHoc fph = new FormPhongHoc();
+            fph.ShowDialog();
+        }
+
+        private void btnMonHoc_Click(object sender, EventArgs e)
+        {
+            FormMonHoc fmh = new FormMonHoc();
+            fmh.ShowDialog();
+        }
     }
 }
