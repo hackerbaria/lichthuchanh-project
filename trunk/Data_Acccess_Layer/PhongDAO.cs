@@ -28,7 +28,7 @@ namespace Data_Acccess_Layer
         {
             try
             {
-                string query = string.Format("insert into GiaoVien(MaPhong,TenPhong,SoMay) Values(@MaPhong,@TenPhong,@SoMay)");
+                string query = string.Format("insert into Phong(MaPhong,TenPhong,SoMay) Values(@MaPhong,@TenPhong,@SoMay)");
                 SqlParameter[] sqlParameters = new SqlParameter[3];
 
                 sqlParameters[0] = new SqlParameter("@MaPhong", SqlDbType.VarChar);
