@@ -102,6 +102,7 @@
             this.label1.Size = new System.Drawing.Size(321, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Bảng Thông Tin Giáo Viên";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnThemGV
             // 
@@ -196,6 +197,7 @@
             this.label5.Size = new System.Drawing.Size(133, 20);
             this.label5.TabIndex = 13;
             this.label5.Text = "Tên Giáo Viên :";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -206,6 +208,7 @@
             this.label4.Size = new System.Drawing.Size(127, 20);
             this.label4.TabIndex = 12;
             this.label4.Text = "Mã Giáo Viên :";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -216,6 +219,7 @@
             this.label3.Size = new System.Drawing.Size(77, 20);
             this.label3.TabIndex = 11;
             this.label3.Text = "Địa Chỉ :";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -226,6 +230,7 @@
             this.label2.Size = new System.Drawing.Size(132, 20);
             this.label2.TabIndex = 10;
             this.label2.Text = "Số Điện Thoại :";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnLuu
             // 
@@ -245,6 +250,7 @@
             this.btnHuy.TabIndex = 27;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // FormGiaoVien
             // 
