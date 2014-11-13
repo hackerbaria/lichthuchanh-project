@@ -147,5 +147,10 @@ namespace Presentation_Layer
 
             }
         }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

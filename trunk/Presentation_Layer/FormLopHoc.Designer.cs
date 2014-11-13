@@ -50,9 +50,11 @@
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(508, 468);
+            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnHuy.Location = new System.Drawing.Point(511, 479);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(87, 23);
+            this.btnHuy.Size = new System.Drawing.Size(87, 34);
             this.btnHuy.TabIndex = 43;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
@@ -60,9 +62,11 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(418, 468);
+            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.ForeColor = System.Drawing.Color.Maroon;
+            this.btnLuu.Location = new System.Drawing.Point(421, 479);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(84, 23);
+            this.btnLuu.Size = new System.Drawing.Size(84, 34);
             this.btnLuu.TabIndex = 42;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
@@ -130,18 +134,22 @@
             // 
             // btnQuayLai
             // 
-            this.btnQuayLai.Location = new System.Drawing.Point(645, 468);
+            this.btnQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuayLai.ForeColor = System.Drawing.Color.Magenta;
+            this.btnQuayLai.Location = new System.Drawing.Point(648, 479);
             this.btnQuayLai.Name = "btnQuayLai";
-            this.btnQuayLai.Size = new System.Drawing.Size(107, 23);
+            this.btnQuayLai.Size = new System.Drawing.Size(107, 34);
             this.btnQuayLai.TabIndex = 33;
             this.btnQuayLai.Text = "Quay Lại";
             this.btnQuayLai.UseVisualStyleBackColor = true;
             // 
             // btnSuaLopHoc
             // 
-            this.btnSuaLopHoc.Location = new System.Drawing.Point(291, 468);
+            this.btnSuaLopHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaLopHoc.ForeColor = System.Drawing.Color.Blue;
+            this.btnSuaLopHoc.Location = new System.Drawing.Point(294, 479);
             this.btnSuaLopHoc.Name = "btnSuaLopHoc";
-            this.btnSuaLopHoc.Size = new System.Drawing.Size(104, 23);
+            this.btnSuaLopHoc.Size = new System.Drawing.Size(104, 34);
             this.btnSuaLopHoc.TabIndex = 31;
             this.btnSuaLopHoc.Text = "Sửa";
             this.btnSuaLopHoc.UseVisualStyleBackColor = true;
@@ -149,9 +157,11 @@
             // 
             // btnThemLopHoc
             // 
-            this.btnThemLopHoc.Location = new System.Drawing.Point(38, 468);
+            this.btnThemLopHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemLopHoc.ForeColor = System.Drawing.Color.Blue;
+            this.btnThemLopHoc.Location = new System.Drawing.Point(41, 479);
             this.btnThemLopHoc.Name = "btnThemLopHoc";
-            this.btnThemLopHoc.Size = new System.Drawing.Size(108, 23);
+            this.btnThemLopHoc.Size = new System.Drawing.Size(108, 34);
             this.btnThemLopHoc.TabIndex = 30;
             this.btnThemLopHoc.Text = "Thêm";
             this.btnThemLopHoc.UseVisualStyleBackColor = true;
@@ -170,9 +180,11 @@
             // 
             // btnXoaLopHoc
             // 
-            this.btnXoaLopHoc.Location = new System.Drawing.Point(164, 468);
+            this.btnXoaLopHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaLopHoc.ForeColor = System.Drawing.Color.Red;
+            this.btnXoaLopHoc.Location = new System.Drawing.Point(167, 479);
             this.btnXoaLopHoc.Name = "btnXoaLopHoc";
-            this.btnXoaLopHoc.Size = new System.Drawing.Size(110, 23);
+            this.btnXoaLopHoc.Size = new System.Drawing.Size(110, 34);
             this.btnXoaLopHoc.TabIndex = 32;
             this.btnXoaLopHoc.Text = "Xóa";
             this.btnXoaLopHoc.UseVisualStyleBackColor = true;
@@ -185,9 +197,9 @@
             this.MaLop,
             this.TenLop,
             this.SoLuongSV});
-            this.DGVPhong.Location = new System.Drawing.Point(12, 160);
+            this.DGVPhong.Location = new System.Drawing.Point(38, 179);
             this.DGVPhong.Name = "DGVPhong";
-            this.DGVPhong.Size = new System.Drawing.Size(505, 283);
+            this.DGVPhong.Size = new System.Drawing.Size(508, 283);
             this.DGVPhong.TabIndex = 28;
             // 
             // MaLop
@@ -215,7 +227,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(823, 506);
+            this.ClientSize = new System.Drawing.Size(823, 525);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.txtSoSV);
