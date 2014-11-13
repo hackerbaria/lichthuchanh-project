@@ -63,6 +63,7 @@
             this.btnMonHoc.TabIndex = 5;
             this.btnMonHoc.Text = "Môn Học";
             this.btnMonHoc.UseVisualStyleBackColor = false;
+            this.btnMonHoc.Click += new System.EventHandler(this.btnMonHoc_Click);
             // 
             // btnPhongHoc
             // 
@@ -75,6 +76,7 @@
             this.btnPhongHoc.Text = "Phòng Học";
             this.btnPhongHoc.UseMnemonic = false;
             this.btnPhongHoc.UseVisualStyleBackColor = false;
+            this.btnPhongHoc.Click += new System.EventHandler(this.btnPhongHoc_Click);
             // 
             // btnLopHoc
             // 
@@ -86,6 +88,7 @@
             this.btnLopHoc.TabIndex = 3;
             this.btnLopHoc.Text = "Lớp Học";
             this.btnLopHoc.UseVisualStyleBackColor = false;
+            this.btnLopHoc.Click += new System.EventHandler(this.btnLopHoc_Click);
             // 
             // btnGiaoVien
             // 
