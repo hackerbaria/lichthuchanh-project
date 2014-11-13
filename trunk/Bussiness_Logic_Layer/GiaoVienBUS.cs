@@ -30,6 +30,14 @@ namespace Bussiness_Logic_Layer
                 return true;
             return false;
         }
+        public bool CapNhatGiaoVien(GiaoVienVO gV)
+        {
+            return _GiaoVienDAO.UpdateGiaoVien(gV);
+        }
+        public bool XoaGiaoVien(GiaoVienVO gV)
+        {
+            return _GiaoVienDAO.DeleteGiaoVien(gV);
+        }
         /*public GiaoVienVO getGiaoVien(string maGV, string tenGV, string diaChi,string sdt)
         {
             GiaoVienVO GvVO = new GiaoVienVO();

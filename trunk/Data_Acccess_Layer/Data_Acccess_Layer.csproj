@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="DBConnection.cs" />
     <Compile Include="GiaoVienDAO.cs" />
+    <Compile Include="LopHocDAO.cs" />
+    <Compile Include="PhongDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserDAO.cs" />
   </ItemGroup>

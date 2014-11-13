@@ -49,5 +49,63 @@ namespace Data_Acccess_Layer
                 return false;
             }
         }
+        public bool UpdateGiaoVien(GiaoVienVO gv)
+        {
+            
+            try
+            {
+                string query = string.Format("UPDATE GiaoVien SET MaGV = @MaGV, TenGV=@TenGV, DiaChi=@DiaChi, SoDienThoai=@SoDienThoai Where MaGV = @MaGV");
+                
+                SqlParameter[] sqlParameters = new SqlParameter[4];
+
+                sqlParameters[0] = new SqlParameter("@MaGV", SqlDbType.VarChar);
+                sqlParameters[0].Value = Convert.ToString(gv.MaGV);
+
+                sqlParameters[1] = new SqlParameter("@TenGV", SqlDbType.NVarChar);
+                sqlParameters[1].Value = Convert.ToString(gv.TenGV);
+
+                sqlParameters[2] = new SqlParameter("@DiaChi", SqlDbType.NVarChar);
+                sqlParameters[2].Value = Convert.ToString(gv.DiaChi);
+
+                sqlParameters[3] = new SqlParameter("@SoDienThoai", SqlDbType.VarChar);
+                sqlParameters[3].Value = Convert.ToString(gv.SoDienThoai);
+
+                return conn.executeInsertQuery(query, sqlParameters);
+            
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public bool DeleteGiaoVien(GiaoVienVO gv)
+        {
+
+            try
+            {
+                string query = string.Format("DELETE GiaoVien Where MaGV = @MaGV and TenGV=@TenGV and DiaChi=@DiaChi and SoDienThoai=@SoDienThoai");
+
+                SqlParameter[] sqlParameters = new SqlParameter[4];
+
+                sqlParameters[0] = new SqlParameter("@MaGV", SqlDbType.VarChar);
+                sqlParameters[0].Value = Convert.ToString(gv.MaGV);
+
+                sqlParameters[1] = new SqlParameter("@TenGV", SqlDbType.NVarChar);
+                sqlParameters[1].Value = Convert.ToString(gv.TenGV);
+
+                sqlParameters[2] = new SqlParameter("@DiaChi", SqlDbType.NVarChar);
+                sqlParameters[2].Value = Convert.ToString(gv.DiaChi);
+
+                sqlParameters[3] = new SqlParameter("@SoDienThoai", SqlDbType.VarChar);
+                sqlParameters[3].Value = Convert.ToString(gv.SoDienThoai);
+
+                return conn.executeInsertQuery(query, sqlParameters);
+
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }
