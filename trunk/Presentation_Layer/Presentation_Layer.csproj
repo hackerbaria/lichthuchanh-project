@@ -56,6 +56,18 @@
     <Compile Include="FormGiaoVien.Designer.cs">
       <DependentUpon>FormGiaoVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormGiaoVienDN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiaoVienDN.Designer.cs">
+      <DependentUpon>FormGiaoVienDN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLapLich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLapLich.Designer.cs">
+      <DependentUpon>FormLapLich.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLopHoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +92,12 @@
     <Compile Include="FormPhongHoc.Designer.cs">
       <DependentUpon>FormPhongHoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormXemLich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXemLich.Designer.cs">
+      <DependentUpon>FormXemLich.cs</DependentUpon>
+    </Compile>
     <Compile Include="LichThucHanh2DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -93,6 +111,12 @@
     <EmbeddedResource Include="FormGiaoVien.resx">
       <DependentUpon>FormGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoVienDN.resx">
+      <DependentUpon>FormGiaoVienDN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLapLich.resx">
+      <DependentUpon>FormLapLich.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLopHoc.resx">
       <DependentUpon>FormLopHoc.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPhongHoc.resx">
       <DependentUpon>FormPhongHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormXemLich.resx">
+      <DependentUpon>FormXemLich.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

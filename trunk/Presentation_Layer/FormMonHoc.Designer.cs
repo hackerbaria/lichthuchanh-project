@@ -44,13 +44,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnXoaMH = new System.Windows.Forms.Button();
             this.DGVMonHoc = new System.Windows.Forms.DataGridView();
-            this.txtSoTiet = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.MaMH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenMonHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoTiet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Khoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtSoTiet = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGVMonHoc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -162,12 +162,13 @@
             // 
             this.btnQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuayLai.ForeColor = System.Drawing.Color.Blue;
-            this.btnQuayLai.Location = new System.Drawing.Point(644, 480);
+            this.btnQuayLai.Location = new System.Drawing.Point(640, 480);
             this.btnQuayLai.Name = "btnQuayLai";
             this.btnQuayLai.Size = new System.Drawing.Size(107, 34);
             this.btnQuayLai.TabIndex = 33;
             this.btnQuayLai.Text = "Quay Lại";
             this.btnQuayLai.UseVisualStyleBackColor = true;
+            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
             // 
             // btnSuaMH
             // 
@@ -225,30 +226,11 @@
             this.SoChi,
             this.SoTiet,
             this.Khoa});
-            this.DGVMonHoc.Location = new System.Drawing.Point(21, 191);
+            this.DGVMonHoc.Location = new System.Drawing.Point(10, 191);
             this.DGVMonHoc.Name = "DGVMonHoc";
             this.DGVMonHoc.Size = new System.Drawing.Size(741, 283);
             this.DGVMonHoc.TabIndex = 28;
-            // 
-            // txtSoTiet
-            // 
-            this.txtSoTiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.txtSoTiet.Enabled = false;
-            this.txtSoTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoTiet.Location = new System.Drawing.Point(507, 77);
-            this.txtSoTiet.Name = "txtSoTiet";
-            this.txtSoTiet.Size = new System.Drawing.Size(223, 26);
-            this.txtSoTiet.TabIndex = 45;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(406, 80);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 20);
-            this.label6.TabIndex = 44;
-            this.label6.Text = "Số Tiết :";
+            this.DGVMonHoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVMonHoc_CellClick);
             // 
             // MaMH
             // 
@@ -283,11 +265,31 @@
             this.Khoa.Name = "Khoa";
             this.Khoa.Width = 160;
             // 
+            // txtSoTiet
+            // 
+            this.txtSoTiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.txtSoTiet.Enabled = false;
+            this.txtSoTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoTiet.Location = new System.Drawing.Point(507, 77);
+            this.txtSoTiet.Name = "txtSoTiet";
+            this.txtSoTiet.Size = new System.Drawing.Size(223, 26);
+            this.txtSoTiet.TabIndex = 45;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(406, 80);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(76, 20);
+            this.label6.TabIndex = 44;
+            this.label6.Text = "Số Tiết :";
+            // 
             // FormMonHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(776, 515);
+            this.ClientSize = new System.Drawing.Size(759, 515);
             this.Controls.Add(this.txtSoTiet);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnHuy);
@@ -308,6 +310,7 @@
             this.Controls.Add(this.DGVMonHoc);
             this.Name = "FormMonHoc";
             this.Text = "FormMonHoc";
+            this.Load += new System.EventHandler(this.FormMonHoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVMonHoc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

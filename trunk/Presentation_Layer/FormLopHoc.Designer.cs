@@ -41,11 +41,11 @@
             this.btnThemLopHoc = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnXoaLopHoc = new System.Windows.Forms.Button();
-            this.DGVPhong = new System.Windows.Forms.DataGridView();
+            this.DGVLopHoc = new System.Windows.Forms.DataGridView();
             this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuongSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVPhong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVLopHoc)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHuy
@@ -142,6 +142,7 @@
             this.btnQuayLai.TabIndex = 33;
             this.btnQuayLai.Text = "Quay Lại";
             this.btnQuayLai.UseVisualStyleBackColor = true;
+            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
             // 
             // btnSuaLopHoc
             // 
@@ -190,17 +191,18 @@
             this.btnXoaLopHoc.UseVisualStyleBackColor = true;
             this.btnXoaLopHoc.Click += new System.EventHandler(this.btnXoaLopHoc_Click);
             // 
-            // DGVPhong
+            // DGVLopHoc
             // 
-            this.DGVPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVPhong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DGVLopHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVLopHoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaLop,
             this.TenLop,
             this.SoLuongSV});
-            this.DGVPhong.Location = new System.Drawing.Point(38, 179);
-            this.DGVPhong.Name = "DGVPhong";
-            this.DGVPhong.Size = new System.Drawing.Size(508, 283);
-            this.DGVPhong.TabIndex = 28;
+            this.DGVLopHoc.Location = new System.Drawing.Point(123, 173);
+            this.DGVLopHoc.Name = "DGVLopHoc";
+            this.DGVLopHoc.Size = new System.Drawing.Size(544, 283);
+            this.DGVLopHoc.TabIndex = 28;
+            this.DGVLopHoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVLopHoc_CellClick);
             // 
             // MaLop
             // 
@@ -221,7 +223,7 @@
             this.SoLuongSV.DataPropertyName = "SoLuongSV";
             this.SoLuongSV.HeaderText = "Số Lượng Sinh Viên";
             this.SoLuongSV.Name = "SoLuongSV";
-            this.SoLuongSV.Width = 120;
+            this.SoLuongSV.Width = 160;
             // 
             // FormLopHoc
             // 
@@ -241,11 +243,11 @@
             this.Controls.Add(this.btnThemLopHoc);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnXoaLopHoc);
-            this.Controls.Add(this.DGVPhong);
+            this.Controls.Add(this.DGVLopHoc);
             this.Name = "FormLopHoc";
             this.Text = "FormLopHoc";
             this.Load += new System.EventHandler(this.FormLopHoc_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DGVPhong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVLopHoc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,7 +268,7 @@
         private System.Windows.Forms.Button btnThemLopHoc;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnXoaLopHoc;
-        private System.Windows.Forms.DataGridView DGVPhong;
+        private System.Windows.Forms.DataGridView DGVLopHoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLop;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenLop;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongSV;

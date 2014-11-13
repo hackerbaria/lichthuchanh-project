@@ -19,7 +19,7 @@ namespace Presentation_Layer
         bool them = false;
         bool sua = false;
         //bool xoa = false;
-        bool biSuaThongTin = false;
+       
         public FormGiaoVien()
         {
             InitializeComponent();
@@ -36,7 +36,7 @@ namespace Presentation_Layer
         private void FormGiaoVien_Load(object sender, EventArgs e)
         {
             loadGV();
-            biSuaThongTin = false;
+          
         }
 
         
@@ -57,53 +57,13 @@ namespace Presentation_Layer
        
         }
 
-        private void DGVGiaoVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Thứ tự dòng hiện hành
-            if (biSuaThongTin == true)
-            {
-                suaThongTinGV();
-                biSuaThongTin = false;
-            }
-            int r = DGVGiaoVien.CurrentCell.RowIndex;
-            // Chuyển thông tin lên panel 
-            this.txtMaGV.Text = DGVGiaoVien.Rows[r].Cells[0].Value.ToString();
-            this.txtTenGV.Text = DGVGiaoVien.Rows[r].Cells[1].Value.ToString();
-            this.txtDiaChi.Text = DGVGiaoVien.Rows[r].Cells[2].Value.ToString();
-            this.txtSoDienThoai.Text = DGVGiaoVien.Rows[r].Cells[3].Value.ToString();
-       
-        }
-        
-        private void txtMaGV_TextChanged(object sender, EventArgs e)
-        {
-            
-            //biSuaThongTin = true;
-            
-        }
-
-        private void txtTenGV_TextChanged(object sender, EventArgs e)
-        {
-            //biSuaThongTin = true;
-        }
-
-        private void txtDiaChi_TextChanged(object sender, EventArgs e)
-        {
-            //biSuaThongTin = true;
-        }
-
-        private void txtSoDienThoai_TextChanged(object sender, EventArgs e)
-        {
-            //biSuaThongTin = true;
-        }
+      
         public void suaThongTinGV()
         {
-            /*if (biSuaThongTin == false)
-                MessageBox.Show("Thông Tin Giáo Viên Không Thay Đổi", "Thông Báo");
-            else
-            {*/
+           
 
                 DialogResult traLoi;
-                traLoi = MessageBox.Show("Bạn Có Muốn Thay Đổi Thông Tin Giáo Viên Không?","Thông Báo", MessageBoxButtons.YesNo);
+                traLoi = MessageBox.Show("Bạn Có Muốn Thay Đổi Thông Tin Giáo Viên Không?","Thông Báo", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
                 if(traLoi==DialogResult.Yes)
                 {
                     GV.MaGV = txtMaGV.Text;
@@ -112,7 +72,7 @@ namespace Presentation_Layer
                     GV.SoDienThoai = txtSoDienThoai.Text;
                     if (giaoVienBUS.CapNhatGiaoVien(GV) == true)
                     {
-                        biSuaThongTin = false;
+                       
                         MessageBox.Show("Sửa Thông Tin Giáo Viên Thành Công", "Thông Báo");
                         loadGV();
                     }
@@ -130,15 +90,13 @@ namespace Presentation_Layer
 
         private void btnQuayLai_Click(object sender, EventArgs e)
         {
-            if (biSuaThongTin == true)
-                suaThongTinGV();
             this.Close();
         }
 
         private void btnXoaGV_Click(object sender, EventArgs e)
         {
             DialogResult traLoi;
-            traLoi = MessageBox.Show("Bạn Có Muốn Xóa Giáo Viên Này Không?","Thông Báo", MessageBoxButtons.YesNo);
+            traLoi = MessageBox.Show("Bạn Có Muốn Xóa Giáo Viên Này Không?","Thông Báo", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
             if(traLoi==DialogResult.Yes)
             {
                     GV.MaGV = txtMaGV.Text;
@@ -147,7 +105,7 @@ namespace Presentation_Layer
                     GV.SoDienThoai = txtSoDienThoai.Text;
                     if (giaoVienBUS.XoaGiaoVien(GV) == true)
                     {
-                        biSuaThongTin = false;
+                     
                         MessageBox.Show("Xóa Giáo Viên Thành Công", "Thông Báo");
                         loadGV();
                     }
@@ -161,63 +119,94 @@ namespace Presentation_Layer
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if(them==true)
+            if (them == true)
             {
                 GV.MaGV = txtMaGV.Text;
                 GV.TenGV = txtTenGV.Text;
                 GV.DiaChi = txtDiaChi.Text;
-                GV.SoDienThoai = txtSoDienThoai.Text;
-                if (giaoVienBUS.themGiaoVien(GV) == true)
+    
+                try
                 {
-                    MessageBox.Show("Thêm Thành Công Giáo Viên", "Thông Báo");
-                    loadGV();
-                    txtTenGV.Enabled = false;
-                    txtDiaChi.Enabled = false;
-                    txtSoDienThoai.Enabled = false;
-                    them = false;
+                    double sdt = Convert.ToInt32(txtSoDienThoai.Text);
+                    if (giaoVienBUS.themGiaoVien(GV) == true)
+                    {
+                        MessageBox.Show("Thêm Thành Công Giáo Viên", "Thông Báo");
+                        loadGV();
+                        txtMaGV.Enabled = false;
+                        txtTenGV.Enabled = false;
+                        txtDiaChi.Enabled = false;
+                        txtSoDienThoai.Enabled = false;
+                        them = false;
+                    }
+                    else
+                        MessageBox.Show("Không Thêm Được Giáo Viên", "Thông Báo");
                 }
-                else
-                    MessageBox.Show("Không Thêm Được Giáo Viên", "Thông Báo");
+                catch
+                {
+                    if (txtSoDienThoai.Text == "")
+                    {
+                        MessageBox.Show("Thêm Thành Công Giáo Viên", "Thông Báo");
+                        loadGV();
+                        txtMaGV.Enabled = false;
+                        txtTenGV.Enabled = false;
+                        txtDiaChi.Enabled = false;
+                        txtSoDienThoai.Enabled = false;
+                        them = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hãy nhập lại số điện thoại cho hợp lý", "Thông Báo");
+                        txtSoDienThoai.Focus();
+                        GV.SoDienThoai = txtSoDienThoai.Text;
+                    }
+                }
+
+                
             }
             else
             {
-                if(sua==true)
+                if (sua == true)
                 {
-                    suaThongTinGV();
-                    sua = false;
+                    try
+                    {
+                        double sdt = Convert.ToInt32(txtSoDienThoai.Text);
+                        suaThongTinGV();
+                        sua = false;
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Hãy sửa lại số điện thoại cho hợp lý", "Thông Báo");
+                        txtSoDienThoai.Focus();
+                    }
+                    
                 }
-             
+
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void DGVGiaoVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            // Thứ tự dòng hiện hành
+            
+            int r = DGVGiaoVien.CurrentCell.RowIndex;
+            // Chuyển thông tin lên panel 
+            this.txtMaGV.Text = DGVGiaoVien.Rows[r].Cells[0].Value.ToString();
+            this.txtTenGV.Text = DGVGiaoVien.Rows[r].Cells[1].Value.ToString();
+            this.txtDiaChi.Text = DGVGiaoVien.Rows[r].Cells[2].Value.ToString();
+            this.txtSoDienThoai.Text = DGVGiaoVien.Rows[r].Cells[3].Value.ToString();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
+            txtMaGV.ResetText();
+            txtTenGV.ResetText();
+            txtDiaChi.ResetText();
+            txtSoDienThoai.ResetText();
 
+            txtMaGV.Enabled = false;
+            txtTenGV.Enabled = false;
+            txtDiaChi.Enabled = false;
+            txtSoDienThoai.Enabled = false;
         }
 
 
