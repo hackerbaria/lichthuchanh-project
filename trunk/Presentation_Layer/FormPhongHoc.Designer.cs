@@ -50,18 +50,22 @@
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(530, 464);
+            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.ForeColor = System.Drawing.Color.Blue;
+            this.btnHuy.Location = new System.Drawing.Point(530, 456);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(87, 23);
+            this.btnHuy.Size = new System.Drawing.Size(87, 31);
             this.btnHuy.TabIndex = 57;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(440, 464);
+            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.ForeColor = System.Drawing.Color.Maroon;
+            this.btnLuu.Location = new System.Drawing.Point(440, 456);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(84, 23);
+            this.btnLuu.Size = new System.Drawing.Size(84, 31);
             this.btnLuu.TabIndex = 56;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
@@ -129,18 +133,22 @@
             // 
             // btnQuayLai
             // 
-            this.btnQuayLai.Location = new System.Drawing.Point(667, 464);
+            this.btnQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuayLai.ForeColor = System.Drawing.Color.Magenta;
+            this.btnQuayLai.Location = new System.Drawing.Point(667, 456);
             this.btnQuayLai.Name = "btnQuayLai";
-            this.btnQuayLai.Size = new System.Drawing.Size(107, 23);
+            this.btnQuayLai.Size = new System.Drawing.Size(107, 31);
             this.btnQuayLai.TabIndex = 49;
             this.btnQuayLai.Text = "Quay Lại";
             this.btnQuayLai.UseVisualStyleBackColor = true;
             // 
             // btnSuaPhong
             // 
-            this.btnSuaPhong.Location = new System.Drawing.Point(313, 464);
+            this.btnSuaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaPhong.ForeColor = System.Drawing.Color.Blue;
+            this.btnSuaPhong.Location = new System.Drawing.Point(313, 456);
             this.btnSuaPhong.Name = "btnSuaPhong";
-            this.btnSuaPhong.Size = new System.Drawing.Size(104, 23);
+            this.btnSuaPhong.Size = new System.Drawing.Size(104, 31);
             this.btnSuaPhong.TabIndex = 47;
             this.btnSuaPhong.Text = "Sửa";
             this.btnSuaPhong.UseVisualStyleBackColor = true;
@@ -148,9 +156,11 @@
             // 
             // btnThemPhong
             // 
-            this.btnThemPhong.Location = new System.Drawing.Point(60, 464);
+            this.btnThemPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemPhong.ForeColor = System.Drawing.Color.Blue;
+            this.btnThemPhong.Location = new System.Drawing.Point(60, 456);
             this.btnThemPhong.Name = "btnThemPhong";
-            this.btnThemPhong.Size = new System.Drawing.Size(108, 23);
+            this.btnThemPhong.Size = new System.Drawing.Size(108, 31);
             this.btnThemPhong.TabIndex = 46;
             this.btnThemPhong.Text = "Thêm";
             this.btnThemPhong.UseVisualStyleBackColor = true;
@@ -169,9 +179,11 @@
             // 
             // btnXoaPhong
             // 
-            this.btnXoaPhong.Location = new System.Drawing.Point(186, 464);
+            this.btnXoaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaPhong.ForeColor = System.Drawing.Color.Red;
+            this.btnXoaPhong.Location = new System.Drawing.Point(186, 456);
             this.btnXoaPhong.Name = "btnXoaPhong";
-            this.btnXoaPhong.Size = new System.Drawing.Size(110, 23);
+            this.btnXoaPhong.Size = new System.Drawing.Size(110, 31);
             this.btnXoaPhong.TabIndex = 48;
             this.btnXoaPhong.Text = "Xóa";
             this.btnXoaPhong.UseVisualStyleBackColor = true;
@@ -184,9 +196,9 @@
             this.MaPhong,
             this.TenPhong,
             this.SoMay});
-            this.DGVPhong.Location = new System.Drawing.Point(34, 156);
+            this.DGVPhong.Location = new System.Drawing.Point(181, 157);
             this.DGVPhong.Name = "DGVPhong";
-            this.DGVPhong.Size = new System.Drawing.Size(444, 283);
+            this.DGVPhong.Size = new System.Drawing.Size(542, 283);
             this.DGVPhong.TabIndex = 44;
             // 
             // MaPhong
@@ -201,7 +213,7 @@
             this.TenPhong.DataPropertyName = "TenPhong";
             this.TenPhong.HeaderText = "Tên Phòng";
             this.TenPhong.Name = "TenPhong";
-            this.TenPhong.Width = 150;
+            this.TenPhong.Width = 250;
             // 
             // SoMay
             // 
