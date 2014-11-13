@@ -154,7 +154,7 @@
             this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(51, 76);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(704, 119);
+            this.label1.Size = new System.Drawing.Size(699, 119);
             this.label1.TabIndex = 0;
             this.label1.Text = "CHÀO MỪNG ĐẾN VỚI PHẦN MỀM QUẢN LÍ LỊCH THỰC HÀNH";
             // 

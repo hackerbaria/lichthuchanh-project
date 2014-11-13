@@ -45,7 +45,14 @@ namespace Presentation_Layer
 
         private void chkAddmin_CheckedChanged(object sender, EventArgs e)
         {
+            if (chkAddmin.Checked == true)
+                chkGiaoVien.Checked = false;
+        }
 
+        private void chkGiaoVien_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkGiaoVien.Checked == true)
+                chkAddmin.Checked = false;
         }
     }
 }

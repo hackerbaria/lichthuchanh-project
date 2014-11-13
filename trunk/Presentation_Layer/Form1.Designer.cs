@@ -112,6 +112,7 @@
             this.chkGiaoVien.TabIndex = 11;
             this.chkGiaoVien.Text = "Giáo Viên";
             this.chkGiaoVien.UseVisualStyleBackColor = true;
+            this.chkGiaoVien.CheckedChanged += new System.EventHandler(this.chkGiaoVien_CheckedChanged);
             // 
             // chkAddmin
             // 
