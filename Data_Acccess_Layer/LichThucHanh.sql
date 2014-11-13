@@ -12,12 +12,12 @@ create table GiaoVien
 	SoDienThoai varchar(13)
 )
 --nhap du lieu
-insert into GiaoVien(MaGV,TenGV,DiaChi,SoDienThoai) values('GV001','Nguyễn Văn A','P .Linh Chiểu - Q. Thủ  Đức','0987654432')
-insert into GiaoVien(MaGV,TenGV,DiaChi,SoDienThoai) values('GV002','Phạm Văn B','Quận 9','0909374852')
-insert into GiaoVien(MaGV,TenGV,DiaChi,SoDienThoai) values('GV003','Lê Thị Phượng','Quận 7','0987654432')
-insert into GiaoVien(MaGV,TenGV,DiaChi,SoDienThoai) values('GV004','Ngô Quốc Hùng','Quận 4','0967323834')
-insert into GiaoVien(MaGV,TenGV,DiaChi,SoDienThoai) values('GV005','Nguyễn Thị Huệ','Quận3','0168345234')
-insert into GiaoVien(MaGV,TenGV,DiaChi,SoDienThoai) values('GV006','Lê Văn Toàn','Quận 1','0392393434')
+insert into GiaoVien(MaGV,TenGV,DiaChi,SoDienThoai) values('GV001',N'Nguyễn Văn A',N'P .Linh Chiểu - Q. Thủ  Đức','0987654432')
+insert into GiaoVien(MaGV,TenGV,DiaChi,SoDienThoai) values('GV002',N'Phạm Văn B',N'Quận 9','0909374852')
+insert into GiaoVien(MaGV,TenGV,DiaChi,SoDienThoai) values('GV003',N'Lê Thị Phượng',N'Quận 7','0987654432')
+insert into GiaoVien(MaGV,TenGV,DiaChi,SoDienThoai) values('GV004',N'Ngô Quốc Hùng',N'Quận 4','0967323834')
+insert into GiaoVien(MaGV,TenGV,DiaChi,SoDienThoai) values('GV005',N'Nguyễn Thị Huệ',N'Quận3','0168345234')
+insert into GiaoVien(MaGV,TenGV,DiaChi,SoDienThoai) values('GV006',N'Lê Văn Toàn',N'Quận 1','0392393434')
 
 
 
@@ -28,13 +28,13 @@ create table Lop
 	SoLuongSV int
 )
 --nhap du lieu
-insert into Lop(MaLop,TenLop,SoLuongSV) values('L001','Toán Rời Rạc Và Lý Thuyêt Đồ Thị',50)
-insert into Lop(MaLop,TenLop,SoLuongSV) values('L002','Cấu Trúc Máy Tính Và Hợp Ngữ',50)
-insert into Lop(MaLop,TenLop,SoLuongSV) values('L003','Hệ Điều Hành',50)
-insert into Lop(MaLop,TenLop,SoLuongSV) values('L004','Kỹ Thuật Lập Trình',50)
-insert into Lop(MaLop,TenLop,SoLuongSV) values('L005','Mạng Máy Tính Căn Bản',50)
-insert into Lop(MaLop,TenLop,SoLuongSV) values('L006','Cơ Sở Dữ Liệu',50)
-insert into Lop(MaLop,TenLop,SoLuongSV) values('L007','Lập Trình Hướng Đới Tượng',50)
+insert into Lop(MaLop,TenLop,SoLuongSV) values('L001',N'Toán Rời Rạc Và Lý Thuyêt Đồ Thị',50)
+insert into Lop(MaLop,TenLop,SoLuongSV) values('L002',N'Cấu Trúc Máy Tính Và Hợp Ngữ',50)
+insert into Lop(MaLop,TenLop,SoLuongSV) values('L003',N'Hệ Điều Hành',50)
+insert into Lop(MaLop,TenLop,SoLuongSV) values('L004',N'Kỹ Thuật Lập Trình',50)
+insert into Lop(MaLop,TenLop,SoLuongSV) values('L005',N'Mạng Máy Tính Căn Bản',50)
+insert into Lop(MaLop,TenLop,SoLuongSV) values('L006',N'Cơ Sở Dữ Liệu',50)
+insert into Lop(MaLop,TenLop,SoLuongSV) values('L007',N'Lập Trình Hướng Đới Tượng',50)
 
 create table MonHoc
 (
@@ -45,14 +45,14 @@ create table MonHoc
 	Khoa nvarchar(50)
 )
 --nhap dl
-insert into MonHoc(MaMH,TenMonHoc,SoChi,SoTiet,Khoa) values('MH001','Toán Rời Rạc Và Lý Thuyêt Đồ Thị',4,5,'CNTT')
-insert into MonHoc(MaMH,TenMonHoc,SoChi,SoTiet,Khoa) values('MH002','Cấu Trúc Máy Tính Và Hợp Ngữ',4,5,'CNTT')
-insert into MonHoc(MaMH,TenMonHoc,SoChi,SoTiet,Khoa) values('MH003','Hệ Điều Hành',4,5,'CNTT')
-insert into MonHoc(MaMH,TenMonHoc,SoChi,SoTiet,Khoa) values('MH004','Kỹ Thuật Lập Trình',4,5,'CNTT')
-insert into MonHoc(MaMH,TenMonHoc,SoChi,SoTiet,Khoa) values('MH005','Mạng Máy Tính Căn Bản',4,5,'CNTT')
-insert into MonHoc(MaMH,TenMonHoc,SoChi,SoTiet,Khoa) values('MH006','Cơ Sở Dữ Liệu',4,5,'CNTT')
-insert into MonHoc(MaMH,TenMonHoc,SoChi,SoTiet,Khoa) values('MH007','Lập Trình Hướng Đối Tượng',4,5,'CNTT')
-insert into MonHoc(MaMH,TenMonHoc,SoChi,SoTiet,Khoa) values('MH008','Công Nghệ Phận Mềm',4,5,'CNTT')
+insert into MonHoc(MaMH,TenMonHoc,SoChi,SoTiet,Khoa) values('MH001',N'Toán Rời Rạc Và Lý Thuyêt Đồ Thị',4,5,'CNTT')
+insert into MonHoc(MaMH,TenMonHoc,SoChi,SoTiet,Khoa) values('MH002',N'Cấu Trúc Máy Tính Và Hợp Ngữ',4,5,'CNTT')
+insert into MonHoc(MaMH,TenMonHoc,SoChi,SoTiet,Khoa) values('MH003',N'Hệ Điều Hành',4,5,'CNTT')
+insert into MonHoc(MaMH,TenMonHoc,SoChi,SoTiet,Khoa) values('MH004',N'Kỹ Thuật Lập Trình',4,5,'CNTT')
+insert into MonHoc(MaMH,TenMonHoc,SoChi,SoTiet,Khoa) values('MH005',N'Mạng Máy Tính Căn Bản',4,5,'CNTT')
+insert into MonHoc(MaMH,TenMonHoc,SoChi,SoTiet,Khoa) values('MH006',N'Cơ Sở Dữ Liệu',4,5,'CNTT')
+insert into MonHoc(MaMH,TenMonHoc,SoChi,SoTiet,Khoa) values('MH007',N'Lập Trình Hướng Đối Tượng',4,5,'CNTT')
+insert into MonHoc(MaMH,TenMonHoc,SoChi,SoTiet,Khoa) values('MH008',N'Công Nghệ Phận Mềm',4,5,'CNTT')
 
 create table Phong
 (
@@ -61,19 +61,19 @@ create table Phong
 	SoMay int
 )
 --nhap dl
-insert into Phong(MaPhong,TenPhong,SoMay) values('P001','PM1',50)
-insert into Phong(MaPhong,TenPhong,SoMay) values('P002','PM2',45)
-insert into Phong(MaPhong,TenPhong,SoMay) values('P003','PM3',50)
-insert into Phong(MaPhong,TenPhong,SoMay) values('P004','PM4',40)
-insert into Phong(MaPhong,TenPhong,SoMay) values('P005','PM5',50)
-insert into Phong(MaPhong,TenPhong,SoMay) values('P006','A5-201',50)
-insert into Phong(MaPhong,TenPhong,SoMay) values('P007','A5-202',50)
-insert into Phong(MaPhong,TenPhong,SoMay) values('P008','A5-203',50)
-insert into Phong(MaPhong,TenPhong,SoMay) values('P009','A5-204',50)
-insert into Phong(MaPhong,TenPhong,SoMay) values('P010','A5-301',50)
-insert into Phong(MaPhong,TenPhong,SoMay) values('P011','A5-302',50)
-insert into Phong(MaPhong,TenPhong,SoMay) values('P012','A5-303',50)
-insert into Phong(MaPhong,TenPhong,SoMay) values('P013','A5-304',50)
+insert into Phong(MaPhong,TenPhong,SoMay) values('P001',N'PM1',50)
+insert into Phong(MaPhong,TenPhong,SoMay) values('P002',N'PM2',45)
+insert into Phong(MaPhong,TenPhong,SoMay) values('P003',N'PM3',50)
+insert into Phong(MaPhong,TenPhong,SoMay) values('P004',N'PM4',40)
+insert into Phong(MaPhong,TenPhong,SoMay) values('P005',N'PM5',50)
+insert into Phong(MaPhong,TenPhong,SoMay) values('P006',N'A5-201',50)
+insert into Phong(MaPhong,TenPhong,SoMay) values('P007',N'A5-202',50)
+insert into Phong(MaPhong,TenPhong,SoMay) values('P008',N'A5-203',50)
+insert into Phong(MaPhong,TenPhong,SoMay) values('P009',N'A5-204',50)
+insert into Phong(MaPhong,TenPhong,SoMay) values('P010',N'A5-301',50)
+insert into Phong(MaPhong,TenPhong,SoMay) values('P011',N'A5-302',50)
+insert into Phong(MaPhong,TenPhong,SoMay) values('P012',N'A5-303',50)
+insert into Phong(MaPhong,TenPhong,SoMay) values('P013',N'A5-304',50)
 
 
 create table ThoiGian
