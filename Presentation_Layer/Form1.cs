@@ -23,7 +23,10 @@ namespace Presentation_Layer
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-
+            DialogResult traLoi;
+            traLoi = MessageBox.Show("Thoát khỏi Chương Trình?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if(traLoi==DialogResult.OK)
+                this.Close();
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
@@ -34,13 +37,22 @@ namespace Presentation_Layer
             else
                 quyen = 2;
             UserVO user = _userBUS.getUserEmailByName(txtTenDangNhap.Text, txtMatKhau.Text, quyen);
-            if (user.TenDangNhap != null)
+            if(user.Quyen==1) //(user.TenDangNhap != null)
             {
                 FormMain fm = new FormMain();
+                
                 fm.ShowDialog();
             }
             else
-                MessageBox.Show("Xem lai thong tin dang nhap", "Thong bao");
+            { 
+                if(user.Quyen==2)
+                {
+                    FormGiaoVienDN fgvDN = new FormGiaoVienDN();
+                    fgvDN.ShowDialog();
+                }
+                else
+                    MessageBox.Show("Xem lai thong tin dang nhap", "Thong bao");
+            }    
         }
 
         private void chkAddmin_CheckedChanged(object sender, EventArgs e)
@@ -53,6 +65,18 @@ namespace Presentation_Layer
         {
             if (chkGiaoVien.Checked == true)
                 chkAddmin.Checked = false;
+        }
+
+        private void txtTenDangNhap_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar==13)
+                txtMatKhau.Focus();
+        }
+
+        private void txtMatKhau_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                btnDangNhap.Focus();
         }
     }
 }

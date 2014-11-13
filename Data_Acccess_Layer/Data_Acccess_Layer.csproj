@@ -37,9 +37,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Value_Object_Layer">
-      <HintPath>..\Value_Object_Layer\bin\Debug\Value_Object_Layer.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnection.cs" />
@@ -49,6 +46,15 @@
     <Compile Include="PhongDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserDAO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Value_Object_Layer\Value_Object_Layer.csproj">
+      <Project>{9ce7478b-5435-4cfa-a8af-00f56bc9ada6}</Project>
+      <Name>Value_Object_Layer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LichThucHanh.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

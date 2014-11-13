@@ -22,7 +22,6 @@ namespace Presentation_Layer
             FormGiaoVien fgv = new FormGiaoVien();
             fgv.ShowDialog();
         }
-
         private void btnLopHoc_Click(object sender, EventArgs e)
         {
             FormLopHoc flh = new FormLopHoc();
@@ -39,6 +38,40 @@ namespace Presentation_Layer
         {
             FormMonHoc fmh = new FormMonHoc();
             fmh.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            DialogResult traLoi;
+            traLoi = MessageBox.Show("Thoát khỏi Chương Trình?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (traLoi == DialogResult.OK)  
+                Application.Exit();
+        }
+
+        private void btnQuayLaiDangNhap_Click(object sender, EventArgs e)
+        {
+            DialogResult traLoi;
+            traLoi = MessageBox.Show("Trở Lại màn Hình Đăng Nhập?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (traLoi == DialogResult.OK)
+                this.Close();
+                
+        }
+
+        private void btnLapLich_Click(object sender, EventArgs e)
+        {
+            FormLapLich fll = new FormLapLich();
+            fll.ShowDialog();
+        }
+
+        private void btnXemLich_Click(object sender, EventArgs e)
+        {
+            FormXemLich fxl = new FormXemLich();
+            fxl.ShowDialog();
         }
     }
 }

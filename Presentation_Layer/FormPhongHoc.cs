@@ -20,10 +20,11 @@ namespace Presentation_Layer
         bool them = false;
         bool sua = false;
         //bool xoa = false;
-        bool biSuaThongTin = false;
+        
         public FormPhongHoc()
         {
             InitializeComponent();
+            phongBUS = new PhongBUS();
         }
         public void loadPhong()
         {
@@ -33,10 +34,7 @@ namespace Presentation_Layer
         }
         public void suaThongTinPhong()
         {
-            /*if (biSuaThongTin == false)
-                MessageBox.Show("Thông Tin Giáo Viên Không Thay Đổi", "Thông Báo");
-            else
-            {*/
+           
 
             DialogResult traLoi;
             traLoi = MessageBox.Show("Bạn Có Muốn Thay Đổi Thông Tin Phòng Học Không?", "Thông Báo", MessageBoxButtons.YesNo);
@@ -45,12 +43,22 @@ namespace Presentation_Layer
           
                 P.MaPhong = txtMaPhong.Text;
                 P.TenPhong = txtTenPhong.Text;
-                P.SoMay = Convert.ToInt32(txtSoMay.Text);
-                if (phongBUS.CapNhatPhong(P) == true)
+                try
                 {
-                    biSuaThongTin = false;
-                    MessageBox.Show("Sửa Thông Tin Phòng Học Thành Công", "Thông Báo");
-                    loadPhong();
+                    P.SoMay = Convert.ToInt32(txtSoMay.Text);
+                    if (phongBUS.CapNhatPhong(P) == true)
+                    {
+
+                        MessageBox.Show("Sửa Thông Tin Phòng Học Thành Công", "Thông Báo");
+                        loadPhong();
+                        sua = false;
+                    }
+                    else
+                        MessageBox.Show("Không Thể Sửa Thông Tin Phòng Học", "Thông Báo");
+                }
+                catch
+                {
+                    MessageBox.Show("Xem Lại Thông Tin mới sửa", "Thông Báo");
                 }
 
             }
@@ -60,6 +68,9 @@ namespace Presentation_Layer
         private void btnThemPhong_Click(object sender, EventArgs e)
         {
             them = true;
+            txtMaPhong.ResetText();
+            txtTenPhong.ResetText();
+            txtSoMay.ResetText();
 
             txtMaPhong.Enabled = true;
             txtTenPhong.Enabled = true;
@@ -76,11 +87,15 @@ namespace Presentation_Layer
             {
                 P.MaPhong = txtMaPhong.Text;
                 P.TenPhong = txtTenPhong.Text;
-                P.SoMay =Convert.ToInt32( txtSoMay.Text);
-             
+                if (txtSoMay.Text != "")
+                {
+                    P.SoMay = Convert.ToInt32(txtSoMay.Text);
+                }
+                else
+                    P.SoMay =-1;
                 if (phongBUS.XoaPhong(P)== true)
                 {
-                    biSuaThongTin = false;
+                   
                     MessageBox.Show("Xóa Phòng Học Thành Công", "Thông Báo");
                     loadPhong();
                 }
@@ -94,7 +109,6 @@ namespace Presentation_Layer
         {
             sua = true;
             
-            txtMaPhong.Enabled = true;
             txtTenPhong.Enabled = true;
             txtSoMay.Enabled = true;
         }
@@ -103,33 +117,71 @@ namespace Presentation_Layer
         {
             if (them == true)
             {
-                
                 P.MaPhong = txtMaPhong.Text;
                 P.TenPhong = txtTenPhong.Text;
-                P.SoMay = Convert.ToInt32(txtSoMay.Text);
-                if (phongBUS.themPhong(P) == true)
-                {
-                    MessageBox.Show("Thêm Thành Công Phòng Học", "Thông Báo");
-                    loadPhong();
+                try
+                {   
+                    P.SoMay = Convert.ToInt32(txtSoMay.Text);
+                    if (phongBUS.themPhong(P) == true)
+                    {
+                        them = false;
+                        MessageBox.Show("Thêm Thành Công Phòng Học", "Thông Báo");
+                        loadPhong();
                   
-                    txtMaPhong.Enabled = false;
-                    txtTenPhong.Enabled = false;
-                    txtSoMay.Enabled = false;
+                        txtMaPhong.Enabled = false;
+                        txtTenPhong.Enabled = false;
+                        txtSoMay.Enabled = false;
+                    }
+                    else
+                        MessageBox.Show("Không Thêm Được Phòng", "Thông Báo");
                 }
-
-                else
-                    MessageBox.Show("Không Thêm Được Phòng", "Thông Báo");
-            }
+                catch
+                {
+                    MessageBox.Show("Kiểm Tra Số Lượng Máy vừa nhập", "Thông Báo");
+                    txtSoMay.Focus();
+                }
+            }   
             else
             {
                 if (sua == true)
                 {
                     suaThongTinPhong();
 
-                    sua = false;
+                    
                 }
 
             }
+        }
+
+        private void FormPhongHoc_Load(object sender, EventArgs e)
+        {
+            loadPhong();
+        }
+
+        private void DGVPhong_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            int r = DGVPhong.CurrentCell.RowIndex;
+            // Chuyển thông tin lên panel 
+            this.txtMaPhong.Text = DGVPhong.Rows[r].Cells[0].Value.ToString();
+            this.txtTenPhong.Text = DGVPhong.Rows[r].Cells[1].Value.ToString();
+            this.txtSoMay.Text = DGVPhong.Rows[r].Cells[2].Value.ToString();
+        }
+
+        private void btnQuayLai_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            txtMaPhong.ResetText();
+            txtTenPhong.ResetText();
+            txtSoMay.ResetText();
+
+            txtMaPhong.Enabled = false;
+            txtTenPhong.Enabled = false;
+            txtSoMay.Enabled = false;
         }
     }
 }

@@ -36,8 +36,11 @@
             this.btnInAnThongKe = new System.Windows.Forms.Button();
             this.btnDanhSach = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLapLich = new System.Windows.Forms.Button();
+            this.btnQuayLaiDangNhap = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -46,12 +49,13 @@
             // 
             this.btnXemLich.BackColor = System.Drawing.Color.LightSalmon;
             this.btnXemLich.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXemLich.Location = new System.Drawing.Point(488, 47);
+            this.btnXemLich.Location = new System.Drawing.Point(603, 47);
             this.btnXemLich.Name = "btnXemLich";
             this.btnXemLich.Size = new System.Drawing.Size(125, 81);
             this.btnXemLich.TabIndex = 6;
             this.btnXemLich.Text = "Xem Lịch";
             this.btnXemLich.UseVisualStyleBackColor = false;
+            this.btnXemLich.Click += new System.EventHandler(this.btnXemLich_Click);
             // 
             // btnMonHoc
             // 
@@ -127,15 +131,28 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.Controls.Add(this.btnThoat);
+            this.panel2.Controls.Add(this.btnQuayLaiDangNhap);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(14, 80);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(801, 309);
+            this.panel2.Size = new System.Drawing.Size(801, 285);
             this.panel2.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(48, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(699, 107);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "CHÀO MỪNG ĐẾN VỚI PHẦN MỀM       QUẢN LÍ LỊCH THỰC HÀNH";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Controls.Add(this.btnLapLich);
             this.panel1.Controls.Add(this.btnXemLich);
             this.panel1.Controls.Add(this.btnMonHoc);
             this.panel1.Controls.Add(this.btnPhongHoc);
@@ -148,21 +165,49 @@
             this.panel1.Size = new System.Drawing.Size(801, 128);
             this.panel1.TabIndex = 2;
             // 
-            // label1
+            // btnLapLich
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(51, 76);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(699, 119);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "CHÀO MỪNG ĐẾN VỚI PHẦN MỀM QUẢN LÍ LỊCH THỰC HÀNH";
+            this.btnLapLich.BackColor = System.Drawing.Color.LightSalmon;
+            this.btnLapLich.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLapLich.Location = new System.Drawing.Point(481, 47);
+            this.btnLapLich.Name = "btnLapLich";
+            this.btnLapLich.Size = new System.Drawing.Size(125, 81);
+            this.btnLapLich.TabIndex = 7;
+            this.btnLapLich.Text = "Lập Lịch";
+            this.btnLapLich.UseVisualStyleBackColor = false;
+            this.btnLapLich.Click += new System.EventHandler(this.btnLapLich_Click);
+            // 
+            // btnQuayLaiDangNhap
+            // 
+            this.btnQuayLaiDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnQuayLaiDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuayLaiDangNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnQuayLaiDangNhap.Location = new System.Drawing.Point(636, 223);
+            this.btnQuayLaiDangNhap.Name = "btnQuayLaiDangNhap";
+            this.btnQuayLaiDangNhap.Size = new System.Drawing.Size(138, 49);
+            this.btnQuayLaiDangNhap.TabIndex = 1;
+            this.btnQuayLaiDangNhap.Text = "Trở Lại Trang Đăng Nhập";
+            this.btnQuayLaiDangNhap.UseVisualStyleBackColor = false;
+            this.btnQuayLaiDangNhap.Click += new System.EventHandler(this.btnQuayLaiDangNhap_Click);
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.ForeColor = System.Drawing.Color.Purple;
+            this.btnThoat.Location = new System.Drawing.Point(505, 223);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(125, 49);
+            this.btnThoat.TabIndex = 2;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(828, 403);
+            this.ClientSize = new System.Drawing.Size(828, 364);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FormMain";
@@ -185,5 +230,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnLapLich;
+        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btnQuayLaiDangNhap;
     }
 }
