@@ -56,18 +56,22 @@
             // 
             // btnHuy
             // 
+            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.ForeColor = System.Drawing.Color.Magenta;
             this.btnHuy.Location = new System.Drawing.Point(507, 480);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(87, 23);
+            this.btnHuy.Size = new System.Drawing.Size(87, 34);
             this.btnHuy.TabIndex = 43;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
             // 
             // btnLuu
             // 
+            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.ForeColor = System.Drawing.Color.Blue;
             this.btnLuu.Location = new System.Drawing.Point(417, 480);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(84, 23);
+            this.btnLuu.Size = new System.Drawing.Size(84, 34);
             this.btnLuu.TabIndex = 42;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
@@ -155,18 +159,22 @@
             // 
             // btnQuayLai
             // 
+            this.btnQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuayLai.ForeColor = System.Drawing.Color.Blue;
             this.btnQuayLai.Location = new System.Drawing.Point(644, 480);
             this.btnQuayLai.Name = "btnQuayLai";
-            this.btnQuayLai.Size = new System.Drawing.Size(107, 23);
+            this.btnQuayLai.Size = new System.Drawing.Size(107, 34);
             this.btnQuayLai.TabIndex = 33;
             this.btnQuayLai.Text = "Quay Lại";
             this.btnQuayLai.UseVisualStyleBackColor = true;
             // 
             // btnSuaMH
             // 
+            this.btnSuaMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaMH.ForeColor = System.Drawing.Color.Maroon;
             this.btnSuaMH.Location = new System.Drawing.Point(290, 480);
             this.btnSuaMH.Name = "btnSuaMH";
-            this.btnSuaMH.Size = new System.Drawing.Size(104, 23);
+            this.btnSuaMH.Size = new System.Drawing.Size(104, 34);
             this.btnSuaMH.TabIndex = 31;
             this.btnSuaMH.Text = "Sửa";
             this.btnSuaMH.UseVisualStyleBackColor = true;
@@ -174,9 +182,11 @@
             // 
             // btnThemMH
             // 
+            this.btnThemMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemMH.ForeColor = System.Drawing.Color.Blue;
             this.btnThemMH.Location = new System.Drawing.Point(37, 480);
             this.btnThemMH.Name = "btnThemMH";
-            this.btnThemMH.Size = new System.Drawing.Size(108, 23);
+            this.btnThemMH.Size = new System.Drawing.Size(108, 34);
             this.btnThemMH.TabIndex = 30;
             this.btnThemMH.Text = "Thêm";
             this.btnThemMH.UseVisualStyleBackColor = true;
@@ -195,9 +205,11 @@
             // 
             // btnXoaMH
             // 
+            this.btnXoaMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaMH.ForeColor = System.Drawing.Color.Red;
             this.btnXoaMH.Location = new System.Drawing.Point(163, 480);
             this.btnXoaMH.Name = "btnXoaMH";
-            this.btnXoaMH.Size = new System.Drawing.Size(110, 23);
+            this.btnXoaMH.Size = new System.Drawing.Size(110, 34);
             this.btnXoaMH.TabIndex = 32;
             this.btnXoaMH.Text = "Xóa";
             this.btnXoaMH.UseVisualStyleBackColor = true;
