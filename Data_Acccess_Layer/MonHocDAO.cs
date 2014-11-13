@@ -28,7 +28,7 @@ namespace Data_Acccess_Layer
             try
             {
                 string query = string.Format("insert into MonHoc(MaMH,TenMonHoc,SoChi,SoTiet,Khoa) Values(@MaMH,@TenMonHoc,@SoChi,@SoTiet,@Khoa)");
-                SqlParameter[] sqlParameters = new SqlParameter[4];
+                SqlParameter[] sqlParameters = new SqlParameter[5];
 
                 sqlParameters[0] = new SqlParameter("@MaMH", SqlDbType.VarChar);
                 sqlParameters[0].Value = Convert.ToString(MH.MaMH);
@@ -87,7 +87,7 @@ namespace Data_Acccess_Layer
 
             try
             {
-                string query = string.Format("DELETE MonHoc Where MaMH = @MaMH and TenMonHoc=@TenMonHoc and SoChi=@SoChi and SoTiet=@SoTiet and Khoa=@Khoai");
+                string query = string.Format("DELETE MonHoc Where MaMH = @MaMH and TenMonHoc=@TenMonHoc and SoChi=@SoChi and SoTiet=@SoTiet and Khoa=@Khoa");
 
                 SqlParameter[] sqlParameters = new SqlParameter[4];
                 sqlParameters[0] = new SqlParameter("@MaMH", SqlDbType.VarChar);

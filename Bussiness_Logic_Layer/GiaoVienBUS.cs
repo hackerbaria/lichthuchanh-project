@@ -38,25 +38,7 @@ namespace Bussiness_Logic_Layer
         {
             return _GiaoVienDAO.DeleteGiaoVien(gV);
         }
-        /*public GiaoVienVO getGiaoVien(string maGV, string tenGV, string diaChi,string sdt)
-        {
-            GiaoVienVO GvVO = new GiaoVienVO();
-            DataTable dataTable = new DataTable();
-
-            dataTable = _GiaoVienDAO.GetAllGiaoVien();
-            if (dataTable != null)
-            {
-                foreach (DataRow dr in dataTable.Rows)
-                {
-                    GiaoVienVO. = dr[0].ToString();
-                    userVO.MatKhau = dr[1].ToString();
-                    userVO.Quyen = int.Parse(dr[2].ToString());
-
-                }
-            }
-
-            //return userVO;
-        }*/
+        
 
     }
 }

@@ -27,7 +27,7 @@ namespace Data_Acccess_Layer
         {
             try
             {
-                string query = string.Format("insert into GiaoVien(MaLop,TenLop,SoLuongSV) Values(@MaLop,@TenLop,@SoLuongSV)");
+                string query = string.Format("insert into Lop(MaLop,TenLop,SoLuongSV) Values(@MaLop,@TenLop,@SoLuongSV)");
                 SqlParameter[] sqlParameters = new SqlParameter[3];
 
                 sqlParameters[0] = new SqlParameter("@MaLop", SqlDbType.VarChar);
@@ -51,7 +51,7 @@ namespace Data_Acccess_Layer
             
             try
             {
-                string query = string.Format("UPDATE GiaoVien SET MaLop = @MaLop, TenLop=@TenLop, SoLuongSV=@SoLuongSV Where MaLop = @MaLop");
+                string query = string.Format("UPDATE Lop SET MaLop = @MaLop, TenLop=@TenLop, SoLuongSV= @SoLuongSV Where MaLop = @MaLop");
                 
                 SqlParameter[] sqlParameters = new SqlParameter[3];
 
@@ -61,7 +61,7 @@ namespace Data_Acccess_Layer
                 sqlParameters[1] = new SqlParameter("@TenLop", SqlDbType.NVarChar);
                 sqlParameters[1].Value = Convert.ToString(LH.TenLop);
 
-                sqlParameters[2] = new SqlParameter("@DiaChi", SqlDbType.NVarChar);
+                sqlParameters[2] = new SqlParameter("@SoLuongSV", SqlDbType.Int);
                 sqlParameters[2].Value = Convert.ToString(LH.SoLuongSV);
 
                 return conn.executeInsertQuery(query, sqlParameters);
@@ -77,7 +77,7 @@ namespace Data_Acccess_Layer
 
             try
             {
-                string query = string.Format("DELETE LopHoc Where MaLop = @MaLop and TenLop=@TenLop and SoLuongSV=@SoLuongSV");
+                string query = string.Format("DELETE from Lop Where MaLop = @MaLop and TenLop=@TenLop and SoLuongSV=@SoLuongSV");
 
                 SqlParameter[] sqlParameters = new SqlParameter[3];
 
@@ -87,8 +87,9 @@ namespace Data_Acccess_Layer
                 sqlParameters[1] = new SqlParameter("@TenLop", SqlDbType.NVarChar);
                 sqlParameters[1].Value = Convert.ToString(LH.TenLop);
 
-                sqlParameters[2] = new SqlParameter("@DiaChi", SqlDbType.NVarChar);
+                sqlParameters[2] = new SqlParameter("@SoLuongSV", SqlDbType.Int);
                 sqlParameters[2].Value = Convert.ToString(LH.SoLuongSV);
+
 
                 return conn.executeInsertQuery(query, sqlParameters);
 
