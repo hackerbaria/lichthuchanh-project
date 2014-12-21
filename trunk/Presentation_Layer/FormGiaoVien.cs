@@ -36,6 +36,7 @@ namespace Presentation_Layer
         private void FormGiaoVien_Load(object sender, EventArgs e)
         {
             loadGV();
+            
           
         }
 
@@ -119,6 +120,7 @@ namespace Presentation_Layer
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            GV.SoDienThoai = txtSoDienThoai.Text;
             if (them == true)
             {
                 GV.MaGV = txtMaGV.Text;

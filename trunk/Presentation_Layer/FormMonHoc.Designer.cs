@@ -309,7 +309,7 @@
             this.Controls.Add(this.btnXoaMH);
             this.Controls.Add(this.DGVMonHoc);
             this.Name = "FormMonHoc";
-            this.Text = "FormMonHoc";
+            this.Text = "Môn Học";
             this.Load += new System.EventHandler(this.FormMonHoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVMonHoc)).EndInit();
             this.ResumeLayout(false);

@@ -196,6 +196,7 @@ namespace Presentation_Layer
             this.txtTenMH.Text=DGVMonHoc.Rows[r].Cells[1].Value.ToString();
             this.txtSoChi.Text=DGVMonHoc.Rows[r].Cells[2].Value.ToString();
             this.txtSoTiet.Text=DGVMonHoc.Rows[r].Cells[3].Value.ToString();
+            this.txtKhoa.Text = DGVMonHoc.Rows[r].Cells[4].Value.ToString();
         }
 
         private void btnQuayLai_Click(object sender, EventArgs e)

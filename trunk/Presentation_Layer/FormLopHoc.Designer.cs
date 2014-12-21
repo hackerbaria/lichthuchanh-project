@@ -245,7 +245,7 @@
             this.Controls.Add(this.btnXoaLopHoc);
             this.Controls.Add(this.DGVLopHoc);
             this.Name = "FormLopHoc";
-            this.Text = "FormLopHoc";
+            this.Text = "Lớp Học";
             this.Load += new System.EventHandler(this.FormLopHoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVLopHoc)).EndInit();
             this.ResumeLayout(false);

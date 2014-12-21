@@ -33,21 +33,20 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.cbbLop = new System.Windows.Forms.ComboBox();
+            this.cbbMon = new System.Windows.Forms.ComboBox();
+            this.cbbPhong = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cbbThu = new System.Windows.Forms.ComboBox();
+            this.cbbTuan = new System.Windows.Forms.ComboBox();
+            this.btnThemLich = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.btnQuayLaiDangNhap = new System.Windows.Forms.Button();
+            this.cbbGiaoVien = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label5
@@ -92,7 +91,7 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(248, 40);
@@ -101,137 +100,95 @@
             this.label1.TabIndex = 34;
             this.label1.Text = "Lập Lịch Cho Giáo Viên";
             // 
-            // comboBox1
+            // cbbLop
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(146, 165);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(205, 28);
-            this.comboBox1.TabIndex = 35;
+            this.cbbLop.BackColor = System.Drawing.SystemColors.Control;
+            this.cbbLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbLop.FormattingEnabled = true;
+            this.cbbLop.Location = new System.Drawing.Point(146, 165);
+            this.cbbLop.Name = "cbbLop";
+            this.cbbLop.Size = new System.Drawing.Size(269, 28);
+            this.cbbLop.TabIndex = 35;
             // 
-            // comboBox2
+            // cbbMon
             // 
-            this.comboBox2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(146, 219);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(205, 28);
-            this.comboBox2.TabIndex = 36;
+            this.cbbMon.BackColor = System.Drawing.SystemColors.Control;
+            this.cbbMon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbMon.FormattingEnabled = true;
+            this.cbbMon.Location = new System.Drawing.Point(146, 219);
+            this.cbbMon.Name = "cbbMon";
+            this.cbbMon.Size = new System.Drawing.Size(269, 28);
+            this.cbbMon.TabIndex = 36;
             // 
-            // comboBox3
+            // cbbPhong
             // 
-            this.comboBox3.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(146, 276);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(205, 28);
-            this.comboBox3.TabIndex = 37;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(146, 322);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(205, 28);
-            this.comboBox4.TabIndex = 38;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(431, 222);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 20);
-            this.label6.TabIndex = 42;
-            this.label6.Text = "Ngày :";
+            this.cbbPhong.BackColor = System.Drawing.SystemColors.Control;
+            this.cbbPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbPhong.FormattingEnabled = true;
+            this.cbbPhong.Location = new System.Drawing.Point(146, 276);
+            this.cbbPhong.Name = "cbbPhong";
+            this.cbbPhong.Size = new System.Drawing.Size(269, 28);
+            this.cbbPhong.TabIndex = 37;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(431, 168);
+            this.label7.Location = new System.Drawing.Point(474, 107);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 20);
             this.label7.TabIndex = 41;
             this.label7.Text = "Tuần :";
+            
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(431, 279);
+            this.label8.Location = new System.Drawing.Point(484, 165);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 20);
             this.label8.TabIndex = 40;
             this.label8.Text = "Thứ :";
             // 
-            // label9
+            // cbbThu
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(431, 325);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 20);
-            this.label9.TabIndex = 39;
-            this.label9.Text = "Buổi :";
+            this.cbbThu.BackColor = System.Drawing.SystemColors.Control;
+            this.cbbThu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbThu.FormattingEnabled = true;
+            this.cbbThu.Location = new System.Drawing.Point(551, 162);
+            this.cbbThu.Name = "cbbThu";
+            this.cbbThu.Size = new System.Drawing.Size(165, 28);
+            this.cbbThu.TabIndex = 45;
+            this.cbbThu.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
             // 
-            // comboBox5
+            // cbbTuan
             // 
-            this.comboBox5.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.comboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(525, 325);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(205, 28);
-            this.comboBox5.TabIndex = 46;
+            this.cbbTuan.BackColor = System.Drawing.SystemColors.Control;
+            this.cbbTuan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbTuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTuan.FormattingEnabled = true;
+            this.cbbTuan.Location = new System.Drawing.Point(551, 100);
+            this.cbbTuan.Name = "cbbTuan";
+            this.cbbTuan.Size = new System.Drawing.Size(165, 28);
+            this.cbbTuan.TabIndex = 43;
             // 
-            // comboBox6
+            // btnThemLich
             // 
-            this.comboBox6.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(525, 279);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(205, 28);
-            this.comboBox6.TabIndex = 45;
-            // 
-            // comboBox7
-            // 
-            this.comboBox7.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.comboBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(525, 222);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(205, 28);
-            this.comboBox7.TabIndex = 44;
-            // 
-            // comboBox8
-            // 
-            this.comboBox8.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.comboBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(525, 168);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(205, 28);
-            this.comboBox8.TabIndex = 43;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Tomato;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(283, 372);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 44);
-            this.button1.TabIndex = 47;
-            this.button1.Text = "Lưu";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnThemLich.BackColor = System.Drawing.Color.Tomato;
+            this.btnThemLich.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemLich.ForeColor = System.Drawing.Color.Red;
+            this.btnThemLich.Location = new System.Drawing.Point(242, 372);
+            this.btnThemLich.Name = "btnThemLich";
+            this.btnThemLich.Size = new System.Drawing.Size(159, 44);
+            this.btnThemLich.TabIndex = 47;
+            this.btnThemLich.Text = "Thêm Lịch";
+            this.btnThemLich.UseVisualStyleBackColor = false;
+            this.btnThemLich.Click += new System.EventHandler(this.btnThemLich_Click);
             // 
             // label10
             // 
@@ -256,26 +213,60 @@
             this.btnQuayLaiDangNhap.UseVisualStyleBackColor = false;
             this.btnQuayLaiDangNhap.Click += new System.EventHandler(this.btnQuayLaiDangNhap_Click);
             // 
+            // cbbGiaoVien
+            // 
+            this.cbbGiaoVien.BackColor = System.Drawing.SystemColors.Control;
+            this.cbbGiaoVien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbGiaoVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbGiaoVien.FormattingEnabled = true;
+            this.cbbGiaoVien.Location = new System.Drawing.Point(146, 104);
+            this.cbbGiaoVien.Name = "cbbGiaoVien";
+            this.cbbGiaoVien.Size = new System.Drawing.Size(269, 28);
+            this.cbbGiaoVien.TabIndex = 35;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(146, 324);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(60, 20);
+            this.textBox1.TabIndex = 50;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(242, 324);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(60, 20);
+            this.textBox2.TabIndex = 50;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(212, 320);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(17, 24);
+            this.label6.TabIndex = 51;
+            this.label6.Text = "-";
+            // 
             // FormLapLich
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 423);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnQuayLaiDangNhap);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.comboBox7);
-            this.Controls.Add(this.comboBox8);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.btnThemLich);
+            this.Controls.Add(this.cbbThu);
+            this.Controls.Add(this.cbbTuan);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbbPhong);
+            this.Controls.Add(this.cbbMon);
+            this.Controls.Add(this.cbbGiaoVien);
+            this.Controls.Add(this.cbbLop);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -283,6 +274,7 @@
             this.Controls.Add(this.label2);
             this.Name = "FormLapLich";
             this.Text = "Lập Lịch Cho Giáo Viên";
+            this.Load += new System.EventHandler(this.FormLapLich_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,20 +287,19 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cbbLop;
+        private System.Windows.Forms.ComboBox cbbMon;
+        private System.Windows.Forms.ComboBox cbbPhong;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cbbThu;
+        private System.Windows.Forms.ComboBox cbbTuan;
+        private System.Windows.Forms.Button btnThemLich;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnQuayLaiDangNhap;
+        private System.Windows.Forms.ComboBox cbbGiaoVien;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label6;
     }
 }

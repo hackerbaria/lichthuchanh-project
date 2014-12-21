@@ -277,7 +277,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DGVGiaoVien);
             this.Name = "FormGiaoVien";
-            this.Text = "Xem Thông Tin Giáo Viên";
+            this.Text = "Thông Tin Giáo Viên";
             this.Load += new System.EventHandler(this.FormGiaoVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVGiaoVien)).EndInit();
             this.ResumeLayout(false);
