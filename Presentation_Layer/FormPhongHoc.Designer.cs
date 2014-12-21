@@ -245,7 +245,7 @@
             this.Controls.Add(this.btnXoaPhong);
             this.Controls.Add(this.DGVPhong);
             this.Name = "FormPhongHoc";
-            this.Text = "FormPhongHoc";
+            this.Text = "Phòng Học";
             this.Load += new System.EventHandler(this.FormPhongHoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVPhong)).EndInit();
             this.ResumeLayout(false);

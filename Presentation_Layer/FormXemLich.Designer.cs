@@ -371,7 +371,7 @@
             this.ClientSize = new System.Drawing.Size(884, 425);
             this.Controls.Add(this.panel3);
             this.Name = "FormXemLich";
-            this.Text = "FormXemLich";
+            this.Text = "Xem Lịch";
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);

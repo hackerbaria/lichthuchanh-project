@@ -36,11 +36,11 @@
             this.btnInAnThongKe = new System.Windows.Forms.Button();
             this.btnDanhSach = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnQuayLaiDangNhap = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLapLich = new System.Windows.Forms.Button();
-            this.btnQuayLaiDangNhap = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -139,6 +139,32 @@
             this.panel2.Size = new System.Drawing.Size(801, 285);
             this.panel2.TabIndex = 3;
             // 
+            // btnThoat
+            // 
+            this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.ForeColor = System.Drawing.Color.Purple;
+            this.btnThoat.Location = new System.Drawing.Point(505, 223);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(125, 49);
+            this.btnThoat.TabIndex = 2;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // btnQuayLaiDangNhap
+            // 
+            this.btnQuayLaiDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnQuayLaiDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuayLaiDangNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnQuayLaiDangNhap.Location = new System.Drawing.Point(636, 223);
+            this.btnQuayLaiDangNhap.Name = "btnQuayLaiDangNhap";
+            this.btnQuayLaiDangNhap.Size = new System.Drawing.Size(138, 49);
+            this.btnQuayLaiDangNhap.TabIndex = 1;
+            this.btnQuayLaiDangNhap.Text = "Trở Lại Trang Đăng Nhập";
+            this.btnQuayLaiDangNhap.UseVisualStyleBackColor = false;
+            this.btnQuayLaiDangNhap.Click += new System.EventHandler(this.btnQuayLaiDangNhap_Click);
+            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -177,32 +203,6 @@
             this.btnLapLich.UseVisualStyleBackColor = false;
             this.btnLapLich.Click += new System.EventHandler(this.btnLapLich_Click);
             // 
-            // btnQuayLaiDangNhap
-            // 
-            this.btnQuayLaiDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnQuayLaiDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuayLaiDangNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnQuayLaiDangNhap.Location = new System.Drawing.Point(636, 223);
-            this.btnQuayLaiDangNhap.Name = "btnQuayLaiDangNhap";
-            this.btnQuayLaiDangNhap.Size = new System.Drawing.Size(138, 49);
-            this.btnQuayLaiDangNhap.TabIndex = 1;
-            this.btnQuayLaiDangNhap.Text = "Trở Lại Trang Đăng Nhập";
-            this.btnQuayLaiDangNhap.UseVisualStyleBackColor = false;
-            this.btnQuayLaiDangNhap.Click += new System.EventHandler(this.btnQuayLaiDangNhap_Click);
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.ForeColor = System.Drawing.Color.Purple;
-            this.btnThoat.Location = new System.Drawing.Point(505, 223);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(125, 49);
-            this.btnThoat.TabIndex = 2;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = false;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -211,7 +211,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FormMain";
-            this.Text = "FormMain";
+            this.Text = "Màn Hình Chính";
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

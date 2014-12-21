@@ -65,7 +65,7 @@
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtMatKhau.BackColor = System.Drawing.SystemColors.Control;
             this.txtMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhau.Location = new System.Drawing.Point(201, 194);
             this.txtMatKhau.Name = "txtMatKhau";
@@ -76,7 +76,7 @@
             // 
             // txtTenDangNhap
             // 
-            this.txtTenDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtTenDangNhap.BackColor = System.Drawing.SystemColors.Control;
             this.txtTenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenDangNhap.Location = new System.Drawing.Point(201, 145);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
@@ -86,7 +86,7 @@
             // 
             // lblTMkAddmin
             // 
-            this.lblTMkAddmin.BackColor = System.Drawing.Color.RoyalBlue;
+            this.lblTMkAddmin.BackColor = System.Drawing.Color.Transparent;
             this.lblTMkAddmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTMkAddmin.Location = new System.Drawing.Point(50, 193);
             this.lblTMkAddmin.Name = "lblTMkAddmin";
@@ -96,7 +96,7 @@
             // 
             // lblTenDangNhap
             // 
-            this.lblTenDangNhap.BackColor = System.Drawing.Color.RoyalBlue;
+            this.lblTenDangNhap.BackColor = System.Drawing.Color.Transparent;
             this.lblTenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenDangNhap.Location = new System.Drawing.Point(50, 144);
             this.lblTenDangNhap.Name = "lblTenDangNhap";
@@ -133,7 +133,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(111, 21);
@@ -157,7 +157,7 @@
             this.Controls.Add(this.chkAddmin);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Màn Hình Đăng Nhập";
             this.ResumeLayout(false);
             this.PerformLayout();
 

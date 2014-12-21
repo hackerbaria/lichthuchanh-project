@@ -12,12 +12,12 @@ create table GiaoVien
 	SoDienThoai varchar(13)
 )
 --nhap du lieu
-insert into GiaoVien(MaGV,TenGV,DiaChi,SoDienThoai) values('GV001',N'Nguyễn Văn A',N'P .Linh Chiểu - Q. Thủ  Đức','0987654432')
-insert into GiaoVien(MaGV,TenGV,DiaChi,SoDienThoai) values('GV002',N'Phạm Văn B',N'Quận 9','0909374852')
-insert into GiaoVien(MaGV,TenGV,DiaChi,SoDienThoai) values('GV003',N'Lê Thị Phượng',N'Quận 7','0987654432')
-insert into GiaoVien(MaGV,TenGV,DiaChi,SoDienThoai) values('GV004',N'Ngô Quốc Hùng',N'Quận 4','0967323834')
-insert into GiaoVien(MaGV,TenGV,DiaChi,SoDienThoai) values('GV005',N'Nguyễn Thị Huệ',N'Quận3','0168345234')
-insert into GiaoVien(MaGV,TenGV,DiaChi,SoDienThoai) values('GV006',N'Lê Văn Toàn',N'Quận 1','0392393434')
+insert into GiaoVien(MaGV,TenGV,DiaChi,SoDienThoai) values('doan',N'Thầy Đinh Công Đoan',N'P .Linh Chiểu - Q. Thủ  Đức','0987654432')
+insert into GiaoVien(MaGV,TenGV,DiaChi,SoDienThoai) values('dao',N'Thầy Nguyễn Minh Đạo',N'Quận 9','0909374852')
+insert into GiaoVien(MaGV,TenGV,DiaChi,SoDienThoai) values('tu',N'Thầy Trần Công Tú',N'Quận 7','0987654432')
+insert into GiaoVien(MaGV,TenGV,DiaChi,SoDienThoai) values('van',N'Cô Nguyễn Thị Thanh Vân',N'Quận 4','0967323834')
+insert into GiaoVien(MaGV,TenGV,DiaChi,SoDienThoai) values('khoan',N'Thầy Khoan',N'Quận3','0168345234')
+insert into GiaoVien(MaGV,TenGV,DiaChi,SoDienThoai) values('trung',N'Thầy Trung',N'Quận 1','0392393434')
 
 
 
@@ -28,13 +28,13 @@ create table Lop
 	SoLuongSV int
 )
 --nhap du lieu
-insert into Lop(MaLop,TenLop,SoLuongSV) values('L001',N'Toán Rời Rạc Và Lý Thuyêt Đồ Thị',50)
-insert into Lop(MaLop,TenLop,SoLuongSV) values('L002',N'Cấu Trúc Máy Tính Và Hợp Ngữ',50)
-insert into Lop(MaLop,TenLop,SoLuongSV) values('L003',N'Hệ Điều Hành',50)
-insert into Lop(MaLop,TenLop,SoLuongSV) values('L004',N'Kỹ Thuật Lập Trình',50)
-insert into Lop(MaLop,TenLop,SoLuongSV) values('L005',N'Mạng Máy Tính Căn Bản',50)
-insert into Lop(MaLop,TenLop,SoLuongSV) values('L006',N'Cơ Sở Dữ Liệu',50)
-insert into Lop(MaLop,TenLop,SoLuongSV) values('L007',N'Lập Trình Hướng Đới Tượng',50)
+insert into Lop(MaLop,TenLop,SoLuongSV) values('091101A',N'Kỹ Sư 09 1',40)
+insert into Lop(MaLop,TenLop,SoLuongSV) values('091101B',N'Kỹ Sư 09 2',60)
+insert into Lop(MaLop,TenLop,SoLuongSV) values('091101C',N'Kỹ Sư 09 3',70)
+insert into Lop(MaLop,TenLop,SoLuongSV) values('101101A',N'Kỹ Sư 10 1',54)
+insert into Lop(MaLop,TenLop,SoLuongSV) values('101101B',N'Kỹ Sư 10 1',55)
+insert into Lop(MaLop,TenLop,SoLuongSV) values('101109A',N'Sư Phạm 10 1',78)
+insert into Lop(MaLop,TenLop,SoLuongSV) values('111109A',N'Sư Phạm 11',90)
 
 create table MonHoc
 (
@@ -76,24 +76,7 @@ insert into Phong(MaPhong,TenPhong,SoMay) values('P012',N'A5-303',50)
 insert into Phong(MaPhong,TenPhong,SoMay) values('P013',N'A5-304',50)
 
 
-create table ThoiGian
-(
-	MaTG varchar(10) primary key,
-	Tiet nvarchar(30)
-)
-insert into ThoiGian(MaTG,Tiet) values('TG001','1-5')
-insert into ThoiGian(MaTG,Tiet) values('TG002','1-4')
-insert into ThoiGian(MaTG,Tiet) values('TG003','1-3')
-insert into ThoiGian(MaTG,Tiet) values('TG004','1-2')
-insert into ThoiGian(MaTG,Tiet) values('TG005','3-5')
-insert into ThoiGian(MaTG,Tiet) values('TG006','3-4')
-insert into ThoiGian(MaTG,Tiet) values('TG007','7-12')
-insert into ThoiGian(MaTG,Tiet) values('TG008','7-11')
-insert into ThoiGian(MaTG,Tiet) values('TG009','7-10')
-insert into ThoiGian(MaTG,Tiet) values('TG010','7-8')
-insert into ThoiGian(MaTG,Tiet) values('TG011','9-12')
-insert into ThoiGian(MaTG,Tiet) values('TG012','9-11')
-insert into ThoiGian(MaTG,Tiet) values('TG013','9-10')
+
 
 
 create table Account
@@ -118,11 +101,10 @@ create table LichDay
 	MaGV varchar(10) not null foreign key references GiaoVien(MaGV),
 	MaMH varchar(10) not null foreign key references MonHoc(MaMH),
 	MaLop varchar(10) not null foreign key references Lop(MaLop),
-	MaPhong varchar(10) not null foreign key references Phong(MaPhong),
-	MaTG varchar(10) not null foreign key references ThoiGian(MaTG),
-	Ngay date not null,
+	MaPhong varchar(10) null foreign key references Phong(MaPhong),
+	Ngay date null,
 	Tuan int not null,
 	Thu nvarchar(20) not null,
-	Buoi nvarchar(20) not null
-	constraint PK_KhoaChinh primary key(MaGV,MaMH,MaLop,MaPhong,MaTG,Ngay,Tuan,Thu,Buoi)
+	Tiet nvarchar(20) not null,
+	constraint PK_KhoaChinh primary key(MaGV,MaMH,MaLop,Tuan,Thu,Tiet)
 )
