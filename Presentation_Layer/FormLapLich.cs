@@ -18,7 +18,8 @@ namespace Presentation_Layer
         private GiaoVienBUS giaoVienBUS = new GiaoVienBUS();
         private LopHocBUS lopHocBUS = new LopHocBUS();
         private MonHocBUS monHocBUS = new MonHocBUS();
-        private PhongBUS phongBUS = new PhongBUS(); 
+        private PhongBUS phongBUS = new PhongBUS();
+        private LapLichBUS lapLichBUS = new LapLichBUS();
         //private GiaoVienVO GV = new GiaoVienVO();
 
         
@@ -50,6 +51,7 @@ namespace Presentation_Layer
             //set data to ComboBox Phong Hoc
             dt = phongBUS.getAllPhong();
             cbbPhong.DataSource = dt;
+            //int soPhong = dt.Rows.Count;
             cbbPhong.DisplayMember = "tenPhong";
             cbbPhong.ValueMember = "maPhong";
 
@@ -103,8 +105,49 @@ namespace Presentation_Layer
 
         private void btnThemLich_Click(object sender, EventArgs e)
         {
-            LichDayVO oneSchedule = new LichDayVO();
-           String a = cbbGiaoVien.SelectedValue+"";
+            if (txtTietStart.Text =="" || txtTietEnd.Text =="")
+                MessageBox.Show("Hãy điền tiết bắt đầu và kết thúc cho đầy đủ", "Thông Báo");
+            else
+            {
+                int start = Convert.ToInt32(txtTietStart.Text);
+                int end = Convert.ToInt32(txtTietEnd.Text);
+                if (start <= end)
+                {
+                    LichDayVO oneSchedule = new LichDayVO();
+                    oneSchedule.MaGV = cbbGiaoVien.SelectedValue + "";
+                    oneSchedule.MaLop = cbbLop.SelectedValue + "";
+                    oneSchedule.MaMH = cbbMon.SelectedValue + "";
+                    oneSchedule.MaPhong = cbbPhong.SelectedValue + "";
+
+                    oneSchedule.Thu = Convert.ToString(((Item)cbbThu.SelectedItem).Value);
+                    oneSchedule.Tuan = ((Item)cbbTuan.SelectedItem).Value;
+                    oneSchedule.Tiet = txtTietStart.Text + "-" + txtTietEnd.Text;
+                    if (lapLichBUS.themLapLich(oneSchedule))
+                        MessageBox.Show("Lập Lịch Thành Công", "Thông Báo");
+                    else
+                        MessageBox.Show("Lập Lịch Không Thành Công", "Thông Báo");
+                }
+                else
+                    MessageBox.Show("Nhập sai tiết", "Thông Báo");
+            }
+            
         }
+
+        private void txtTietStart_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void txtTietEnd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        //private void txtTietStart_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //   []string mangSo=new string{"1","2","3","4","5","6","7","8","9","10","11","12"};
+        //   if(e.KeyValue<'1'||e.KeyValue>'12')
+        //       MessageBox.Show("Nhập tiết ko hợp lệ");
+        //}
     }
 }

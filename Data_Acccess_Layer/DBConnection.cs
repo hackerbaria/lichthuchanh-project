@@ -21,7 +21,7 @@ namespace Data_Acccess_Layer
         public DBConnection()
         {
             myAdapter = new SqlDataAdapter();
-            conn = new SqlConnection(@"Data Source=LENXEDIEM\SQLEXPRESS;Initial Catalog=LichThucHanh;Integrated Security=True");
+            conn = new SqlConnection(@"Data Source=DUONG\DUONG;Initial Catalog=LichThucHanh;Integrated Security=True");
         }
 
         /// <method>

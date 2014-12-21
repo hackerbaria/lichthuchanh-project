@@ -98,6 +98,12 @@
     <Compile Include="FormXemLich.Designer.cs">
       <DependentUpon>FormXemLich.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormXemLichGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXemLichGiaoVien.Designer.cs">
+      <DependentUpon>FormXemLichGiaoVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="LichThucHanh2DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -131,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormXemLich.resx">
       <DependentUpon>FormXemLich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormXemLichGiaoVien.resx">
+      <DependentUpon>FormXemLichGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
