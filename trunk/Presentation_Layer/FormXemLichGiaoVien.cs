@@ -81,7 +81,7 @@ namespace Presentation_Layer
                         }
                         else
                         {
-                            dgvTuan1.Rows[k*2+3].Cells[Int32.Parse(number)].Value = Value;
+                            dgvTuan1.Rows[k + dtPhong.Rows.Count +1].Cells[Int32.Parse(number)].Value = Value;
                         }
                        
                     }
