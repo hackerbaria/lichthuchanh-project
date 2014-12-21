@@ -9,7 +9,19 @@ namespace Value_Object_Layer
     public class Item
     {
         private String name;
+
+        public String Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
         private int value;
+
+        public int Value
+        {
+            get { return this.value; }
+            set { this.value = value; }
+        }
 
         public Item(string name, int value)
         {

@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="DBConnection.cs" />
     <Compile Include="GiaoVienDAO.cs" />
+    <Compile Include="LapLichDAO.cs" />
     <Compile Include="LopHocDAO.cs" />
     <Compile Include="MonHocDAO.cs" />
     <Compile Include="PhongDAO.cs" />

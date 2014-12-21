@@ -44,8 +44,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.btnQuayLaiDangNhap = new System.Windows.Forms.Button();
             this.cbbGiaoVien = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTietStart = new System.Windows.Forms.TextBox();
+            this.txtTietEnd = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -142,7 +142,6 @@
             this.label7.Size = new System.Drawing.Size(59, 20);
             this.label7.TabIndex = 41;
             this.label7.Text = "Tuần :";
-            
             // 
             // label8
             // 
@@ -224,19 +223,21 @@
             this.cbbGiaoVien.Size = new System.Drawing.Size(269, 28);
             this.cbbGiaoVien.TabIndex = 35;
             // 
-            // textBox1
+            // txtTietStart
             // 
-            this.textBox1.Location = new System.Drawing.Point(146, 324);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(60, 20);
-            this.textBox1.TabIndex = 50;
+            this.txtTietStart.Location = new System.Drawing.Point(146, 324);
+            this.txtTietStart.Name = "txtTietStart";
+            this.txtTietStart.Size = new System.Drawing.Size(60, 20);
+            this.txtTietStart.TabIndex = 50;
+            this.txtTietStart.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTietStart_KeyPress);
             // 
-            // textBox2
+            // txtTietEnd
             // 
-            this.textBox2.Location = new System.Drawing.Point(242, 324);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(60, 20);
-            this.textBox2.TabIndex = 50;
+            this.txtTietEnd.Location = new System.Drawing.Point(242, 324);
+            this.txtTietEnd.Name = "txtTietEnd";
+            this.txtTietEnd.Size = new System.Drawing.Size(60, 20);
+            this.txtTietEnd.TabIndex = 50;
+            this.txtTietEnd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTietEnd_KeyPress);
             // 
             // label6
             // 
@@ -254,8 +255,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 423);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTietEnd);
+            this.Controls.Add(this.txtTietStart);
             this.Controls.Add(this.btnQuayLaiDangNhap);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btnThemLich);
@@ -298,8 +299,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnQuayLaiDangNhap;
         private System.Windows.Forms.ComboBox cbbGiaoVien;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTietStart;
+        private System.Windows.Forms.TextBox txtTietEnd;
         private System.Windows.Forms.Label label6;
     }
 }
