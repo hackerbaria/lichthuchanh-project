@@ -51,5 +51,19 @@ namespace Data_Acccess_Layer
                 return false;
             }
         }
+
+        public DataTable getLichByMaGVAndWeek(String maGV, int week)
+        {
+            string query = string.Format("select * from LichDay where MaGV = @MaGV and Tuan = @Tuan");
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+
+            sqlParameters[0] = new SqlParameter("@MaGV", SqlDbType.VarChar);
+            sqlParameters[0].Value = maGV;
+
+            sqlParameters[1] = new SqlParameter("@Tuan", SqlDbType.Int);
+            sqlParameters[1].Value = week;
+
+            return conn.executeSelectQuery(query, sqlParameters);
+        }
     }
 }
