@@ -22,6 +22,11 @@ namespace Bussiness_Logic_Layer
         {
             return _GiaoVienDAO.GetAllGiaoVien();
         }
+
+        public DataTable getGiaoVienByAccount(UserVO user)
+        {
+            return _GiaoVienDAO.getGiaoVienByAccount(user);
+        }
         public bool themGiaoVien(GiaoVienVO gV)
         {
        

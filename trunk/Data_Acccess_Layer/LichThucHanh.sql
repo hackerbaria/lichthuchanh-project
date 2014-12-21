@@ -107,3 +107,6 @@ create table Admin
 	MatKhau nvarchar(20) not null,
 	Quyen int not null
 )
+
+--nhap dl
+insert into Admin(TenDangNhap,MatKhau,Quyen) values('admin','admin',1)

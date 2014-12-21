@@ -37,6 +37,7 @@ namespace Presentation_Layer
             else
                 quyen = 2;
             UserVO user = _userBUS.getUserEmailByName(txtTenDangNhap.Text, txtMatKhau.Text, quyen);
+            Utils.Acount = user.TenDangNhap;
             if(user.Quyen==1) //(user.TenDangNhap != null)
             {
                 FormMain fm = new FormMain();
@@ -47,8 +48,9 @@ namespace Presentation_Layer
             { 
                 if(user.Quyen==2)
                 {
-                    FormGiaoVienDN fgvDN = new FormGiaoVienDN();
+                    FormXemLichGiaoVien fgvDN = new FormXemLichGiaoVien();
                     fgvDN.ShowDialog();
+                    
                 }
                 else
                     MessageBox.Show("Xem lai thong tin dang nhap", "Thong bao");
