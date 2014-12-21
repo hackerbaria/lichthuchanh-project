@@ -75,26 +75,17 @@ insert into Phong(MaPhong,TenPhong,SoMay) values('P011',N'A5-302',50)
 insert into Phong(MaPhong,TenPhong,SoMay) values('P012',N'A5-303',50)
 insert into Phong(MaPhong,TenPhong,SoMay) values('P013',N'A5-304',50)
 
-
-
-
-
 create table Account
 (
-	TenDangNhap varchar(20) primary key,
+	TenDangNhap varchar(10) primary key foreign key references GiaoVien(MaGV),
 	MatKhau nvarchar(20) not null,
 	Quyen int not null
 )
 --nhap dl
-insert into Account(TenDangNhap,MatKhau,Quyen) values('admin','1234',1)
-insert into Account(TenDangNhap,MatKhau,Quyen) values('GV001','GV001',2)
-insert into Account(TenDangNhap,MatKhau,Quyen) values('GV002','GV002',2)
-insert into Account(TenDangNhap,MatKhau,Quyen) values('GV003','GV003',2)
-insert into Account(TenDangNhap,MatKhau,Quyen) values('GV004','GV004',2)
-insert into Account(TenDangNhap,MatKhau,Quyen) values('GV005','GV005',2)
-insert into Account(TenDangNhap,MatKhau,Quyen) values('GV006','GV006',2)
-insert into Account(TenDangNhap,MatKhau,Quyen) values('GV007','GV007',2)
-
+insert into Account(TenDangNhap,MatKhau,Quyen) values('doan','doan',2)
+insert into Account(TenDangNhap,MatKhau,Quyen) values('van','van',2)
+insert into Account(TenDangNhap,MatKhau,Quyen) values('trung','trung',2)
+insert into Account(TenDangNhap,MatKhau,Quyen) values('khoan','khoan',2)
 
 create table LichDay
 (
@@ -107,4 +98,12 @@ create table LichDay
 	Thu nvarchar(20) not null,
 	Tiet nvarchar(20) not null,
 	constraint PK_KhoaChinh primary key(MaGV,MaMH,MaLop,Tuan,Thu,Tiet)
+)
+
+
+create table Admin
+(
+	TenDangNhap varchar(10) primary key,
+	MatKhau nvarchar(20) not null,
+	Quyen int not null
 )
