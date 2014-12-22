@@ -32,5 +32,10 @@ namespace Bussiness_Logic_Layer
         {
             return lapLichDAO.getLichByMaGVAndWeek(maGV, week);
         }
+
+        public DataTable getLichByWeek(int week)
+        {
+            return lapLichDAO.getLichByWeek(week);
+        }
     }
 }

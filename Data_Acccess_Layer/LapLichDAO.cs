@@ -65,5 +65,17 @@ namespace Data_Acccess_Layer
 
             return conn.executeSelectQuery(query, sqlParameters);
         }
+
+        public DataTable getLichByWeek(int week)
+        {
+            string query = string.Format("select * from LichDay where Tuan = @Tuan");
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+
+            sqlParameters[0] = new SqlParameter("@Tuan", SqlDbType.Int);
+            sqlParameters[0].Value = week;
+
+            return conn.executeSelectQuery(query, sqlParameters);
+        }
     }
 }
