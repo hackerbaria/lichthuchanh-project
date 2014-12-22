@@ -28,15 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle136 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle137 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle138 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle139 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle140 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle141 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle142 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle143 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle144 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle145 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle146 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle147 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -46,6 +37,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle151 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle152 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle153 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle136 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle137 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle138 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle139 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle140 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle141 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle142 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle143 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle144 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle154 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle155 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle156 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -171,32 +171,19 @@
             this.lblName = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabTuan1 = new System.Windows.Forms.TabPage();
-            this.tabTuan2 = new System.Windows.Forms.TabPage();
-            this.CN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Thu7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Thu6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Thu5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Thu4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Thu3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Thu2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Buoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTuan1 = new System.Windows.Forms.DataGridView();
+            this.Buoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Thu2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Thu3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Thu4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Thu5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Thu6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Thu7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tabTuan3 = new System.Windows.Forms.TabPage();
-            this.tabTuan4 = new System.Windows.Forms.TabPage();
-            this.tabTuan5 = new System.Windows.Forms.TabPage();
-            this.tabTuan6 = new System.Windows.Forms.TabPage();
-            this.tabTuan7 = new System.Windows.Forms.TabPage();
-            this.tabTuan8 = new System.Windows.Forms.TabPage();
-            this.tabTuan9 = new System.Windows.Forms.TabPage();
-            this.tabTuan = new System.Windows.Forms.TabPage();
-            this.tabTuan11 = new System.Windows.Forms.TabPage();
-            this.tabTuan12 = new System.Windows.Forms.TabPage();
-            this.tabTuan13 = new System.Windows.Forms.TabPage();
-            this.tagTuan14 = new System.Windows.Forms.TabPage();
-            this.tabTuan15 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabTuan2 = new System.Windows.Forms.TabPage();
+            this.dgvTuan2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -206,7 +193,8 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.tabTuan3 = new System.Windows.Forms.TabPage();
+            this.dgvTuan3 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -216,7 +204,8 @@
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.tabTuan4 = new System.Windows.Forms.TabPage();
+            this.dgvTuan4 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -226,7 +215,8 @@
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.tabTuan5 = new System.Windows.Forms.TabPage();
+            this.dgvTuan5 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -236,7 +226,8 @@
             this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.tabTuan6 = new System.Windows.Forms.TabPage();
+            this.dgvTuan6 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -246,7 +237,8 @@
             this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.tabTuan7 = new System.Windows.Forms.TabPage();
+            this.dgvTuan7 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -256,7 +248,8 @@
             this.dataGridViewTextBoxColumn52 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn53 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn54 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView7 = new System.Windows.Forms.DataGridView();
+            this.tabTuan8 = new System.Windows.Forms.TabPage();
+            this.dgvTuan8 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn55 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn56 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn57 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -266,7 +259,8 @@
             this.dataGridViewTextBoxColumn61 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn62 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn63 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView8 = new System.Windows.Forms.DataGridView();
+            this.tabTuan9 = new System.Windows.Forms.TabPage();
+            this.dgvTuan9 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn64 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn65 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn66 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -276,7 +270,8 @@
             this.dataGridViewTextBoxColumn70 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn71 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn72 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView9 = new System.Windows.Forms.DataGridView();
+            this.tabTuan = new System.Windows.Forms.TabPage();
+            this.dgvTuan10 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn73 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn74 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn75 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -286,7 +281,8 @@
             this.dataGridViewTextBoxColumn79 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn80 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn81 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView10 = new System.Windows.Forms.DataGridView();
+            this.tabTuan11 = new System.Windows.Forms.TabPage();
+            this.dgvTuan11 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn82 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn83 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn84 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -296,7 +292,8 @@
             this.dataGridViewTextBoxColumn88 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn89 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn90 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView11 = new System.Windows.Forms.DataGridView();
+            this.tabTuan12 = new System.Windows.Forms.TabPage();
+            this.dgvTuan12 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn91 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn92 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn93 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -306,7 +303,8 @@
             this.dataGridViewTextBoxColumn97 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn98 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn99 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView12 = new System.Windows.Forms.DataGridView();
+            this.tabTuan13 = new System.Windows.Forms.TabPage();
+            this.dgvTuan13 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn100 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn101 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn102 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -316,7 +314,8 @@
             this.dataGridViewTextBoxColumn106 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn107 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn108 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView13 = new System.Windows.Forms.DataGridView();
+            this.tagTuan14 = new System.Windows.Forms.TabPage();
+            this.dgvTuan14 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn109 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn110 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn111 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -326,7 +325,8 @@
             this.dataGridViewTextBoxColumn115 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn116 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn117 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView14 = new System.Windows.Forms.DataGridView();
+            this.tabTuan15 = new System.Windows.Forms.TabPage();
+            this.dgvTuan15 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn118 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn119 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn120 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -338,35 +338,35 @@
             this.dataGridViewTextBoxColumn126 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabTuan1.SuspendLayout();
-            this.tabTuan2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTuan1)).BeginInit();
+            this.tabTuan2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan2)).BeginInit();
             this.tabTuan3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan3)).BeginInit();
             this.tabTuan4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan4)).BeginInit();
             this.tabTuan5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan5)).BeginInit();
             this.tabTuan6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan6)).BeginInit();
             this.tabTuan7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan7)).BeginInit();
             this.tabTuan8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan8)).BeginInit();
             this.tabTuan9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan9)).BeginInit();
             this.tabTuan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan10)).BeginInit();
             this.tabTuan11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan11)).BeginInit();
             this.tabTuan12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan12)).BeginInit();
             this.tabTuan13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan13)).BeginInit();
             this.tagTuan14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan14)).BeginInit();
             this.tabTuan15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan15)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -464,96 +464,6 @@
             this.tabTuan1.Text = "Tuần 1";
             this.tabTuan1.UseVisualStyleBackColor = true;
             // 
-            // tabTuan2
-            // 
-            this.tabTuan2.Controls.Add(this.dataGridView1);
-            this.tabTuan2.Location = new System.Drawing.Point(4, 22);
-            this.tabTuan2.Name = "tabTuan2";
-            this.tabTuan2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTuan2.Size = new System.Drawing.Size(1012, 580);
-            this.tabTuan2.TabIndex = 1;
-            this.tabTuan2.Text = "Tuần 2";
-            this.tabTuan2.UseVisualStyleBackColor = true;
-            // 
-            // CN
-            // 
-            dataGridViewCellStyle136.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CN.DefaultCellStyle = dataGridViewCellStyle136;
-            this.CN.HeaderText = "Chủ Nhật";
-            this.CN.Name = "CN";
-            this.CN.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Thu7
-            // 
-            dataGridViewCellStyle137.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Thu7.DefaultCellStyle = dataGridViewCellStyle137;
-            this.Thu7.HeaderText = "Thứ 7";
-            this.Thu7.Name = "Thu7";
-            this.Thu7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Thu7.Width = 110;
-            // 
-            // Thu6
-            // 
-            dataGridViewCellStyle138.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Thu6.DefaultCellStyle = dataGridViewCellStyle138;
-            this.Thu6.HeaderText = "Thứ 6";
-            this.Thu6.Name = "Thu6";
-            this.Thu6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Thu6.Width = 110;
-            // 
-            // Thu5
-            // 
-            dataGridViewCellStyle139.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Thu5.DefaultCellStyle = dataGridViewCellStyle139;
-            this.Thu5.HeaderText = "Thứ 5";
-            this.Thu5.Name = "Thu5";
-            this.Thu5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Thu5.Width = 110;
-            // 
-            // Thu4
-            // 
-            dataGridViewCellStyle140.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Thu4.DefaultCellStyle = dataGridViewCellStyle140;
-            this.Thu4.HeaderText = "Thứ 4";
-            this.Thu4.Name = "Thu4";
-            this.Thu4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Thu4.Width = 110;
-            // 
-            // Thu3
-            // 
-            dataGridViewCellStyle141.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Thu3.DefaultCellStyle = dataGridViewCellStyle141;
-            this.Thu3.HeaderText = "Thứ 3";
-            this.Thu3.Name = "Thu3";
-            this.Thu3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Thu3.Width = 110;
-            // 
-            // Thu2
-            // 
-            dataGridViewCellStyle142.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Thu2.DefaultCellStyle = dataGridViewCellStyle142;
-            this.Thu2.HeaderText = "Thứ 2";
-            this.Thu2.Name = "Thu2";
-            this.Thu2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Thu2.Width = 110;
-            // 
-            // Phong
-            // 
-            dataGridViewCellStyle143.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Phong.DefaultCellStyle = dataGridViewCellStyle143;
-            this.Phong.HeaderText = "Phòng";
-            this.Phong.Name = "Phong";
-            this.Phong.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Buoi
-            // 
-            dataGridViewCellStyle144.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Buoi.DefaultCellStyle = dataGridViewCellStyle144;
-            this.Buoi.HeaderText = "Buổi";
-            this.Buoi.MinimumWidth = 10;
-            this.Buoi.Name = "Buoi";
-            this.Buoi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
             // dgvTuan1
             // 
             this.dgvTuan1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -574,6 +484,85 @@
             this.dgvTuan1.Size = new System.Drawing.Size(1006, 574);
             this.dgvTuan1.TabIndex = 12;
             // 
+            // Buoi
+            // 
+            dataGridViewCellStyle145.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Buoi.DefaultCellStyle = dataGridViewCellStyle145;
+            this.Buoi.HeaderText = "Buổi";
+            this.Buoi.MinimumWidth = 10;
+            this.Buoi.Name = "Buoi";
+            this.Buoi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Phong
+            // 
+            dataGridViewCellStyle146.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Phong.DefaultCellStyle = dataGridViewCellStyle146;
+            this.Phong.HeaderText = "Phòng";
+            this.Phong.Name = "Phong";
+            this.Phong.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Thu2
+            // 
+            dataGridViewCellStyle147.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Thu2.DefaultCellStyle = dataGridViewCellStyle147;
+            this.Thu2.HeaderText = "Thứ 2";
+            this.Thu2.Name = "Thu2";
+            this.Thu2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Thu2.Width = 110;
+            // 
+            // Thu3
+            // 
+            dataGridViewCellStyle148.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Thu3.DefaultCellStyle = dataGridViewCellStyle148;
+            this.Thu3.HeaderText = "Thứ 3";
+            this.Thu3.Name = "Thu3";
+            this.Thu3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Thu3.Width = 110;
+            // 
+            // Thu4
+            // 
+            dataGridViewCellStyle149.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Thu4.DefaultCellStyle = dataGridViewCellStyle149;
+            this.Thu4.HeaderText = "Thứ 4";
+            this.Thu4.Name = "Thu4";
+            this.Thu4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Thu4.Width = 110;
+            // 
+            // Thu5
+            // 
+            dataGridViewCellStyle150.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Thu5.DefaultCellStyle = dataGridViewCellStyle150;
+            this.Thu5.HeaderText = "Thứ 5";
+            this.Thu5.Name = "Thu5";
+            this.Thu5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Thu5.Width = 110;
+            // 
+            // Thu6
+            // 
+            dataGridViewCellStyle151.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Thu6.DefaultCellStyle = dataGridViewCellStyle151;
+            this.Thu6.HeaderText = "Thứ 6";
+            this.Thu6.Name = "Thu6";
+            this.Thu6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Thu6.Width = 110;
+            // 
+            // Thu7
+            // 
+            dataGridViewCellStyle152.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Thu7.DefaultCellStyle = dataGridViewCellStyle152;
+            this.Thu7.HeaderText = "Thứ 7";
+            this.Thu7.Name = "Thu7";
+            this.Thu7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Thu7.Width = 110;
+            // 
+            // CN
+            // 
+            dataGridViewCellStyle153.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CN.DefaultCellStyle = dataGridViewCellStyle153;
+            this.CN.HeaderText = "Chủ Nhật";
+            this.CN.Name = "CN";
+            this.CN.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
@@ -583,140 +572,21 @@
             this.panel1.Size = new System.Drawing.Size(1006, 574);
             this.panel1.TabIndex = 0;
             // 
-            // tabTuan3
+            // tabTuan2
             // 
-            this.tabTuan3.Controls.Add(this.dataGridView2);
-            this.tabTuan3.Location = new System.Drawing.Point(4, 22);
-            this.tabTuan3.Name = "tabTuan3";
-            this.tabTuan3.Size = new System.Drawing.Size(1012, 580);
-            this.tabTuan3.TabIndex = 2;
-            this.tabTuan3.Text = "Tuần 3";
-            this.tabTuan3.UseVisualStyleBackColor = true;
+            this.tabTuan2.Controls.Add(this.dgvTuan2);
+            this.tabTuan2.Location = new System.Drawing.Point(4, 22);
+            this.tabTuan2.Name = "tabTuan2";
+            this.tabTuan2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabTuan2.Size = new System.Drawing.Size(1012, 580);
+            this.tabTuan2.TabIndex = 1;
+            this.tabTuan2.Text = "Tuần 2";
+            this.tabTuan2.UseVisualStyleBackColor = true;
             // 
-            // tabTuan4
+            // dgvTuan2
             // 
-            this.tabTuan4.Controls.Add(this.dataGridView3);
-            this.tabTuan4.Location = new System.Drawing.Point(4, 22);
-            this.tabTuan4.Name = "tabTuan4";
-            this.tabTuan4.Size = new System.Drawing.Size(1012, 580);
-            this.tabTuan4.TabIndex = 3;
-            this.tabTuan4.Text = "Tuần 4";
-            this.tabTuan4.UseVisualStyleBackColor = true;
-            // 
-            // tabTuan5
-            // 
-            this.tabTuan5.Controls.Add(this.dataGridView4);
-            this.tabTuan5.Location = new System.Drawing.Point(4, 22);
-            this.tabTuan5.Name = "tabTuan5";
-            this.tabTuan5.Size = new System.Drawing.Size(1012, 580);
-            this.tabTuan5.TabIndex = 4;
-            this.tabTuan5.Text = "Tuần 5";
-            this.tabTuan5.UseVisualStyleBackColor = true;
-            // 
-            // tabTuan6
-            // 
-            this.tabTuan6.Controls.Add(this.dataGridView5);
-            this.tabTuan6.Location = new System.Drawing.Point(4, 22);
-            this.tabTuan6.Name = "tabTuan6";
-            this.tabTuan6.Size = new System.Drawing.Size(1012, 580);
-            this.tabTuan6.TabIndex = 5;
-            this.tabTuan6.Text = "Tuần 6";
-            this.tabTuan6.UseVisualStyleBackColor = true;
-            // 
-            // tabTuan7
-            // 
-            this.tabTuan7.Controls.Add(this.dataGridView6);
-            this.tabTuan7.Location = new System.Drawing.Point(4, 22);
-            this.tabTuan7.Name = "tabTuan7";
-            this.tabTuan7.Size = new System.Drawing.Size(1012, 580);
-            this.tabTuan7.TabIndex = 6;
-            this.tabTuan7.Text = "Tuần 7";
-            this.tabTuan7.UseVisualStyleBackColor = true;
-            // 
-            // tabTuan8
-            // 
-            this.tabTuan8.Controls.Add(this.dataGridView7);
-            this.tabTuan8.Location = new System.Drawing.Point(4, 22);
-            this.tabTuan8.Name = "tabTuan8";
-            this.tabTuan8.Size = new System.Drawing.Size(1012, 580);
-            this.tabTuan8.TabIndex = 7;
-            this.tabTuan8.Text = "Tuần 8";
-            this.tabTuan8.UseVisualStyleBackColor = true;
-            // 
-            // tabTuan9
-            // 
-            this.tabTuan9.Controls.Add(this.dataGridView8);
-            this.tabTuan9.Location = new System.Drawing.Point(4, 22);
-            this.tabTuan9.Name = "tabTuan9";
-            this.tabTuan9.Size = new System.Drawing.Size(1012, 580);
-            this.tabTuan9.TabIndex = 8;
-            this.tabTuan9.Text = "Tuần 9";
-            this.tabTuan9.UseVisualStyleBackColor = true;
-            // 
-            // tabTuan
-            // 
-            this.tabTuan.Controls.Add(this.dataGridView9);
-            this.tabTuan.Location = new System.Drawing.Point(4, 22);
-            this.tabTuan.Name = "tabTuan";
-            this.tabTuan.Size = new System.Drawing.Size(1012, 580);
-            this.tabTuan.TabIndex = 9;
-            this.tabTuan.Text = "Tuần 10";
-            this.tabTuan.UseVisualStyleBackColor = true;
-            // 
-            // tabTuan11
-            // 
-            this.tabTuan11.Controls.Add(this.dataGridView10);
-            this.tabTuan11.Location = new System.Drawing.Point(4, 22);
-            this.tabTuan11.Name = "tabTuan11";
-            this.tabTuan11.Size = new System.Drawing.Size(1012, 580);
-            this.tabTuan11.TabIndex = 10;
-            this.tabTuan11.Text = "Tuần 11";
-            this.tabTuan11.UseVisualStyleBackColor = true;
-            // 
-            // tabTuan12
-            // 
-            this.tabTuan12.Controls.Add(this.dataGridView11);
-            this.tabTuan12.Location = new System.Drawing.Point(4, 22);
-            this.tabTuan12.Name = "tabTuan12";
-            this.tabTuan12.Size = new System.Drawing.Size(1012, 580);
-            this.tabTuan12.TabIndex = 11;
-            this.tabTuan12.Text = "Tuần 12";
-            this.tabTuan12.UseVisualStyleBackColor = true;
-            // 
-            // tabTuan13
-            // 
-            this.tabTuan13.Controls.Add(this.dataGridView12);
-            this.tabTuan13.Location = new System.Drawing.Point(4, 22);
-            this.tabTuan13.Name = "tabTuan13";
-            this.tabTuan13.Size = new System.Drawing.Size(1012, 580);
-            this.tabTuan13.TabIndex = 12;
-            this.tabTuan13.Text = "Tuần 13";
-            this.tabTuan13.UseVisualStyleBackColor = true;
-            // 
-            // tagTuan14
-            // 
-            this.tagTuan14.Controls.Add(this.dataGridView13);
-            this.tagTuan14.Location = new System.Drawing.Point(4, 22);
-            this.tagTuan14.Name = "tagTuan14";
-            this.tagTuan14.Size = new System.Drawing.Size(1012, 580);
-            this.tagTuan14.TabIndex = 13;
-            this.tagTuan14.Text = "Tuần 14";
-            this.tagTuan14.UseVisualStyleBackColor = true;
-            // 
-            // tabTuan15
-            // 
-            this.tabTuan15.Controls.Add(this.dataGridView14);
-            this.tabTuan15.Location = new System.Drawing.Point(4, 22);
-            this.tabTuan15.Name = "tabTuan15";
-            this.tabTuan15.Size = new System.Drawing.Size(1012, 580);
-            this.tabTuan15.TabIndex = 14;
-            this.tabTuan15.Text = "Tuần 15";
-            this.tabTuan15.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvTuan2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTuan2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
@@ -726,17 +596,17 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.Size = new System.Drawing.Size(1006, 574);
-            this.dataGridView1.TabIndex = 13;
+            this.dgvTuan2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTuan2.Location = new System.Drawing.Point(3, 3);
+            this.dgvTuan2.Name = "dgvTuan2";
+            this.dgvTuan2.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTuan2.Size = new System.Drawing.Size(1006, 574);
+            this.dgvTuan2.TabIndex = 13;
             // 
             // dataGridViewTextBoxColumn1
             // 
-            dataGridViewCellStyle145.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle145;
+            dataGridViewCellStyle136.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle136;
             this.dataGridViewTextBoxColumn1.HeaderText = "Buổi";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 10;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
@@ -744,16 +614,16 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
-            dataGridViewCellStyle146.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle146;
+            dataGridViewCellStyle137.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle137;
             this.dataGridViewTextBoxColumn2.HeaderText = "Phòng";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dataGridViewTextBoxColumn3
             // 
-            dataGridViewCellStyle147.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle147;
+            dataGridViewCellStyle138.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle138;
             this.dataGridViewTextBoxColumn3.HeaderText = "Thứ 2";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -761,8 +631,8 @@
             // 
             // dataGridViewTextBoxColumn4
             // 
-            dataGridViewCellStyle148.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle148;
+            dataGridViewCellStyle139.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle139;
             this.dataGridViewTextBoxColumn4.HeaderText = "Thứ 3";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -770,8 +640,8 @@
             // 
             // dataGridViewTextBoxColumn5
             // 
-            dataGridViewCellStyle149.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle149;
+            dataGridViewCellStyle140.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle140;
             this.dataGridViewTextBoxColumn5.HeaderText = "Thứ 4";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -779,8 +649,8 @@
             // 
             // dataGridViewTextBoxColumn6
             // 
-            dataGridViewCellStyle150.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle150;
+            dataGridViewCellStyle141.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle141;
             this.dataGridViewTextBoxColumn6.HeaderText = "Thứ 5";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -788,8 +658,8 @@
             // 
             // dataGridViewTextBoxColumn7
             // 
-            dataGridViewCellStyle151.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle151;
+            dataGridViewCellStyle142.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle142;
             this.dataGridViewTextBoxColumn7.HeaderText = "Thứ 6";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -797,8 +667,8 @@
             // 
             // dataGridViewTextBoxColumn8
             // 
-            dataGridViewCellStyle152.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle152;
+            dataGridViewCellStyle143.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle143;
             this.dataGridViewTextBoxColumn8.HeaderText = "Thứ 7";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -806,16 +676,26 @@
             // 
             // dataGridViewTextBoxColumn9
             // 
-            dataGridViewCellStyle153.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle153;
+            dataGridViewCellStyle144.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle144;
             this.dataGridViewTextBoxColumn9.HeaderText = "Chủ Nhật";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // dataGridView2
+            // tabTuan3
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tabTuan3.Controls.Add(this.dgvTuan3);
+            this.tabTuan3.Location = new System.Drawing.Point(4, 22);
+            this.tabTuan3.Name = "tabTuan3";
+            this.tabTuan3.Size = new System.Drawing.Size(1012, 580);
+            this.tabTuan3.TabIndex = 2;
+            this.tabTuan3.Text = "Tuần 3";
+            this.tabTuan3.UseVisualStyleBackColor = true;
+            // 
+            // dgvTuan3
+            // 
+            this.dgvTuan3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTuan3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12,
@@ -825,12 +705,12 @@
             this.dataGridViewTextBoxColumn16,
             this.dataGridViewTextBoxColumn17,
             this.dataGridViewTextBoxColumn18});
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.Size = new System.Drawing.Size(1012, 580);
-            this.dataGridView2.TabIndex = 13;
+            this.dgvTuan3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTuan3.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan3.Name = "dgvTuan3";
+            this.dgvTuan3.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTuan3.Size = new System.Drawing.Size(1012, 580);
+            this.dgvTuan3.TabIndex = 13;
             // 
             // dataGridViewTextBoxColumn10
             // 
@@ -911,10 +791,20 @@
             this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
             this.dataGridViewTextBoxColumn18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // dataGridView3
+            // tabTuan4
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tabTuan4.Controls.Add(this.dgvTuan4);
+            this.tabTuan4.Location = new System.Drawing.Point(4, 22);
+            this.tabTuan4.Name = "tabTuan4";
+            this.tabTuan4.Size = new System.Drawing.Size(1012, 580);
+            this.tabTuan4.TabIndex = 3;
+            this.tabTuan4.Text = "Tuần 4";
+            this.tabTuan4.UseVisualStyleBackColor = true;
+            // 
+            // dgvTuan4
+            // 
+            this.dgvTuan4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTuan4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn19,
             this.dataGridViewTextBoxColumn20,
             this.dataGridViewTextBoxColumn21,
@@ -924,12 +814,12 @@
             this.dataGridViewTextBoxColumn25,
             this.dataGridViewTextBoxColumn26,
             this.dataGridViewTextBoxColumn27});
-            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView3.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView3.Size = new System.Drawing.Size(1012, 580);
-            this.dataGridView3.TabIndex = 13;
+            this.dgvTuan4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTuan4.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan4.Name = "dgvTuan4";
+            this.dgvTuan4.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTuan4.Size = new System.Drawing.Size(1012, 580);
+            this.dgvTuan4.TabIndex = 13;
             // 
             // dataGridViewTextBoxColumn19
             // 
@@ -1010,10 +900,20 @@
             this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
             this.dataGridViewTextBoxColumn27.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // dataGridView4
+            // tabTuan5
             // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tabTuan5.Controls.Add(this.dgvTuan5);
+            this.tabTuan5.Location = new System.Drawing.Point(4, 22);
+            this.tabTuan5.Name = "tabTuan5";
+            this.tabTuan5.Size = new System.Drawing.Size(1012, 580);
+            this.tabTuan5.TabIndex = 4;
+            this.tabTuan5.Text = "Tuần 5";
+            this.tabTuan5.UseVisualStyleBackColor = true;
+            // 
+            // dgvTuan5
+            // 
+            this.dgvTuan5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTuan5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn28,
             this.dataGridViewTextBoxColumn29,
             this.dataGridViewTextBoxColumn30,
@@ -1023,12 +923,12 @@
             this.dataGridViewTextBoxColumn34,
             this.dataGridViewTextBoxColumn35,
             this.dataGridViewTextBoxColumn36});
-            this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView4.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView4.Size = new System.Drawing.Size(1012, 580);
-            this.dataGridView4.TabIndex = 13;
+            this.dgvTuan5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTuan5.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan5.Name = "dgvTuan5";
+            this.dgvTuan5.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTuan5.Size = new System.Drawing.Size(1012, 580);
+            this.dgvTuan5.TabIndex = 13;
             // 
             // dataGridViewTextBoxColumn28
             // 
@@ -1109,10 +1009,20 @@
             this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
             this.dataGridViewTextBoxColumn36.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // dataGridView5
+            // tabTuan6
             // 
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tabTuan6.Controls.Add(this.dgvTuan6);
+            this.tabTuan6.Location = new System.Drawing.Point(4, 22);
+            this.tabTuan6.Name = "tabTuan6";
+            this.tabTuan6.Size = new System.Drawing.Size(1012, 580);
+            this.tabTuan6.TabIndex = 5;
+            this.tabTuan6.Text = "Tuần 6";
+            this.tabTuan6.UseVisualStyleBackColor = true;
+            // 
+            // dgvTuan6
+            // 
+            this.dgvTuan6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTuan6.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn37,
             this.dataGridViewTextBoxColumn38,
             this.dataGridViewTextBoxColumn39,
@@ -1122,12 +1032,12 @@
             this.dataGridViewTextBoxColumn43,
             this.dataGridViewTextBoxColumn44,
             this.dataGridViewTextBoxColumn45});
-            this.dataGridView5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView5.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView5.Size = new System.Drawing.Size(1012, 580);
-            this.dataGridView5.TabIndex = 13;
+            this.dgvTuan6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTuan6.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan6.Name = "dgvTuan6";
+            this.dgvTuan6.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTuan6.Size = new System.Drawing.Size(1012, 580);
+            this.dgvTuan6.TabIndex = 13;
             // 
             // dataGridViewTextBoxColumn37
             // 
@@ -1208,10 +1118,20 @@
             this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
             this.dataGridViewTextBoxColumn45.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // dataGridView6
+            // tabTuan7
             // 
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tabTuan7.Controls.Add(this.dgvTuan7);
+            this.tabTuan7.Location = new System.Drawing.Point(4, 22);
+            this.tabTuan7.Name = "tabTuan7";
+            this.tabTuan7.Size = new System.Drawing.Size(1012, 580);
+            this.tabTuan7.TabIndex = 6;
+            this.tabTuan7.Text = "Tuần 7";
+            this.tabTuan7.UseVisualStyleBackColor = true;
+            // 
+            // dgvTuan7
+            // 
+            this.dgvTuan7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTuan7.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn46,
             this.dataGridViewTextBoxColumn47,
             this.dataGridViewTextBoxColumn48,
@@ -1221,12 +1141,12 @@
             this.dataGridViewTextBoxColumn52,
             this.dataGridViewTextBoxColumn53,
             this.dataGridViewTextBoxColumn54});
-            this.dataGridView6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView6.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView6.Size = new System.Drawing.Size(1012, 580);
-            this.dataGridView6.TabIndex = 13;
+            this.dgvTuan7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTuan7.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan7.Name = "dgvTuan7";
+            this.dgvTuan7.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTuan7.Size = new System.Drawing.Size(1012, 580);
+            this.dgvTuan7.TabIndex = 13;
             // 
             // dataGridViewTextBoxColumn46
             // 
@@ -1307,10 +1227,20 @@
             this.dataGridViewTextBoxColumn54.Name = "dataGridViewTextBoxColumn54";
             this.dataGridViewTextBoxColumn54.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // dataGridView7
+            // tabTuan8
             // 
-            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView7.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tabTuan8.Controls.Add(this.dgvTuan8);
+            this.tabTuan8.Location = new System.Drawing.Point(4, 22);
+            this.tabTuan8.Name = "tabTuan8";
+            this.tabTuan8.Size = new System.Drawing.Size(1012, 580);
+            this.tabTuan8.TabIndex = 7;
+            this.tabTuan8.Text = "Tuần 8";
+            this.tabTuan8.UseVisualStyleBackColor = true;
+            // 
+            // dgvTuan8
+            // 
+            this.dgvTuan8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTuan8.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn55,
             this.dataGridViewTextBoxColumn56,
             this.dataGridViewTextBoxColumn57,
@@ -1320,12 +1250,12 @@
             this.dataGridViewTextBoxColumn61,
             this.dataGridViewTextBoxColumn62,
             this.dataGridViewTextBoxColumn63});
-            this.dataGridView7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView7.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView7.Name = "dataGridView7";
-            this.dataGridView7.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView7.Size = new System.Drawing.Size(1012, 580);
-            this.dataGridView7.TabIndex = 13;
+            this.dgvTuan8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTuan8.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan8.Name = "dgvTuan8";
+            this.dgvTuan8.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTuan8.Size = new System.Drawing.Size(1012, 580);
+            this.dgvTuan8.TabIndex = 13;
             // 
             // dataGridViewTextBoxColumn55
             // 
@@ -1406,10 +1336,20 @@
             this.dataGridViewTextBoxColumn63.Name = "dataGridViewTextBoxColumn63";
             this.dataGridViewTextBoxColumn63.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // dataGridView8
+            // tabTuan9
             // 
-            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView8.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tabTuan9.Controls.Add(this.dgvTuan9);
+            this.tabTuan9.Location = new System.Drawing.Point(4, 22);
+            this.tabTuan9.Name = "tabTuan9";
+            this.tabTuan9.Size = new System.Drawing.Size(1012, 580);
+            this.tabTuan9.TabIndex = 8;
+            this.tabTuan9.Text = "Tuần 9";
+            this.tabTuan9.UseVisualStyleBackColor = true;
+            // 
+            // dgvTuan9
+            // 
+            this.dgvTuan9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTuan9.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn64,
             this.dataGridViewTextBoxColumn65,
             this.dataGridViewTextBoxColumn66,
@@ -1419,12 +1359,12 @@
             this.dataGridViewTextBoxColumn70,
             this.dataGridViewTextBoxColumn71,
             this.dataGridViewTextBoxColumn72});
-            this.dataGridView8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView8.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView8.Name = "dataGridView8";
-            this.dataGridView8.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView8.Size = new System.Drawing.Size(1012, 580);
-            this.dataGridView8.TabIndex = 13;
+            this.dgvTuan9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTuan9.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan9.Name = "dgvTuan9";
+            this.dgvTuan9.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTuan9.Size = new System.Drawing.Size(1012, 580);
+            this.dgvTuan9.TabIndex = 13;
             // 
             // dataGridViewTextBoxColumn64
             // 
@@ -1505,10 +1445,20 @@
             this.dataGridViewTextBoxColumn72.Name = "dataGridViewTextBoxColumn72";
             this.dataGridViewTextBoxColumn72.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // dataGridView9
+            // tabTuan
             // 
-            this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView9.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tabTuan.Controls.Add(this.dgvTuan10);
+            this.tabTuan.Location = new System.Drawing.Point(4, 22);
+            this.tabTuan.Name = "tabTuan";
+            this.tabTuan.Size = new System.Drawing.Size(1012, 580);
+            this.tabTuan.TabIndex = 9;
+            this.tabTuan.Text = "Tuần 10";
+            this.tabTuan.UseVisualStyleBackColor = true;
+            // 
+            // dgvTuan10
+            // 
+            this.dgvTuan10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTuan10.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn73,
             this.dataGridViewTextBoxColumn74,
             this.dataGridViewTextBoxColumn75,
@@ -1518,12 +1468,12 @@
             this.dataGridViewTextBoxColumn79,
             this.dataGridViewTextBoxColumn80,
             this.dataGridViewTextBoxColumn81});
-            this.dataGridView9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView9.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView9.Name = "dataGridView9";
-            this.dataGridView9.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView9.Size = new System.Drawing.Size(1012, 580);
-            this.dataGridView9.TabIndex = 13;
+            this.dgvTuan10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTuan10.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan10.Name = "dgvTuan10";
+            this.dgvTuan10.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTuan10.Size = new System.Drawing.Size(1012, 580);
+            this.dgvTuan10.TabIndex = 13;
             // 
             // dataGridViewTextBoxColumn73
             // 
@@ -1604,10 +1554,20 @@
             this.dataGridViewTextBoxColumn81.Name = "dataGridViewTextBoxColumn81";
             this.dataGridViewTextBoxColumn81.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // dataGridView10
+            // tabTuan11
             // 
-            this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView10.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tabTuan11.Controls.Add(this.dgvTuan11);
+            this.tabTuan11.Location = new System.Drawing.Point(4, 22);
+            this.tabTuan11.Name = "tabTuan11";
+            this.tabTuan11.Size = new System.Drawing.Size(1012, 580);
+            this.tabTuan11.TabIndex = 10;
+            this.tabTuan11.Text = "Tuần 11";
+            this.tabTuan11.UseVisualStyleBackColor = true;
+            // 
+            // dgvTuan11
+            // 
+            this.dgvTuan11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTuan11.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn82,
             this.dataGridViewTextBoxColumn83,
             this.dataGridViewTextBoxColumn84,
@@ -1617,12 +1577,12 @@
             this.dataGridViewTextBoxColumn88,
             this.dataGridViewTextBoxColumn89,
             this.dataGridViewTextBoxColumn90});
-            this.dataGridView10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView10.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView10.Name = "dataGridView10";
-            this.dataGridView10.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView10.Size = new System.Drawing.Size(1012, 580);
-            this.dataGridView10.TabIndex = 13;
+            this.dgvTuan11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTuan11.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan11.Name = "dgvTuan11";
+            this.dgvTuan11.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTuan11.Size = new System.Drawing.Size(1012, 580);
+            this.dgvTuan11.TabIndex = 13;
             // 
             // dataGridViewTextBoxColumn82
             // 
@@ -1703,10 +1663,20 @@
             this.dataGridViewTextBoxColumn90.Name = "dataGridViewTextBoxColumn90";
             this.dataGridViewTextBoxColumn90.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // dataGridView11
+            // tabTuan12
             // 
-            this.dataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView11.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tabTuan12.Controls.Add(this.dgvTuan12);
+            this.tabTuan12.Location = new System.Drawing.Point(4, 22);
+            this.tabTuan12.Name = "tabTuan12";
+            this.tabTuan12.Size = new System.Drawing.Size(1012, 580);
+            this.tabTuan12.TabIndex = 11;
+            this.tabTuan12.Text = "Tuần 12";
+            this.tabTuan12.UseVisualStyleBackColor = true;
+            // 
+            // dgvTuan12
+            // 
+            this.dgvTuan12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTuan12.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn91,
             this.dataGridViewTextBoxColumn92,
             this.dataGridViewTextBoxColumn93,
@@ -1716,12 +1686,12 @@
             this.dataGridViewTextBoxColumn97,
             this.dataGridViewTextBoxColumn98,
             this.dataGridViewTextBoxColumn99});
-            this.dataGridView11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView11.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView11.Name = "dataGridView11";
-            this.dataGridView11.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView11.Size = new System.Drawing.Size(1012, 580);
-            this.dataGridView11.TabIndex = 13;
+            this.dgvTuan12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTuan12.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan12.Name = "dgvTuan12";
+            this.dgvTuan12.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTuan12.Size = new System.Drawing.Size(1012, 580);
+            this.dgvTuan12.TabIndex = 13;
             // 
             // dataGridViewTextBoxColumn91
             // 
@@ -1802,10 +1772,20 @@
             this.dataGridViewTextBoxColumn99.Name = "dataGridViewTextBoxColumn99";
             this.dataGridViewTextBoxColumn99.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // dataGridView12
+            // tabTuan13
             // 
-            this.dataGridView12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView12.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tabTuan13.Controls.Add(this.dgvTuan13);
+            this.tabTuan13.Location = new System.Drawing.Point(4, 22);
+            this.tabTuan13.Name = "tabTuan13";
+            this.tabTuan13.Size = new System.Drawing.Size(1012, 580);
+            this.tabTuan13.TabIndex = 12;
+            this.tabTuan13.Text = "Tuần 13";
+            this.tabTuan13.UseVisualStyleBackColor = true;
+            // 
+            // dgvTuan13
+            // 
+            this.dgvTuan13.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTuan13.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn100,
             this.dataGridViewTextBoxColumn101,
             this.dataGridViewTextBoxColumn102,
@@ -1815,12 +1795,12 @@
             this.dataGridViewTextBoxColumn106,
             this.dataGridViewTextBoxColumn107,
             this.dataGridViewTextBoxColumn108});
-            this.dataGridView12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView12.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView12.Name = "dataGridView12";
-            this.dataGridView12.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView12.Size = new System.Drawing.Size(1012, 580);
-            this.dataGridView12.TabIndex = 13;
+            this.dgvTuan13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTuan13.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan13.Name = "dgvTuan13";
+            this.dgvTuan13.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTuan13.Size = new System.Drawing.Size(1012, 580);
+            this.dgvTuan13.TabIndex = 13;
             // 
             // dataGridViewTextBoxColumn100
             // 
@@ -1901,10 +1881,20 @@
             this.dataGridViewTextBoxColumn108.Name = "dataGridViewTextBoxColumn108";
             this.dataGridViewTextBoxColumn108.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // dataGridView13
+            // tagTuan14
             // 
-            this.dataGridView13.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView13.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tagTuan14.Controls.Add(this.dgvTuan14);
+            this.tagTuan14.Location = new System.Drawing.Point(4, 22);
+            this.tagTuan14.Name = "tagTuan14";
+            this.tagTuan14.Size = new System.Drawing.Size(1012, 580);
+            this.tagTuan14.TabIndex = 13;
+            this.tagTuan14.Text = "Tuần 14";
+            this.tagTuan14.UseVisualStyleBackColor = true;
+            // 
+            // dgvTuan14
+            // 
+            this.dgvTuan14.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTuan14.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn109,
             this.dataGridViewTextBoxColumn110,
             this.dataGridViewTextBoxColumn111,
@@ -1914,12 +1904,12 @@
             this.dataGridViewTextBoxColumn115,
             this.dataGridViewTextBoxColumn116,
             this.dataGridViewTextBoxColumn117});
-            this.dataGridView13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView13.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView13.Name = "dataGridView13";
-            this.dataGridView13.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView13.Size = new System.Drawing.Size(1012, 580);
-            this.dataGridView13.TabIndex = 13;
+            this.dgvTuan14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTuan14.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan14.Name = "dgvTuan14";
+            this.dgvTuan14.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTuan14.Size = new System.Drawing.Size(1012, 580);
+            this.dgvTuan14.TabIndex = 13;
             // 
             // dataGridViewTextBoxColumn109
             // 
@@ -2000,10 +1990,20 @@
             this.dataGridViewTextBoxColumn117.Name = "dataGridViewTextBoxColumn117";
             this.dataGridViewTextBoxColumn117.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // dataGridView14
+            // tabTuan15
             // 
-            this.dataGridView14.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView14.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tabTuan15.Controls.Add(this.dgvTuan15);
+            this.tabTuan15.Location = new System.Drawing.Point(4, 22);
+            this.tabTuan15.Name = "tabTuan15";
+            this.tabTuan15.Size = new System.Drawing.Size(1012, 580);
+            this.tabTuan15.TabIndex = 14;
+            this.tabTuan15.Text = "Tuần 15";
+            this.tabTuan15.UseVisualStyleBackColor = true;
+            // 
+            // dgvTuan15
+            // 
+            this.dgvTuan15.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTuan15.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn118,
             this.dataGridViewTextBoxColumn119,
             this.dataGridViewTextBoxColumn120,
@@ -2013,12 +2013,12 @@
             this.dataGridViewTextBoxColumn124,
             this.dataGridViewTextBoxColumn125,
             this.dataGridViewTextBoxColumn126});
-            this.dataGridView14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView14.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView14.Name = "dataGridView14";
-            this.dataGridView14.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView14.Size = new System.Drawing.Size(1012, 580);
-            this.dataGridView14.TabIndex = 13;
+            this.dgvTuan15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTuan15.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan15.Name = "dgvTuan15";
+            this.dgvTuan15.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTuan15.Size = new System.Drawing.Size(1012, 580);
+            this.dgvTuan15.TabIndex = 13;
             // 
             // dataGridViewTextBoxColumn118
             // 
@@ -2116,35 +2116,35 @@
             this.Load += new System.EventHandler(this.FormXemLichGiaoVien_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabTuan1.ResumeLayout(false);
-            this.tabTuan2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTuan1)).EndInit();
+            this.tabTuan2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan2)).EndInit();
             this.tabTuan3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan3)).EndInit();
             this.tabTuan4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan4)).EndInit();
             this.tabTuan5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan5)).EndInit();
             this.tabTuan6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan6)).EndInit();
             this.tabTuan7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan7)).EndInit();
             this.tabTuan8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan8)).EndInit();
             this.tabTuan9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan9)).EndInit();
             this.tabTuan.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan10)).EndInit();
             this.tabTuan11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan11)).EndInit();
             this.tabTuan12.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan12)).EndInit();
             this.tabTuan13.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan13)).EndInit();
             this.tagTuan14.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan14)).EndInit();
             this.tabTuan15.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan15)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2185,7 +2185,7 @@
         private System.Windows.Forms.TabPage tabTuan13;
         private System.Windows.Forms.TabPage tagTuan14;
         private System.Windows.Forms.TabPage tabTuan15;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvTuan2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -2195,7 +2195,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvTuan3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
@@ -2205,7 +2205,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dgvTuan4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
@@ -2215,7 +2215,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
-        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridView dgvTuan5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
@@ -2225,7 +2225,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
-        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.DataGridView dgvTuan6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
@@ -2235,7 +2235,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
-        private System.Windows.Forms.DataGridView dataGridView6;
+        private System.Windows.Forms.DataGridView dgvTuan7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn46;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn47;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn48;
@@ -2245,7 +2245,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn52;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn53;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn54;
-        private System.Windows.Forms.DataGridView dataGridView7;
+        private System.Windows.Forms.DataGridView dgvTuan8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn55;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn56;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn57;
@@ -2255,7 +2255,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn61;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn62;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn63;
-        private System.Windows.Forms.DataGridView dataGridView8;
+        private System.Windows.Forms.DataGridView dgvTuan9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn64;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn65;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn66;
@@ -2265,7 +2265,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn70;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn71;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn72;
-        private System.Windows.Forms.DataGridView dataGridView9;
+        private System.Windows.Forms.DataGridView dgvTuan10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn73;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn74;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn75;
@@ -2275,7 +2275,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn79;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn80;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn81;
-        private System.Windows.Forms.DataGridView dataGridView10;
+        private System.Windows.Forms.DataGridView dgvTuan11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn82;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn83;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn84;
@@ -2285,7 +2285,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn88;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn89;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn90;
-        private System.Windows.Forms.DataGridView dataGridView11;
+        private System.Windows.Forms.DataGridView dgvTuan12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn91;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn92;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn93;
@@ -2295,7 +2295,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn97;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn98;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn99;
-        private System.Windows.Forms.DataGridView dataGridView12;
+        private System.Windows.Forms.DataGridView dgvTuan13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn100;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn101;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn102;
@@ -2305,7 +2305,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn106;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn107;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn108;
-        private System.Windows.Forms.DataGridView dataGridView13;
+        private System.Windows.Forms.DataGridView dgvTuan14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn109;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn110;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn111;
@@ -2315,7 +2315,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn115;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn116;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn117;
-        private System.Windows.Forms.DataGridView dataGridView14;
+        private System.Windows.Forms.DataGridView dgvTuan15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn118;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn119;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn120;
