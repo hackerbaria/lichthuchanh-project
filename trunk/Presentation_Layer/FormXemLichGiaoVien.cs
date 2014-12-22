@@ -17,6 +17,7 @@ namespace Presentation_Layer
         private PhongBUS phongBUS = new PhongBUS();
         private GiaoVienBUS giaovienBUS = new GiaoVienBUS();
         private LapLichBUS lapLichBUS = new LapLichBUS();
+        private MonHocBUS monHocBUS = new MonHocBUS();
         public FormXemLichGiaoVien()
         {
             InitializeComponent();
@@ -188,11 +189,15 @@ namespace Presentation_Layer
 
             DataTable dt15 = new DataTable();
             dt15 = lapLichBUS.getLichByMaGVAndWeek(Utils.Acount, 15);
-
+            DataTable dtMon = new DataTable();
             // tuan 1
             for (int i = 0; i < dt.Rows.Count; i++ )
             {
-                String Value = dt.Rows[i][1] + " " + dt.Rows[i][2] + " " + dt.Rows[i][7] + "";
+                
+                dtMon = monHocBUS.getMonHocByMa(dt.Rows[i][1] + "");
+                String Value = dtMon.Rows[0][1] + " " + dt.Rows[i][2] + " (" + dt.Rows[i][7] + ")";
+
+                // Lay Thu
                 String number = dt.Rows[i][6].ToString();
                 
                 for (int k = 0; k< dtPhong.Rows.Count; k++)
@@ -222,7 +227,8 @@ namespace Presentation_Layer
             // tuan 2
             for (int i = 0; i < dt2.Rows.Count; i++)
             {
-                String Value = dt2.Rows[i][1] + " " + dt2.Rows[i][2] + " " + dt2.Rows[i][7] + "";
+                dtMon = monHocBUS.getMonHocByMa(dt2.Rows[i][1] + "");
+                String Value = dtMon.Rows[0][1] + " " + dt2.Rows[i][2] + " (" + dt2.Rows[i][7] + ")";
                 String number = dt2.Rows[i][6].ToString();
 
                 for (int k = 0; k < dtPhong.Rows.Count; k++)
@@ -251,7 +257,8 @@ namespace Presentation_Layer
             // tuan 3
             for (int i = 0; i < dt3.Rows.Count; i++)
             {
-                String Value = dt3.Rows[i][1] + " " + dt3.Rows[i][2] + " " + dt3.Rows[i][7] + "";
+                dtMon = monHocBUS.getMonHocByMa(dt3.Rows[i][1] + "");
+                String Value = dtMon.Rows[0][1] + " " + dt3.Rows[i][2] + " (" + dt3.Rows[i][7] + ")";
                 String number = dt3.Rows[i][6].ToString();
 
                 for (int k = 0; k < dtPhong.Rows.Count; k++)
@@ -279,7 +286,8 @@ namespace Presentation_Layer
             // tuan 4
             for (int i = 0; i < dt4.Rows.Count; i++)
             {
-                String Value = dt4.Rows[i][1] + " " + dt4.Rows[i][2] + " " + dt4.Rows[i][7] + "";
+                dtMon = monHocBUS.getMonHocByMa(dt4.Rows[i][1] + "");
+                String Value = dtMon.Rows[0][1] + " " + dt4.Rows[i][2] + " (" + dt4.Rows[i][7] + ")";
                 String number = dt4.Rows[i][6].ToString();
 
                 for (int k = 0; k < dtPhong.Rows.Count; k++)
@@ -308,7 +316,8 @@ namespace Presentation_Layer
             // tuan 5
             for (int i = 0; i < dt5.Rows.Count; i++)
             {
-                String Value = dt5.Rows[i][1] + " " + dt5.Rows[i][2] + " " + dt5.Rows[i][7] + "";
+                dtMon = monHocBUS.getMonHocByMa(dt5.Rows[i][1] + "");
+                String Value = dtMon.Rows[0][1] + " " + dt5.Rows[i][2] + " (" + dt5.Rows[i][7] + ")";
                 String number = dt5.Rows[i][6].ToString();
 
                 for (int k = 0; k < dtPhong.Rows.Count; k++)
@@ -336,7 +345,8 @@ namespace Presentation_Layer
             // tuan 6
             for (int i = 0; i < dt6.Rows.Count; i++)
             {
-                String Value = dt6.Rows[i][1] + " " + dt6.Rows[i][2] + " " + dt6.Rows[i][7] + "";
+                dtMon = monHocBUS.getMonHocByMa(dt6.Rows[i][1] + "");
+                String Value = dtMon.Rows[0][1] + " " + dt6.Rows[i][2] + " (" + dt6.Rows[i][7] + ")";
                 String number = dt6.Rows[i][6].ToString();
 
                 for (int k = 0; k < dtPhong.Rows.Count; k++)
@@ -365,7 +375,8 @@ namespace Presentation_Layer
             // tuan 7
             for (int i = 0; i < dt7.Rows.Count; i++)
             {
-                String Value = dt7.Rows[i][1] + " " + dt7.Rows[i][2] + " " + dt7.Rows[i][7] + "";
+                dtMon = monHocBUS.getMonHocByMa(dt7.Rows[i][1] + "");
+                String Value = dtMon.Rows[0][1] + " " + dt7.Rows[i][2] + " (" + dt7.Rows[i][7] + ")";
                 String number = dt7.Rows[i][6].ToString();
 
                 for (int k = 0; k < dtPhong.Rows.Count; k++)
@@ -395,7 +406,8 @@ namespace Presentation_Layer
 
             for (int i = 0; i < dt8.Rows.Count; i++)
             {
-                String Value = dt8.Rows[i][1] + " " + dt8.Rows[i][2] + " " + dt8.Rows[i][7] + "";
+                dtMon = monHocBUS.getMonHocByMa(dt8.Rows[i][1] + "");
+                String Value = dtMon.Rows[0][1] + " " + dt8.Rows[i][2] + " (" + dt8.Rows[i][7] + ")";
                 String number = dt8.Rows[i][6].ToString();
 
                 for (int k = 0; k < dtPhong.Rows.Count; k++)
@@ -422,7 +434,8 @@ namespace Presentation_Layer
 
             for (int i = 0; i < dt9.Rows.Count; i++)
             {
-                String Value = dt9.Rows[i][1] + " " + dt9.Rows[i][2] + " " + dt9.Rows[i][7] + "";
+                dtMon = monHocBUS.getMonHocByMa(dt9.Rows[i][1] + "");
+                String Value = dtMon.Rows[0][1] + " " + dt9.Rows[i][2] + " (" + dt9.Rows[i][7] + ")";
                 String number = dt9.Rows[i][6].ToString();
 
                 for (int k = 0; k < dtPhong.Rows.Count; k++)
@@ -452,7 +465,8 @@ namespace Presentation_Layer
             // tuan 10
             for (int i = 0; i < dt10.Rows.Count; i++)
             {
-                String Value = dt10.Rows[i][1] + " " + dt10.Rows[i][2] + " " + dt10.Rows[i][7] + "";
+                dtMon = monHocBUS.getMonHocByMa(dt10.Rows[i][1] + "");
+                String Value = dtMon.Rows[0][1] + " " + dt10.Rows[i][2] + " (" + dt10.Rows[i][7] + ")";
                 String number = dt10.Rows[i][6].ToString();
 
                 for (int k = 0; k < dtPhong.Rows.Count; k++)
@@ -480,7 +494,8 @@ namespace Presentation_Layer
             // tuan 11
             for (int i = 0; i < dt11.Rows.Count; i++)
             {
-                String Value = dt11.Rows[i][1] + " " + dt11.Rows[i][2] + " " + dt11.Rows[i][7] + "";
+                dtMon = monHocBUS.getMonHocByMa(dt11.Rows[i][1] + "");
+                String Value = dtMon.Rows[0][1] + " " + dt11.Rows[i][2] + " (" + dt11.Rows[i][7] + ")";
                 String number = dt11.Rows[i][6].ToString();
 
                 for (int k = 0; k < dtPhong.Rows.Count; k++)
@@ -509,7 +524,8 @@ namespace Presentation_Layer
             // tuan 12
             for (int i = 0; i < dt12.Rows.Count; i++)
             {
-                String Value = dt12.Rows[i][1] + " " + dt12.Rows[i][2] + " " + dt12.Rows[i][7] + "";
+                dtMon = monHocBUS.getMonHocByMa(dt12.Rows[i][1] + "");
+                String Value = dtMon.Rows[0][1] + " " + dt12.Rows[i][2] + " (" + dt12.Rows[i][7] + ")";
                 String number = dt12.Rows[i][6].ToString();
 
                 for (int k = 0; k < dtPhong.Rows.Count; k++)
@@ -538,7 +554,8 @@ namespace Presentation_Layer
             // tuan 13
             for (int i = 0; i < dt13.Rows.Count; i++)
             {
-                String Value = dt13.Rows[i][1] + " " + dt13.Rows[i][2] + " " + dt13.Rows[i][7] + "";
+                dtMon = monHocBUS.getMonHocByMa(dt13.Rows[i][1] + "");
+                String Value = dtMon.Rows[0][1] + " " + dt13.Rows[i][2] + " (" + dt13.Rows[i][7] + ")";
                 String number = dt13.Rows[i][6].ToString();
 
                 for (int k = 0; k < dtPhong.Rows.Count; k++)
@@ -566,7 +583,8 @@ namespace Presentation_Layer
             // tuan 14
             for (int i = 0; i < dt14.Rows.Count; i++)
             {
-                String Value = dt14.Rows[i][1] + " " + dt14.Rows[i][2] + " " + dt14.Rows[i][7] + "";
+                dtMon = monHocBUS.getMonHocByMa(dt14.Rows[i][1] + "");
+                String Value = dtMon.Rows[0][1] + " " + dt14.Rows[i][2] + " (" + dt14.Rows[i][7] + ")";
                 String number = dt.Rows[i][6].ToString();
 
                 for (int k = 0; k < dtPhong.Rows.Count; k++)
@@ -595,7 +613,8 @@ namespace Presentation_Layer
             // tuan 15
             for (int i = 0; i < dt15.Rows.Count; i++)
             {
-                String Value = dt15.Rows[i][1] + " " + dt15.Rows[i][2] + " " + dt15.Rows[i][7] + "";
+                dtMon = monHocBUS.getMonHocByMa(dt15.Rows[i][1] + "");
+                String Value = dtMon.Rows[0][1] + " " + dt15.Rows[i][2] + " (" + dt15.Rows[i][7] + ")";
                 String number = dt15.Rows[i][6].ToString();
 
                 for (int k = 0; k < dtPhong.Rows.Count; k++)

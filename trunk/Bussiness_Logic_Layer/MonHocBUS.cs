@@ -39,5 +39,11 @@ namespace Bussiness_Logic_Layer
         {
             return _MonHocDAO.DeleteMonHoc(MH);
         }
+
+        public DataTable getMonHocByMa(String ma)
+        {
+
+            return _MonHocDAO.getMonHocByMa( ma);
+        }
     }
 }
