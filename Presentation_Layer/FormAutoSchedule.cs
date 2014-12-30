@@ -152,10 +152,7 @@ namespace Presentation_Layer
             }
         }
 
-        public bool insertToSQL(LichDayVO ld)
-        {
-            return true;
-        }
+        
 
     }
 }

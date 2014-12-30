@@ -47,5 +47,11 @@ namespace Bussiness_Logic_Layer
         {
             return lapLichDAO.getLichByWeek(week);
         }
+
+
+        public void createSchedule()
+        {
+
+        }
     }
 }
