@@ -108,10 +108,8 @@ namespace Presentation_Layer
                 dgvTuan13.Rows[i].Cells[1].Value = dtPhong.Rows[i][1];
                 dgvTuan14.Rows[i].Cells[1].Value = dtPhong.Rows[i][1];
                 dgvTuan15.Rows[i].Cells[1].Value = dtPhong.Rows[i][1];
-            }
-
-            
-            dgvTuan1.Rows[soPhong+1].Cells[0].Value = "Chiều";
+            }  
+            dgvTuan1.Rows[soPhong + 1].Cells[0].Value = "Chiều";
             dgvTuan2.Rows[soPhong + 1].Cells[0].Value = "Chiều";
             dgvTuan3.Rows[soPhong + 1].Cells[0].Value = "Chiều";
             dgvTuan4.Rows[soPhong + 1].Cells[0].Value = "Chiều";
@@ -200,6 +198,7 @@ namespace Presentation_Layer
                 String Value = dt.Rows[i][0] +" " + dtMon.Rows[0][1] + " " + dt.Rows[i][2] + " (" + dt.Rows[i][7] + ")";
 
                 // Lay Thu
+                
                 String number = dt.Rows[i][6].ToString();
                 
                 for (int k = 0; k< dtPhong.Rows.Count; k++)

@@ -36,6 +36,16 @@ namespace Data_Acccess_Layer
 
             return conn.executeSelectQuery(query, sqlParameters);
         }
+        public DataTable getMonHocByName(MonHocVO MH)
+        {
+            string query = string.Format("select * from MonHoc where TenMonHoc = @TenMonHoc");
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            sqlParameters[0] = new SqlParameter("@TenMonHoc", SqlDbType.NVarChar);
+            sqlParameters[0].Value = Convert.ToString(MH.TenMonHoc);
+
+            return conn.executeSelectQuery(query, sqlParameters);
+        }
         public bool InsertMonHoc(MonHocVO MH)
         {
             try

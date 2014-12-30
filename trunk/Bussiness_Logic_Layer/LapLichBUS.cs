@@ -27,6 +27,16 @@ namespace Bussiness_Logic_Layer
                 return false;
 
         }
+        public bool themLapLichBoPhong(LichDayVO LL)
+        {
+
+
+            if (lapLichDAO.insertLapLichBoPhong(LL) == true)
+                return true;
+            else
+                return false;
+
+        }
 
         public DataTable getLichByMaGVAndWeek(String maGV, int week)
         {

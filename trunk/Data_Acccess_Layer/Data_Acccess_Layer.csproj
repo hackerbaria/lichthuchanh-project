@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,6 +42,7 @@
   <ItemGroup>
     <Compile Include="DBConnection.cs" />
     <Compile Include="GiaoVienDAO.cs" />
+    <Compile Include="ImportExcelToSQL.cs" />
     <Compile Include="LapLichDAO.cs" />
     <Compile Include="LopHocDAO.cs" />
     <Compile Include="MonHocDAO.cs" />

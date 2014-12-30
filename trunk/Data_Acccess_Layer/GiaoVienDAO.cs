@@ -50,18 +50,27 @@ namespace Data_Acccess_Layer
             }
         }
 
-        public DataTable getGiaoVienByAccount(UserVO user)
+        public DataTable getGiaoVienByName(GiaoVienVO gv)
         {
-            string query = string.Format("select * from GiaoVien where MaGV = @MaGV");
+            string query = string.Format("select * from GiaoVien where TenGV = @TenGV");
             SqlParameter[] sqlParameters = new SqlParameter[1];
 
-            sqlParameters[0] = new SqlParameter("@MaGV", SqlDbType.VarChar);
-            sqlParameters[0].Value = Convert.ToString(user.TenDangNhap);
+            sqlParameters[0] = new SqlParameter("@TenGV", SqlDbType.NVarChar);
+            sqlParameters[0].Value = Convert.ToString(gv.TenGV);
 
             return conn.executeSelectQuery(query, sqlParameters);
         }
 
+        public DataTable getGiaoVienByAccount(UserVO user)
+        {
+            string query = string.Format("select * from GiaoVien where TenGV = @TenGV");
+            SqlParameter[] sqlParameters = new SqlParameter[1];
 
+            sqlParameters[0] = new SqlParameter("@TenGV", SqlDbType.VarChar);
+            sqlParameters[0].Value = Convert.ToString(user.TenDangNhap);
+
+            return conn.executeSelectQuery(query, sqlParameters);
+        }
         public bool UpdateGiaoVien(GiaoVienVO gv)
         {
             

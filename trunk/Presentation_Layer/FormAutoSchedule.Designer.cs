@@ -32,6 +32,9 @@
             this.btnLoadData = new System.Windows.Forms.Button();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.txtPath = new System.Windows.Forms.TextBox();
+            this.txtTenGV = new System.Windows.Forms.TextBox();
+            this.txtMonHoc = new System.Windows.Forms.TextBox();
+            this.txtTiet = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,11 +73,35 @@
             this.txtPath.Size = new System.Drawing.Size(302, 20);
             this.txtPath.TabIndex = 23;
             // 
+            // txtTenGV
+            // 
+            this.txtTenGV.Location = new System.Drawing.Point(34, 344);
+            this.txtTenGV.Name = "txtTenGV";
+            this.txtTenGV.Size = new System.Drawing.Size(1002, 20);
+            this.txtTenGV.TabIndex = 27;
+            // 
+            // txtMonHoc
+            // 
+            this.txtMonHoc.Location = new System.Drawing.Point(819, 396);
+            this.txtMonHoc.Name = "txtMonHoc";
+            this.txtMonHoc.Size = new System.Drawing.Size(100, 20);
+            this.txtMonHoc.TabIndex = 27;
+            // 
+            // txtTiet
+            // 
+            this.txtTiet.Location = new System.Drawing.Point(936, 397);
+            this.txtTiet.Name = "txtTiet";
+            this.txtTiet.Size = new System.Drawing.Size(100, 20);
+            this.txtTiet.TabIndex = 27;
+            // 
             // FormAutoSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1068, 434);
+            this.Controls.Add(this.txtTiet);
+            this.Controls.Add(this.txtMonHoc);
+            this.Controls.Add(this.txtTenGV);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnLoadData);
             this.Controls.Add(this.btnBrowse);
@@ -93,5 +120,8 @@
         private System.Windows.Forms.Button btnLoadData;
         private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.TextBox txtPath;
+        private System.Windows.Forms.TextBox txtTenGV;
+        private System.Windows.Forms.TextBox txtMonHoc;
+        private System.Windows.Forms.TextBox txtTiet;
     }
 }
