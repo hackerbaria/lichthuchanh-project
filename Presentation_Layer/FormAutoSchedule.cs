@@ -35,21 +35,51 @@ namespace Presentation_Layer
             }
         }
 
+        static DataTable GetSchemaTable(string connectionString)
+        {
+            using (OleDbConnection connection = new
+                       OleDbConnection(connectionString))
+            {
+                connection.Open();
+                DataTable schemaTable = connection.GetOleDbSchemaTable(
+                    OleDbSchemaGuid.Tables,
+                    new object[] { null, null, null, "TABLE" });
+                return schemaTable;
+            }
+        }
+
+
         private void btnLoadData_Click(object sender, EventArgs e)
         {
             if (System.IO.File.Exists(txtPath.Text))
             {
+                DataSet ds = new DataSet();
                 string connectionString = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=""Excel 8.0;HDR=YES;IMEX=1;""", txtPath.Text);
-                string query = String.Format("select * from [{0}$]", "T06");
-                OleDbDataAdapter dataAdapter = new OleDbDataAdapter(query, connectionString);
-                DataSet dataSet = new DataSet();
-                dataAdapter.Fill(dataSet);
-                //dataGridView1.DataSource = dataSet.Tables[0];
-                DataTable dt = new DataTable();
-                dt = dataSet.Tables[0];
-                dataGridView1.DataSource = dt;
+                OleDbConnection connection = new OleDbConnection();
+                connection.ConnectionString = connectionString;
+                //string query = String.Format("select * from [{0}$]", "T06");
+                //OleDbDataAdapter dataAdapter = new OleDbDataAdapter(query, connectionString);
+                //DataSet dataSet = new DataSet();
+                //dataAdapter.Fill(dataSet);
+                ////dataGridView1.DataSource = dataSet.Tables[0];
+                //DataTable dt = new DataTable();
+                //dt = dataSet.Tables[0];
+                //dataGridView1.DataSource = dt;
 
-                importExelToSQL(dt);
+
+                DataTable sheets = GetSchemaTable(connectionString);
+
+                foreach (DataRow r in sheets.Rows)
+                {
+                    string query = "SELECT * FROM [" + r.ItemArray[2].ToString() + "]";
+                    ds.Clear();
+                    OleDbDataAdapter data = new OleDbDataAdapter(query, connection);
+                    data.Fill(ds);
+                    DataTable dt = new DataTable();
+                    dt = ds.Tables[0];
+                    importExelToSQL(dt);
+
+                }
             }
             else
             {
