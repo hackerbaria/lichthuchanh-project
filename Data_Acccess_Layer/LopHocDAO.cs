@@ -23,6 +23,16 @@ namespace Data_Acccess_Layer
            
             return conn.executeSelectQueryNoParam(query);
         }
+        public DataTable getLopByName(LopVO L)
+        {
+            string query = string.Format("select * from Lop where TenLop = @TenLop");
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            sqlParameters[0] = new SqlParameter("@TenLop", SqlDbType.NVarChar);
+            sqlParameters[0].Value = Convert.ToString(L.TenLop);
+
+            return conn.executeSelectQuery(query, sqlParameters);
+        }
         public bool InsertLopHoc(LopVO LH)
         {
             try

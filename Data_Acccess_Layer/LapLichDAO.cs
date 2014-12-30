@@ -51,6 +51,39 @@ namespace Data_Acccess_Layer
                 return false;
             }
         }
+        public bool insertLapLichBoPhong(LichDayVO ld)
+        {
+            try
+            {
+                string query = string.Format("insert into LichDay(MaGV,MaMH,MaLop,Tuan,Thu,Tiet) Values(@MaGV,@MaMH,@MaLop,@Tuan,@Thu,@Tiet)");
+                SqlParameter[] sqlParameters = new SqlParameter[6];
+
+                sqlParameters[0] = new SqlParameter("@MaGV", SqlDbType.VarChar);
+                sqlParameters[0].Value = Convert.ToString(ld.MaGV);
+
+                sqlParameters[1] = new SqlParameter("@MaMH", SqlDbType.NVarChar);
+                sqlParameters[1].Value = Convert.ToString(ld.MaMH);
+
+                sqlParameters[2] = new SqlParameter("@MaLop", SqlDbType.NVarChar);
+                sqlParameters[2].Value = Convert.ToString(ld.MaLop);
+
+                sqlParameters[3] = new SqlParameter("@Tuan", SqlDbType.VarChar);
+                sqlParameters[3].Value = Convert.ToString(ld.Tuan);
+
+                sqlParameters[4] = new SqlParameter("@Thu", SqlDbType.VarChar);
+                sqlParameters[4].Value = Convert.ToString(ld.Thu);
+
+                sqlParameters[5] = new SqlParameter("@Tiet", SqlDbType.VarChar);
+                sqlParameters[5].Value = Convert.ToString(ld.Tiet);
+
+
+                return conn.executeInsertQuery(query, sqlParameters);
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
         public DataTable getLichByMaGVAndWeek(String maGV, int week)
         {
