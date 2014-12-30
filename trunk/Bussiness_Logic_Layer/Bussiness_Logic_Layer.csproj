@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExportScheduleToExcel.cs" />
     <Compile Include="GiaoVienBUS.cs" />
     <Compile Include="LapLichBUS.cs" />
     <Compile Include="LopHocBUS.cs" />
