@@ -47,6 +47,54 @@ namespace Bussiness_Logic_Layer
                 return true;
             return false;
         }
+        public int themMonHocTheoTen(MonHocVO MH)
+        {
+            
+            for (int i = 1; i < 1000; i++)
+            {
+                string monHoc = "MH";
+                if (i < 10)
+                    monHoc = monHoc + "00";
+                else
+                {
+                    if (i < 100)
+                        monHoc = monHoc + "0";
+                }
+                monHoc = monHoc + i;
+                DataTable dt = new DataTable();
+                DataTable dt2 = new DataTable();
+                MH.MaMH = monHoc;
+                dt= _MonHocDAO.searchMaMonHoc(MH);
+                dt2 = _MonHocDAO.searchTenMonHoc(MH);
+                string maMH="",tenMH="";
+                if (dt2 != null)
+                {
+                    foreach (DataRow dr in dt2.Rows)
+                    {
+                        tenMH = dr[1].ToString();
+                    }
+                }
+                if (tenMH != "")
+                    return 2;
+                if(dt != null)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        maMH=dr[0].ToString();
+                    }
+                }
+                
+                if ( maMH=="")
+                {
+                    MH.MaMH = monHoc;
+                    if (_MonHocDAO.InsertMonHocTheoTen(MH))
+                        return 1;
+                }
+                
+            }
+            return 0;
+           
+        }
         public bool CapNhatMonHoc(MonHocVO MH)
         {
             return _MonHocDAO.UpdateMonHoc(MH);

@@ -23,7 +23,18 @@ namespace Data_Acccess_Layer
            
             return conn.executeSelectQueryNoParam(query);
         }
+        public DataTable searchMaMonHoc(MonHocVO mH)
+        {
+            string query = string.Format("select * from MonHoc where MaMH='"+mH.MaMH+"'");
 
+            return conn.executeSelectQueryNoParam(query);
+        }
+        public DataTable searchTenMonHoc(MonHocVO mH)
+        {
+            string query = string.Format("select * from MonHoc where TenMonHoc=N'" + mH.TenMonHoc + "'");
+
+            return conn.executeSelectQueryNoParam(query);
+        }
         public DataTable getMonHocByMa(String ma)
         {
             string query = string.Format("select * from MonHoc where MaMH = @MaMH");
@@ -67,6 +78,26 @@ namespace Data_Acccess_Layer
 
                 sqlParameters[4] = new SqlParameter("@Khoa", SqlDbType.NVarChar);
                 sqlParameters[4].Value = Convert.ToString(MH.Khoa);
+
+                return conn.executeInsertQuery(query, sqlParameters);
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public bool InsertMonHocTheoTen(MonHocVO MH)
+        {
+            try
+            {
+                string query = string.Format("insert into MonHoc(MaMH,TenMonHoc) Values(@MaMH,@TenMonHoc)");
+                SqlParameter[] sqlParameters = new SqlParameter[2];
+
+                sqlParameters[0] = new SqlParameter("@MaMH", SqlDbType.VarChar);
+                sqlParameters[0].Value = Convert.ToString(MH.MaMH);
+
+                sqlParameters[1] = new SqlParameter("@TenMonHoc", SqlDbType.NVarChar);
+                sqlParameters[1].Value = Convert.ToString(MH.TenMonHoc);
 
                 return conn.executeInsertQuery(query, sqlParameters);
             }

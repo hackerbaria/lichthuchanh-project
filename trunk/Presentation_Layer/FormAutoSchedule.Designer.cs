@@ -33,8 +33,8 @@
             this.btnBrowse = new System.Windows.Forms.Button();
             this.txtPath = new System.Windows.Forms.TextBox();
             this.txtTenGV = new System.Windows.Forms.TextBox();
-            this.txtMonHoc = new System.Windows.Forms.TextBox();
-            this.txtTiet = new System.Windows.Forms.TextBox();
+            this.btnSinhMa = new System.Windows.Forms.Button();
+            this.btnThemLichDay2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +48,7 @@
             // 
             // btnLoadData
             // 
-            this.btnLoadData.Location = new System.Drawing.Point(521, 394);
+            this.btnLoadData.Location = new System.Drawing.Point(512, 394);
             this.btnLoadData.Name = "btnLoadData";
             this.btnLoadData.Size = new System.Drawing.Size(97, 23);
             this.btnLoadData.TabIndex = 25;
@@ -80,29 +80,35 @@
             this.txtTenGV.Size = new System.Drawing.Size(1002, 20);
             this.txtTenGV.TabIndex = 27;
             // 
-            // txtMonHoc
+            // btnSinhMa
             // 
-            this.txtMonHoc.Location = new System.Drawing.Point(819, 396);
-            this.txtMonHoc.Name = "txtMonHoc";
-            this.txtMonHoc.Size = new System.Drawing.Size(100, 20);
-            this.txtMonHoc.TabIndex = 27;
+            this.btnSinhMa.Location = new System.Drawing.Point(682, 394);
+            this.btnSinhMa.Name = "btnSinhMa";
+            this.btnSinhMa.Size = new System.Drawing.Size(97, 23);
+            this.btnSinhMa.TabIndex = 25;
+            this.btnSinhMa.Text = "SinhMa";
+            this.btnSinhMa.UseVisualStyleBackColor = true;
+            this.btnSinhMa.Click += new System.EventHandler(this.btnSinhMa_Click);
             // 
-            // txtTiet
+            // btnThemLichDay2
             // 
-            this.txtTiet.Location = new System.Drawing.Point(936, 397);
-            this.txtTiet.Name = "txtTiet";
-            this.txtTiet.Size = new System.Drawing.Size(100, 20);
-            this.txtTiet.TabIndex = 27;
+            this.btnThemLichDay2.Location = new System.Drawing.Point(814, 394);
+            this.btnThemLichDay2.Name = "btnThemLichDay2";
+            this.btnThemLichDay2.Size = new System.Drawing.Size(125, 23);
+            this.btnThemLichDay2.TabIndex = 25;
+            this.btnThemLichDay2.Text = "Thêm Lịch Dạy 2";
+            this.btnThemLichDay2.UseVisualStyleBackColor = true;
+            this.btnThemLichDay2.Click += new System.EventHandler(this.btnSinhMa_Click);
             // 
             // FormAutoSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1068, 434);
-            this.Controls.Add(this.txtTiet);
-            this.Controls.Add(this.txtMonHoc);
             this.Controls.Add(this.txtTenGV);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnThemLichDay2);
+            this.Controls.Add(this.btnSinhMa);
             this.Controls.Add(this.btnLoadData);
             this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.txtPath);
@@ -121,7 +127,7 @@
         private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.TextBox txtPath;
         private System.Windows.Forms.TextBox txtTenGV;
-        private System.Windows.Forms.TextBox txtMonHoc;
-        private System.Windows.Forms.TextBox txtTiet;
+        private System.Windows.Forms.Button btnSinhMa;
+        private System.Windows.Forms.Button btnThemLichDay2;
     }
 }

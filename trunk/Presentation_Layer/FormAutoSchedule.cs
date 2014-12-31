@@ -80,6 +80,10 @@ namespace Presentation_Layer
                     importExelToSQL(dt);
 
                 }
+                if (lapLichBUS.insertLichDayThucHanh())
+                    MessageBox.Show("Da Them Vao Lich Thuc Hanh");
+                else
+                    MessageBox.Show("ko them dc");
             }
             else
             {
@@ -115,10 +119,13 @@ namespace Presentation_Layer
                                 LopVO LH = new LopVO();
                                 //lay ma GV thong qua TenGV
                                 GV.TenGV = tenGV;
+                                //tao maGV dua vao ten
+                                //GV.TenGV=tenGV.Split(' ')ơ
                                 GiaoVienVO gv = giaoVienBUS.getGiaoVienByName(GV);
 
 
                                 //lay maMH thong qua TenMH
+
                                 MH.TenMonHoc = tenMH;
                                 MonHocVO mh = monHocBUS.getMonHocByName(MH);
 
@@ -140,16 +147,43 @@ namespace Presentation_Layer
                                 string tuanDangString = (layChuoiCoTuan.Split(' ')[1]).Trim();
                                 int tuan = Convert.ToInt32(tuanDangString);
                                 LD.Tuan = tuan;
+                                lapLichBUS.themLapLichBoPhong(LD);
                                 //LD.MaPhong = "P001"; ->khoi truyen
-                                if (lapLichBUS.themLapLichBoPhong(LD))
-                                    MessageBox.Show("Da Them Vao CSDL");
-                                else
-                                    MessageBox.Show("ko them vao CSDL duoc");
+                                //if (lapLichBUS.themLapLichBoPhong(LD))
+                                //    MessageBox.Show("Da Them Vao CSDL");
+                                //else
+                                //    MessageBox.Show("ko them vao CSDL duoc");
                             }
                         }
                     }
                 }
             }
+        }
+
+        private void btnSinhMa_Click(object sender, EventArgs e)
+        {
+            sinhMa();
+            
+        }
+        private void sinhMa()
+        {
+            //GiaoVienVO GV = new GiaoVienVO();
+            //GV.TenGV= "Nguyen Van Binh";
+            //if (giaoVienBUS.themGiaoVienTheoTen(GV))
+            //    MessageBox.Show("them thanh cong GV");
+            //else
+            //    MessageBox.Show("ko them dc GV");
+
+            MonHocVO MH = new MonHocVO();
+            MH.TenMonHoc = "Nhap mon lap trinh";
+            if(monHocBUS.themMonHocTheoTen(MH)==1)
+                MessageBox.Show("them thanh cong MH");
+            else
+                if (monHocBUS.themMonHocTheoTen(MH) ==0)
+                    MessageBox.Show("ko them dc MH");
+                else
+                    if(monHocBUS.themMonHocTheoTen(MH) ==2)
+                        MessageBox.Show("Da Co Mon Hoc Nay");
         }
 
         

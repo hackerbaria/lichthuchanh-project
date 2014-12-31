@@ -49,7 +49,26 @@ namespace Data_Acccess_Layer
                 return false;
             }
         }
+        public bool InsertGiaoVienTheoTen(GiaoVienVO gv)
+        {
+            try
+            {
+                string query = string.Format("insert into GiaoVien(MaGV,TenGV) Values(@MaGV,@TenGV)");
+                SqlParameter[] sqlParameters = new SqlParameter[2];
 
+                sqlParameters[0] = new SqlParameter("@MaGV", SqlDbType.VarChar);
+                sqlParameters[0].Value = Convert.ToString(gv.MaGV);
+
+                sqlParameters[1] = new SqlParameter("@TenGV", SqlDbType.NVarChar);
+                sqlParameters[1].Value = Convert.ToString(gv.TenGV);
+
+                return conn.executeInsertQuery(query, sqlParameters);
+            }
+            catch
+            {
+                return false;
+            }
+        }
         public DataTable getGiaoVienByName(GiaoVienVO gv)
         {
             string query = string.Format("select * from GiaoVien where TenGV = @TenGV");
