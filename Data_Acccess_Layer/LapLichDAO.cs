@@ -15,11 +15,18 @@ namespace Data_Acccess_Layer
         {
             conn = new DBConnection();
         }
+        public DataTable GetAllLichDayLyThuyet()
+        {
+            string query = string.Format("select * from LichDayLyThuyet");
+
+            return conn.executeSelectQueryNoParam(query);
+        }
+        
         public bool insertLapLich(LichDayVO ld)
         {
             try
             {
-                string query = string.Format("insert into LichDay(MaGV,MaMH,MaLop,MaPhong,Tuan,Thu,Tiet) Values(@MaGV,@MaMH,@MaLop,@MaPhong,@Tuan,@Thu,@Tiet)");
+                string query = string.Format("insert into LichDayLyThuyet(MaGV,MaMH,MaLop,MaPhong,Tuan,Thu,Tiet) Values(@MaGV,@MaMH,@MaLop,@MaPhong,@Tuan,@Thu,@Tiet)");
                 SqlParameter[] sqlParameters = new SqlParameter[7];
 
                 sqlParameters[0] = new SqlParameter("@MaGV", SqlDbType.VarChar);
@@ -55,7 +62,7 @@ namespace Data_Acccess_Layer
         {
             try
             {
-                string query = string.Format("insert into LichDay(MaGV,MaMH,MaLop,Tuan,Thu,Tiet) Values(@MaGV,@MaMH,@MaLop,@Tuan,@Thu,@Tiet)");
+                string query = string.Format("insert into LichDayLyThuyet(MaGV,MaMH,MaLop,Tuan,Thu,Tiet) Values(@MaGV,@MaMH,@MaLop,@Tuan,@Thu,@Tiet)");
                 SqlParameter[] sqlParameters = new SqlParameter[6];
 
                 sqlParameters[0] = new SqlParameter("@MaGV", SqlDbType.VarChar);
@@ -87,7 +94,7 @@ namespace Data_Acccess_Layer
 
         public DataTable getLichByMaGVAndWeek(String maGV, int week)
         {
-            string query = string.Format("select * from LichDay where MaGV = @MaGV and Tuan = @Tuan");
+            string query = string.Format("select * from LichDayLyThuyet where MaGV = @MaGV and Tuan = @Tuan");
             SqlParameter[] sqlParameters = new SqlParameter[2];
 
             sqlParameters[0] = new SqlParameter("@MaGV", SqlDbType.VarChar);
@@ -101,7 +108,7 @@ namespace Data_Acccess_Layer
 
         public DataTable getLichByWeek(int week)
         {
-            string query = string.Format("select * from LichDay where Tuan = @Tuan");
+            string query = string.Format("select * from LichDayLyThuyet where Tuan = @Tuan");
             SqlParameter[] sqlParameters = new SqlParameter[1];
 
 

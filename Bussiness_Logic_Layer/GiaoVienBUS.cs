@@ -51,6 +51,14 @@ namespace Bussiness_Logic_Layer
                 return true;
             return false;
         }
+        public bool themGiaoVienTheoTen(GiaoVienVO gV)
+        {
+            
+            String[] ma = gV.TenGV.Split(' ');
+            int i=ma.Count();
+            gV.MaGV=ma[i-1].ToLower();
+            return _GiaoVienDAO.InsertGiaoVienTheoTen(gV);
+        }
         public bool CapNhatGiaoVien(GiaoVienVO gV)
         {
             return _GiaoVienDAO.UpdateGiaoVien(gV);

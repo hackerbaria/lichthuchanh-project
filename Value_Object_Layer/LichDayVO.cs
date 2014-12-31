@@ -76,6 +76,18 @@ namespace Value_Object_Layer
         {
 
         }
+        
+        public LichDayVO(String maGV, String maMH, String maLop, String maPhong, int tuan, String thu,String tiet )
+        {
+            this.maGV = maGV;
+            this.maMH = maMH;
+            this.maLop = maLop;
+            this.maPhong = maPhong;
+            this.tuan = tuan;
+            this.thu = thu;
+            this.tuan = tuan;
+            this.tiet = tiet;
+        }
 
 
     }

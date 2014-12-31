@@ -17,8 +17,7 @@ namespace Presentation_Layer
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormAutoSchedule());
-            //Application.Run(new FormLopHoc());--
-            //Application.Run(new FormXemLichGiaoVien());
+            //Application.Run(new FormLapLich());
            
         }
     }

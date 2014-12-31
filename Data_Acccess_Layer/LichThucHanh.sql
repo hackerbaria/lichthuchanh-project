@@ -87,7 +87,7 @@ insert into Account(TenDangNhap,MatKhau,Quyen) values('van','van',2)
 insert into Account(TenDangNhap,MatKhau,Quyen) values('trung','trung',2)
 insert into Account(TenDangNhap,MatKhau,Quyen) values('khoan','khoan',2)
 
-create table LichDay
+create table LichDayLyThuyet
 (
 	MaGV varchar(10) not null foreign key references GiaoVien(MaGV),
 	MaMH varchar(10) not null foreign key references MonHoc(MaMH),
@@ -98,6 +98,18 @@ create table LichDay
 	Thu nvarchar(20) not null,
 	Tiet nvarchar(20) not null,
 	constraint PK_KhoaChinh primary key(MaGV,MaMH,MaLop,Tuan,Thu,Tiet)
+)
+create table LichDayThucHanh
+(
+	MaGV varchar(10) not null foreign key references GiaoVien(MaGV),
+	MaMH varchar(10) not null foreign key references MonHoc(MaMH),
+	MaLop varchar(10) not null foreign key references Lop(MaLop),
+	MaPhong varchar(10) null foreign key references Phong(MaPhong),
+	Ngay date null,
+	Tuan int not null,
+	Thu nvarchar(20) not null,
+	Tiet nvarchar(20) not null,
+	constraint PK_KhoaChinh2 primary key(MaGV,MaMH,MaLop,Tuan,Thu,Tiet)
 )
 
 
