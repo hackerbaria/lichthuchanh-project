@@ -62,19 +62,19 @@ create table Phong
 	GanNhau int
 )
 --nhap dl
-insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P001',N'PM1',50,1)
-insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P002',N'PM2',45,1)
-insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P003',N'PM3',50,1)
-insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P004',N'PM4',40,1)
-insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P005',N'PM5',50,1)
-insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P006',N'A5-201',50,2)
+insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P001',N'PM1',26,1)
+insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P002',N'PM2',30,1)
+insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P003',N'PM3',30,1)
+insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P004',N'PM4',30,1)
+insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P005',N'PM5',20,1)
+insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P006',N'A5-201',40,2)
 insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P007',N'A5-202',50,2)
 insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P008',N'A5-203',50,2)
-insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P009',N'A5-204',50,2)
-insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P010',N'A5-301',50,3)
+insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P009',N'A5-204',60,2)
+insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P010',N'A5-301',40,3)
 insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P011',N'A5-302',50,3)
 insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P012',N'A5-303',50,3)
-insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P013',N'A5-304',50,3)
+insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P013',N'A5-304',60,3)
 
 create table Account
 (
