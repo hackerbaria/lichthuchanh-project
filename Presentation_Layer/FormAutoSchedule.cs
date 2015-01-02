@@ -79,6 +79,7 @@ namespace Presentation_Layer
                     dt = ds.Tables[0];
                     importExelToSQL(dt);
 
+                    
                 }
                 if (lapLichBUS.insertLichDayThucHanh())
                     MessageBox.Show("Da Them Vao Lich Thuc Hanh");

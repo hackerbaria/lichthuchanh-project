@@ -12,14 +12,13 @@ namespace Bussiness_Logic_Layer
     public class LapLichBUS
     {
         private LapLichDAO lapLichDAO;
+        private PhongDAO phongDao;
 
-        private List<LichDayVO> lichThucHanhNonPhong ;
-
-
-        
+        private List<LichDayVO> lichThucHanhNonPhong ;       
         public LapLichBUS()
         {
             lapLichDAO = new LapLichDAO();
+            phongDao = new PhongDAO();
         }
         public  bool insertLichDayThucHanh()
         {
@@ -75,13 +74,93 @@ namespace Bussiness_Logic_Layer
                 }
 
                 lichThucHanhNonPhong.Count();
-                
-                return true;
+               int dem=arrangePhong(lichThucHanhNonPhong);
+               if (dem != 0)
+                   return true;
+               return false;
                
             }
             return false;
         }
+        //sap xep phong trong list lichThucHanhNonPhong
+        private int arrangePhong(List<LichDayVO>lichThucHanhNonPhong)
+        {
+            int dem = 0;
+            List<PhongVO> listPhong = new List<PhongVO>();
+            listPhong= getListPhong();
+            while(lichThucHanhNonPhong.Count>0)
+            {
+                List<LichDayVO> listLichDayNho = new List<LichDayVO>();
+                LichDayVO lichDayTam = new LichDayVO();
+                lichDayTam=lichThucHanhNonPhong[0];
+                listLichDayNho.Add(lichDayTam);
+                lichThucHanhNonPhong.Remove(lichDayTam);
 
+                //list phong tam
+                List<PhongVO> listPhongTam = new List<PhongVO>();
+                for (int q = 0; q < listPhong.Count;q++ )
+                {
+                    listPhongTam.Add(listPhong[q]);
+                }
+                for (int j = lichThucHanhNonPhong.Count - 1; j > 0; j--)
+                {
+                     if (cungNhom(lichThucHanhNonPhong[j], lichDayTam))
+                     {
+                         listLichDayNho.Add(lichThucHanhNonPhong[j]);
+                         lichThucHanhNonPhong.RemoveAt(j);
+                     }
+                }
+
+                int h = 0;// listLichDayNho.Count - 1;
+                for (int k = listPhongTam.Count-1; k > 0 &&h<listLichDayNho.Count; k--)
+                {
+                    listLichDayNho[h].MaPhong = listPhongTam[k].MaPhong;
+                    h++;
+                    listPhongTam.RemoveAt(k);
+                }
+                for(int i=0;i<listLichDayNho.Count;i++)
+                {
+                    if (lapLichDAO.insertLapLichThucHanh(listLichDayNho[i]))
+                        dem++;
+                }
+ 
+            }
+            return dem;
+        }
+
+        private bool cungNhom(LichDayVO a,LichDayVO b)
+        {
+            //neu a va b cung sang hoac chieu thì chúng chung nhóm
+            if (a.Tuan == b.Tuan && a.Thu == b.Thu && (isBuoiSang(a)&&isBuoiSang(b))||(!isBuoiSang(a)&&!isBuoiSang(b)))
+                return true;
+            return false;
+        }
+        private bool isBuoiSang(LichDayVO LD)
+        {
+            string a= LD.Tiet.Split('-')[0];
+            if (Convert.ToInt32(a) < 6)
+                return true;
+            return false;
+        }
+        private List<PhongVO> getListPhong()
+        {
+            List<PhongVO> lPhong = new List<PhongVO>();
+            DataTable dt = new DataTable();
+            dt = phongDao.GetAllPhong();
+            if(dt!=null)
+            {
+                foreach(DataRow r in dt.Rows)
+                {
+                    PhongVO phongVO = new PhongVO();
+                    phongVO.MaPhong = r[0].ToString();
+                    phongVO.TenPhong = r[1].ToString();
+                    phongVO.SoMay =Convert.ToInt32(r[2]);
+
+                    lPhong.Add(phongVO);
+                }
+            }
+            return lPhong;
+        }
         // compare 2 dailySchedules
         //if 2 dailySchedules are same  (only different week)
         //return true, otherwise return false
