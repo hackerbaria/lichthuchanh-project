@@ -58,5 +58,21 @@ namespace Bussiness_Logic_Layer
           
             return _LopHocDAO.DeleteLopHoc(LH);
         }
+
+        public String getTenLopHocByMa(String maLH)
+        {
+            String tenLop = "";
+            DataTable dataTable = new DataTable();
+            dataTable = _LopHocDAO.getLopByMa(maLH);
+            if (dataTable != null)
+            {
+                foreach (DataRow dr in dataTable.Rows)
+                {                   
+                    tenLop = dr[1].ToString();
+                }
+            }
+
+            return tenLop;
+        }
     }
 }

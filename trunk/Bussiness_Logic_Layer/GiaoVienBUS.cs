@@ -43,6 +43,23 @@ namespace Bussiness_Logic_Layer
 
             return giaoVienVO;
         }
+
+        public String getNameGiaoVienByMa(String maGV)
+        {
+            String name = "";           
+            DataTable dataTable = new DataTable();
+            dataTable = _GiaoVienDAO.getGiaoVienByMa(maGV);
+            if (dataTable != null)
+            {
+                foreach (DataRow dr in dataTable.Rows)
+                {
+
+                    name = dr[1].ToString();
+                }
+            }
+
+            return name;
+        }
         public bool themGiaoVien(GiaoVienVO gV)
         {
        
