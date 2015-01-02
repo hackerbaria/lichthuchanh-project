@@ -80,6 +80,17 @@ namespace Data_Acccess_Layer
             return conn.executeSelectQuery(query, sqlParameters);
         }
 
+        public DataTable getGiaoVienByMa(String ma)
+        {
+            string query = string.Format("select * from GiaoVien where MaGV = @MaGV");
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            sqlParameters[0] = new SqlParameter("@MaGV", SqlDbType.NVarChar);
+            sqlParameters[0].Value = ma;
+
+            return conn.executeSelectQuery(query, sqlParameters);
+        }
+
         public DataTable getGiaoVienByAccount(UserVO user)
         {
             string query = string.Format("select * from GiaoVien where TenGV = @TenGV");

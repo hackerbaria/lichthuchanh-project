@@ -33,6 +33,17 @@ namespace Data_Acccess_Layer
 
             return conn.executeSelectQuery(query, sqlParameters);
         }
+
+        public DataTable getLopByMa(String maLH)
+        {
+            string query = string.Format("select * from Lop where @MaLop = @MaLop");
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            sqlParameters[0] = new SqlParameter("@MaLop", SqlDbType.NVarChar);
+            sqlParameters[0].Value = maLH;
+
+            return conn.executeSelectQuery(query, sqlParameters);
+        }
         public bool InsertLopHoc(LopVO LH)
         {
             try
