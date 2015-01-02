@@ -13,6 +13,10 @@ namespace Bussiness_Logic_Layer
     {
         private LapLichDAO lapLichDAO;
         private PhongDAO phongDao;
+
+
+        private List<LichDayVO> lichThucHanhNonPhong;
+
         private LopHocDAO lopHocDAO;
         List<LichDayVO> listLichDayCoPhong = new List<LichDayVO>();
         private List<LichDayVO> lichThucHanhNonPhong;
@@ -103,12 +107,28 @@ namespace Bussiness_Logic_Layer
             {
                 List<LichDayVO> listLichDayNho = new List<LichDayVO>();
 
+                LichDayVO lichDayTam = new LichDayVO();
+                lichDayTam = lichThucHanhNonPhong[0];
+                listLichDayNho.Add(lichDayTam);
+                lichThucHanhNonPhong.Remove(lichDayTam);
+
+
                 //list phong tam dung de luu danh sach phong tam thoi cua listPhong
                 List<PhongVO> listPhongTam = new List<PhongVO>();
                 for (int q = 0; q < listPhong.Count; q++)
                 {
                     listPhongTam.Add(listPhong[q]);
                 }
+
+                for (int j = lichThucHanhNonPhong.Count - 1; j > 0; j--)
+                {
+                    if (cungNhom(lichThucHanhNonPhong[j], lichDayTam))
+                    {
+                        listLichDayNho.Add(lichThucHanhNonPhong[j]);
+                        lichThucHanhNonPhong.RemoveAt(j);
+                    }
+                }
+
                 //
                 //tinhSoLuongPhongCanSapXep       
                 //sapXepSLPhongHocGiamDan(listLopHoc);
@@ -156,6 +176,14 @@ namespace Bussiness_Logic_Layer
                     listLichDayNho.Add(lichThucHanhNonPhong[j]);
                     lichThucHanhNonPhong.RemoveAt(j);
                 }
+
+                for (int i = 0; i < listLichDayNho.Count; i++)
+                {
+                    if (lapLichDAO.insertLapLichThucHanh(listLichDayNho[i]))
+                        dem++;
+                }
+
+
             }
         }
         //gan phong cho nhom nho
