@@ -12,9 +12,6 @@ namespace Bussiness_Logic_Layer
     {
         private int numberPhong;
 
-        private Application app = null;
-        private Workbook workbook = null;
-
         private Range workSheet_range = null;
 
         object missing = Type.Missing;
@@ -45,6 +42,7 @@ namespace Bussiness_Logic_Layer
         {
             try
             {
+                listResult = new LapLichBUS().lichDayThucHanhDaCoPhong();
 
                 listPhong = getListPhong();
                 Console.Write(listPhong.Count);
@@ -54,73 +52,68 @@ namespace Bussiness_Logic_Layer
                 oXL.StandardFont = "Times New Roman";
                 oXL.StandardFontSize = 12;
                 Workbook oWB = oXL.Workbooks.Add(missing);
-               
-                
 
-                
 
-                Worksheet oSheet1 = oWB.ActiveSheet as Worksheet;
-                oSheet1.Name = "T01";
-
-                Worksheet oSheet2 = oWB.Sheets.Add(missing, missing, 1, missing)
+                Worksheet oSheet15 = oWB.ActiveSheet as Worksheet
                                 as Worksheet;
-                oSheet2.Name = "T02";
-
-                Worksheet oSheet3 = oWB.Sheets.Add(missing, missing, 1, missing)
-                               as Worksheet;
-                oSheet3.Name = "T03";
-                Worksheet oSheet4 = oWB.Sheets.Add(missing, missing, 1, missing)
-                              as Worksheet;
-                oSheet4.Name = "T04";
-
-                Worksheet oSheet5 = oWB.Sheets.Add(missing, missing, 1, missing)
-                               as Worksheet;
-                oSheet5.Name = "T05";
-
-                Worksheet oSheet6 = oWB.Sheets.Add(missing, missing, 1, missing)
-                               as Worksheet;
-                oSheet6.Name = "T06";
-
-                Worksheet oSheet7 = oWB.Sheets.Add(missing, missing, 1, missing)
-                              as Worksheet;
-                oSheet7.Name = "T07";
-
-                Worksheet oSheet8 = oWB.Sheets.Add(missing, missing, 1, missing)
-                               as Worksheet;
-                oSheet8.Name = "T08";
-
-                Worksheet oSheet9 = oWB.Sheets.Add(missing, missing, 1, missing)
-                                as Worksheet;
-                oSheet9.Name = "T09";
-
-                Worksheet oSheet10 = oWB.Sheets.Add(missing, missing, 1, missing)
-                               as Worksheet;
-                oSheet10.Name = "T10";
-
-                Worksheet oSheet11 = oWB.Sheets.Add(missing, missing, 1, missing)
-                              as Worksheet;
-                oSheet11.Name = "T11";
-
-                Worksheet oSheet12 = oWB.Sheets.Add(missing, missing, 1, missing)
-                               as Worksheet;
-                oSheet12.Name = "T12";
-
-                Worksheet oSheet13 = oWB.Sheets.Add(missing, missing, 1, missing)
-                               as Worksheet;
-                oSheet13.Name = "T13";
+                oSheet15.Name = "T15";
 
                 Worksheet oSheet14 = oWB.Sheets.Add(missing, missing, 1, missing)
                                 as Worksheet;
                 oSheet14.Name = "T14";
 
-                Worksheet oSheet15 = oWB.Sheets.Add(missing, missing, 1, missing)
+                Worksheet oSheet13 = oWB.Sheets.Add(missing, missing, 1, missing)
+                               as Worksheet;
+                oSheet13.Name = "T13";
+
+                Worksheet oSheet12 = oWB.Sheets.Add(missing, missing, 1, missing)
+                               as Worksheet;
+                oSheet12.Name = "T12";
+
+                Worksheet oSheet11 = oWB.Sheets.Add(missing, missing, 1, missing)
+                             as Worksheet;
+                oSheet11.Name = "T11";
+
+                Worksheet oSheet10 = oWB.Sheets.Add(missing, missing, 1, missing)
+                              as Worksheet;
+                oSheet10.Name = "T10";
+
+                Worksheet oSheet9 = oWB.Sheets.Add(missing, missing, 1, missing)
                                 as Worksheet;
-                oSheet15.Name = "T15";
+                oSheet9.Name = "T09";
 
+                Worksheet oSheet8 = oWB.Sheets.Add(missing, missing, 1, missing)
+                               as Worksheet;
+                oSheet8.Name = "T08";
 
+                Worksheet oSheet7 = oWB.Sheets.Add(missing, missing, 1, missing)
+                              as Worksheet;
+                oSheet7.Name = "T07";
+
+                Worksheet oSheet6 = oWB.Sheets.Add(missing, missing, 1, missing)
+                              as Worksheet;
+                oSheet6.Name = "T06";
+
+                Worksheet oSheet5 = oWB.Sheets.Add(missing, missing, 1, missing)
+                               as Worksheet;
+                oSheet5.Name = "T05";
+
+                Worksheet oSheet4 = oWB.Sheets.Add(missing, missing, 1, missing)
+                              as Worksheet;
+                oSheet4.Name = "T04";
+
+                Worksheet oSheet3 = oWB.Sheets.Add(missing, missing, 1, missing)
+                              as Worksheet;
+                oSheet3.Name = "T03";
+
+                Worksheet oSheet2 = oWB.Sheets.Add(missing, missing, 1, missing)
+                               as Worksheet;
+                oSheet2.Name = "T02";
+
+                Worksheet oSheet1 = oWB.Sheets.Add(missing, missing, 1, missing)
+                                as Worksheet;
+                oSheet1.Name = "T01";
                 List<Worksheet> listWorksheet = new List<Worksheet>();
-
-
 
                 createSheet(oSheet1);
                 createSheet(oSheet2);
@@ -164,10 +157,6 @@ namespace Bussiness_Logic_Layer
 
                 //    addDataToExcel(workSheet, temp);
                 //}
-                
-
-
-                
 
                 string fileName = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)
                                         + "\\LichThucHanhKhoaCNTT.xlsx";
@@ -301,7 +290,7 @@ namespace Bussiness_Logic_Layer
             int rowYellow = 5 + numberPhong;
             String startColumn = "B" + rowYellow;
             String endColumn = "J" + rowYellow;
-            createHeaders(workSheet, rowYellow, 2, "", startColumn, endColumn, 9, "TRANS", true, 10, 15, "", "center");
+            createHeaders(workSheet, rowYellow, 2, "", startColumn, endColumn, 9, "YELLOW", true, 10, 15, "", "center");
 
            
             
@@ -469,7 +458,7 @@ namespace Bussiness_Logic_Layer
             workSheet_range.Font.Bold = font;
             workSheet_range.ColumnWidth = size;
             workSheet_range.Font.Size = fontSize;
-            workSheet_range.HorizontalAlignment = XlHAlign.xlHAlignCenter;
+           
             if (fcolor.Equals(""))
             {
                 workSheet_range.Font.Color = System.Drawing.Color.White.ToArgb();
