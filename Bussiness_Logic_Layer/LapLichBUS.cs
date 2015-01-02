@@ -105,7 +105,8 @@ namespace Bussiness_Logic_Layer
             while (lichThucHanhNonPhong.Count > 0)
             {
                 List<LichDayVO> listLichDayNho = new List<LichDayVO>();
-
+                int s;
+                s = 8;
                 LichDayVO lichDayTam = new LichDayVO();
                 lichDayTam = lichThucHanhNonPhong[0];
                 listLichDayNho.Add(lichDayTam);
