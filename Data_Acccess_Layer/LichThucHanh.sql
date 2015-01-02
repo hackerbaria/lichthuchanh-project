@@ -52,7 +52,9 @@ insert into MonHoc(MaMH,TenMonHoc,SoChi,SoTiet,Khoa) values('MH004',N'Kỹ Thu�
 insert into MonHoc(MaMH,TenMonHoc,SoChi,SoTiet,Khoa) values('MH005',N'Mạng Máy Tính Căn Bản',4,5,'CNTT')
 insert into MonHoc(MaMH,TenMonHoc,SoChi,SoTiet,Khoa) values('MH006',N'Cơ Sở Dữ Liệu',4,5,'CNTT')
 insert into MonHoc(MaMH,TenMonHoc,SoChi,SoTiet,Khoa) values('MH007',N'Lập Trình Hướng Đối Tượng',4,5,'CNTT')
-insert into MonHoc(MaMH,TenMonHoc,SoChi,SoTiet,Khoa) values('MH008',N'Công Nghệ Phận Mềm',4,5,'CNTT')
+insert into MonHoc(MaMH,TenMonHoc,SoChi,SoTiet,Khoa) values('MH008',N'Công Nghệ Phần Mềm',4,5,'CNTT')
+insert into MonHoc(MaMH,TenMonHoc,SoChi,SoTiet,Khoa) values('MH009',N'Lập Trình Web',4,5,'CNTT')
+insert into MonHoc(MaMH,TenMonHoc,SoChi,SoTiet,Khoa) values('MH010',N'Unix',4,5,'CNTT')
 
 create table Phong
 (
