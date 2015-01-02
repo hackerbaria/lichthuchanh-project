@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
@@ -142,7 +143,7 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Thông Tin Đăng Nhập :";
             // 
-            // Form1
+            // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -156,7 +157,8 @@
             this.Controls.Add(this.chkGiaoVien);
             this.Controls.Add(this.chkAddmin);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FormLogin";
             this.Text = "Màn Hình Đăng Nhập";
             this.ResumeLayout(false);
             this.PerformLayout();
