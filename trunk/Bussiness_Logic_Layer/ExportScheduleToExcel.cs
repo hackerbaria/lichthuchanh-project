@@ -42,7 +42,7 @@ namespace Bussiness_Logic_Layer
         {
             try
             {
-                listResult = new LapLichBUS().lichDayThucHanhDaCoPhong();
+                listResult = LapLichBUS.listLichDayCoPhong;
 
                 listPhong = getListPhong();
                 Console.Write(listPhong.Count);
@@ -147,16 +147,16 @@ namespace Bussiness_Logic_Layer
                 listWorksheet.Add(oSheet14);
                 listWorksheet.Add(oSheet15);
 
-                //// add add to each sheet. 
-                //List<LichDayVO> temp = new List<LichDayVO>();
-                //foreach (Worksheet workSheet in listWorksheet)
-                //{
-                //    int week = Int32.Parse(workSheet.Name.Substring(1));
-                //    temp.Clear();
-                //    temp = getLichDayByWeek(week);
+                // add add to each sheet. 
+                List<LichDayVO> temp = new List<LichDayVO>();
+                foreach (Worksheet workSheet in listWorksheet)
+                {
+                    int week = Int32.Parse(workSheet.Name.Substring(1));
+                    temp.Clear();
+                    temp = getLichDayByWeek(week);
 
-                //    addDataToExcel(workSheet, temp);
-                //}
+                    addDataToExcel(workSheet, temp);
+                }
 
                 string fileName = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)
                                         + "\\LichThucHanhKhoaCNTT.xlsx";
@@ -184,7 +184,7 @@ namespace Bussiness_Logic_Layer
 
         private List<LichDayVO> getLichDayByWeek(int week)
         {
-            List<LichDayVO> listOutput = null;
+            List<LichDayVO> listOutput = new List<LichDayVO>();
             for (int j = listResult.Count - 1; j >= 0; j--)
             {
                 if (listResult[j].Tuan == week)
@@ -241,11 +241,11 @@ namespace Bussiness_Logic_Layer
                         int TietEnd = Int32.Parse(tiet.Split('-')[1]);
                         if (TietEnd < 7)
                         {
-                            workSheet.Cells[3 + k, 2 + Int32.Parse(number)] = content;                            
+                            workSheet.Cells[5 + k, 2 + Int32.Parse(number)] = content;                            
                         }
                         else
                         {
-                            workSheet.Cells[3 + k +numberPhong+ 1, 2 + Int32.Parse(number)] = content;                        
+                            workSheet.Cells[5 + k +numberPhong+ 1, 2 + Int32.Parse(number)] = content;                        
                         }
                     }
                 }
