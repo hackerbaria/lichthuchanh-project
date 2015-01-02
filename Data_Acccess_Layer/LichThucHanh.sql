@@ -58,22 +58,23 @@ create table Phong
 (
 	MaPhong varchar(10) primary key,
 	TenPhong nvarchar(50) not null,
-	SoMay int
+	SoMay int,
+	GanNhau int
 )
 --nhap dl
-insert into Phong(MaPhong,TenPhong,SoMay) values('P001',N'PM1',50)
-insert into Phong(MaPhong,TenPhong,SoMay) values('P002',N'PM2',45)
-insert into Phong(MaPhong,TenPhong,SoMay) values('P003',N'PM3',50)
-insert into Phong(MaPhong,TenPhong,SoMay) values('P004',N'PM4',40)
-insert into Phong(MaPhong,TenPhong,SoMay) values('P005',N'PM5',50)
-insert into Phong(MaPhong,TenPhong,SoMay) values('P006',N'A5-201',50)
-insert into Phong(MaPhong,TenPhong,SoMay) values('P007',N'A5-202',50)
-insert into Phong(MaPhong,TenPhong,SoMay) values('P008',N'A5-203',50)
-insert into Phong(MaPhong,TenPhong,SoMay) values('P009',N'A5-204',50)
-insert into Phong(MaPhong,TenPhong,SoMay) values('P010',N'A5-301',50)
-insert into Phong(MaPhong,TenPhong,SoMay) values('P011',N'A5-302',50)
-insert into Phong(MaPhong,TenPhong,SoMay) values('P012',N'A5-303',50)
-insert into Phong(MaPhong,TenPhong,SoMay) values('P013',N'A5-304',50)
+insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P001',N'PM1',50,1)
+insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P002',N'PM2',45,1)
+insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P003',N'PM3',50,1)
+insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P004',N'PM4',40,1)
+insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P005',N'PM5',50,1)
+insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P006',N'A5-201',50,2)
+insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P007',N'A5-202',50,2)
+insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P008',N'A5-203',50,2)
+insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P009',N'A5-204',50,2)
+insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P010',N'A5-301',50,3)
+insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P011',N'A5-302',50,3)
+insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P012',N'A5-303',50,3)
+insert into Phong(MaPhong,TenPhong,SoMay,GanNhau) values('P013',N'A5-304',50,3)
 
 create table Account
 (
