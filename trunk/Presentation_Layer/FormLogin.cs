@@ -12,10 +12,10 @@ using Value_Object_Layer;
 
 namespace Presentation_Layer
 {
-    public partial class Form1 : Form
+    public partial class FormLogin : Form
     {
         private UserBUS _userBUS;
-        public Form1()
+        public FormLogin()
         {
             InitializeComponent();
             _userBUS = new UserBUS();
