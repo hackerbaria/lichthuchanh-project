@@ -18,7 +18,7 @@ namespace Presentation_Layer
         public FormAutoSchedule()
         {
             InitializeComponent();
-            
+
         }
         LapLichBUS lapLichBUS = new LapLichBUS();
         GiaoVienBUS giaoVienBUS = new GiaoVienBUS();
@@ -79,12 +79,16 @@ namespace Presentation_Layer
                     dt = ds.Tables[0];
                     importExelToSQL(dt);
 
-                    
+
                 }
-                if (lapLichBUS.insertLichDayThucHanh())
-                    MessageBox.Show("Da Them Vao Lich Thuc Hanh");
+                int lapLich = lapLichBUS.insertLichDayThucHanh();
+                if (lapLich == 0)
+                    MessageBox.Show("khong them duoc");
                 else
-                    MessageBox.Show("ko them dc");
+                    if (lapLich == 1)
+                        MessageBox.Show("Da Them Vao Lich Thuc Hanh");
+                    else
+                        MessageBox.Show("Them Chua Het");
             }
             else
             {
@@ -96,19 +100,19 @@ namespace Presentation_Layer
         {
             if (dt != null)
             {
-                
+
                 for (int i = 3; i < dt.Rows.Count; i++)
                 {
                     for (int j = 3; j < dt.Columns.Count; j++)
                     {
                         string str = dt.Rows[i].ItemArray[j].ToString();
-                        if (str !="")
+                        if (str != "")
                         {
-                            if (str !=" "||str!="\n"||str!=" "||str!="  ")
+                            if (str != " " || str != "\n" || str != " " || str != "  ")
                             {
                                 String[] mang = str.Split('(');
 
-                                String[]ten = mang[0].Split('-');
+                                String[] ten = mang[0].Split('-');
                                 string tenGV = ten[0];
                                 string tenMH = ten[1];
                                 string tenLop = ten[2];
@@ -121,7 +125,7 @@ namespace Presentation_Layer
                                 //lay ma GV thong qua TenGV
                                 GV.TenGV = tenGV;
                                 //tao maGV dua vao ten
-                                //GV.TenGV=tenGV.Split(' ')ơ
+                                //GV.TenGV=tenGV.Split(' ')o
                                 GiaoVienVO gv = giaoVienBUS.getGiaoVienByName(GV);
 
 
@@ -161,7 +165,7 @@ namespace Presentation_Layer
             }
         }
 
-       
+
         private void sinhMa()
         {
             //GiaoVienVO GV = new GiaoVienVO();
@@ -173,13 +177,13 @@ namespace Presentation_Layer
 
             MonHocVO MH = new MonHocVO();
             MH.TenMonHoc = "Nhap mon lap trinh";
-            if(monHocBUS.themMonHocTheoTen(MH)==1)
+            if (monHocBUS.themMonHocTheoTen(MH) == 1)
                 MessageBox.Show("them thanh cong MH");
             else
-                if (monHocBUS.themMonHocTheoTen(MH) ==0)
+                if (monHocBUS.themMonHocTheoTen(MH) == 0)
                     MessageBox.Show("ko them dc MH");
                 else
-                    if(monHocBUS.themMonHocTheoTen(MH) ==2)
+                    if (monHocBUS.themMonHocTheoTen(MH) == 2)
                         MessageBox.Show("Da Co Mon Hoc Nay");
         }
 
@@ -206,7 +210,7 @@ namespace Presentation_Layer
             //excell_app.createHeaders(9, 2, "", "B9", "D9", 2, "GAINSBORO", true, 10, "");
         }
 
-        
+
 
     }
 }
