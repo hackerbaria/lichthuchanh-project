@@ -106,12 +106,12 @@ namespace Presentation_Layer
                     oneSchedule.Tuan = ((Item)cbbTuan.SelectedItem).Value;
                     oneSchedule.Tiet = txtTietStart.Text + "-" + txtTietEnd.Text;
                     if (lapLichBUS.themLapLich(oneSchedule))
-                        MessageBox.Show("Lập Lịch Thành Công", "Thông Báo");
+                        MessageBox.Show("Lập Lịch Thành Công", "Thông Báo Thành Công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
-                        MessageBox.Show("Lập Lịch Không Thành Công", "Thông Báo");
+                        MessageBox.Show("Lập Lịch Không Thành Công", "Thông Báo Thất Bại", MessageBoxButtons.OK , MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("Nhập sai tiết", "Thông Báo");
+                    MessageBox.Show("Nhập sai tiết", "Thông Báo Thất Bại", MessageBoxButtons.OK , MessageBoxIcon.Error);
             }
         }
     }
