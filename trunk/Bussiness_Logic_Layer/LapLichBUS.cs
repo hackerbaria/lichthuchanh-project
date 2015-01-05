@@ -182,8 +182,11 @@ namespace Bussiness_Logic_Layer
         private bool cungNhom(LichDayVO a, LichDayVO b)
         {
             //neu a va b cung sang hoac chieu thì chúng chung nhóm
-            if (a.Tuan == b.Tuan && a.Thu == b.Thu && (isBuoiSang(a) && isBuoiSang(b)) || (!isBuoiSang(a) && !isBuoiSang(b)))
-                return true;
+            if (a.Tuan == b.Tuan && a.Thu == b.Thu)
+                if ((isBuoiSang(a) && isBuoiSang(b)) || ((!isBuoiSang(a)) && (!isBuoiSang(b))))
+                {
+                    return true;
+                }
             return false;
         }
         private bool isBuoiSang(LichDayVO LD)

@@ -109,7 +109,7 @@
             // 
             this.chkGiaoVien.AutoSize = true;
             this.chkGiaoVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkGiaoVien.Location = new System.Drawing.Point(201, 73);
+            this.chkGiaoVien.Location = new System.Drawing.Point(235, 89);
             this.chkGiaoVien.Name = "chkGiaoVien";
             this.chkGiaoVien.Size = new System.Drawing.Size(89, 21);
             this.chkGiaoVien.TabIndex = 11;
@@ -123,7 +123,7 @@
             this.chkAddmin.Checked = true;
             this.chkAddmin.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkAddmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkAddmin.Location = new System.Drawing.Point(109, 73);
+            this.chkAddmin.Location = new System.Drawing.Point(143, 89);
             this.chkAddmin.Name = "chkAddmin";
             this.chkAddmin.Size = new System.Drawing.Size(66, 21);
             this.chkAddmin.TabIndex = 10;
@@ -137,7 +137,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(111, 21);
+            this.label1.Location = new System.Drawing.Point(137, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(235, 26);
             this.label1.TabIndex = 9;
