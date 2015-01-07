@@ -28,7 +28,7 @@ namespace Bussiness_Logic_Layer
         private LopHocBUS lopHocBUS = new LopHocBUS();
 
         private List<LichDayVO> listResult = new List<LichDayVO>();
-
+        LapLichBUS lapLichBUS = new LapLichBUS();
 
         public const int columnPhong = 3;
 
@@ -42,7 +42,7 @@ namespace Bussiness_Logic_Layer
         {
             try
             {
-                listResult = LapLichBUS.listLichDayCoPhong;
+                listResult = lapLichBUS.layLichDayThucHanhDaCoPhong();
 
                 listPhong = getListPhong();
                 Console.Write(listPhong.Count);
@@ -130,7 +130,7 @@ namespace Bussiness_Logic_Layer
                 createSheet(oSheet13);
                 createSheet(oSheet14);
                 createSheet(oSheet15);
-                
+
                 listWorksheet.Add(oSheet1);
                 listWorksheet.Add(oSheet2);
                 listWorksheet.Add(oSheet3);
