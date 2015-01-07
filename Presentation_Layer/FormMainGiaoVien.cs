@@ -19,11 +19,11 @@ namespace Presentation_Layer
         }
         private void btnXemLichDay_ItemClick(object sender, ItemClickEventArgs e)
         {
-            UCXemLich xl = new UCXemLich();
+            UCXemLichGiaoVien xlgv = new UCXemLichGiaoVien();
             panel1.Controls.Clear();
-            xl.Dock = System.Windows.Forms.DockStyle.Fill;
+            xlgv.Dock = System.Windows.Forms.DockStyle.Fill;
             //ql.Dock = System.Windows.Forms.DockStyle.Bottom;
-            panel1.Controls.Add(xl);
+            panel1.Controls.Add(xlgv);
         }
     }
 }

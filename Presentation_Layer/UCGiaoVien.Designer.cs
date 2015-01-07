@@ -39,14 +39,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnSuaGV = new System.Windows.Forms.Button();
-            this.btnThemGV = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnXoaGV = new System.Windows.Forms.Button();
             this.DGVGiaoVien = new System.Windows.Forms.DataGridView();
+            this.btnThemGV = new System.Windows.Forms.Button();
+            this.btnXoaGV = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGVGiaoVien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,9 +54,9 @@
             // 
             this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnHuy.Location = new System.Drawing.Point(921, 82);
+            this.btnHuy.Location = new System.Drawing.Point(912, 93);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(82, 36);
+            this.btnHuy.Size = new System.Drawing.Size(70, 51);
             this.btnHuy.TabIndex = 43;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
@@ -66,9 +66,9 @@
             // 
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.Color.Blue;
-            this.btnLuu.Location = new System.Drawing.Point(919, 26);
+            this.btnLuu.Location = new System.Drawing.Point(910, 33);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(84, 36);
+            this.btnLuu.Size = new System.Drawing.Size(72, 51);
             this.btnLuu.TabIndex = 42;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
@@ -158,25 +158,13 @@
             // 
             this.btnSuaGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuaGV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnSuaGV.Location = new System.Drawing.Point(832, 137);
+            this.btnSuaGV.Location = new System.Drawing.Point(832, 165);
             this.btnSuaGV.Name = "btnSuaGV";
-            this.btnSuaGV.Size = new System.Drawing.Size(83, 36);
+            this.btnSuaGV.Size = new System.Drawing.Size(72, 51);
             this.btnSuaGV.TabIndex = 31;
             this.btnSuaGV.Text = "Sửa";
             this.btnSuaGV.UseVisualStyleBackColor = true;
             this.btnSuaGV.Click += new System.EventHandler(this.btnSuaGV_Click);
-            // 
-            // btnThemGV
-            // 
-            this.btnThemGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemGV.ForeColor = System.Drawing.Color.Blue;
-            this.btnThemGV.Location = new System.Drawing.Point(832, 26);
-            this.btnThemGV.Name = "btnThemGV";
-            this.btnThemGV.Size = new System.Drawing.Size(81, 36);
-            this.btnThemGV.TabIndex = 30;
-            this.btnThemGV.Text = "Thêm";
-            this.btnThemGV.UseVisualStyleBackColor = true;
-            this.btnThemGV.Click += new System.EventHandler(this.btnThemGV_Click);
             // 
             // label1
             // 
@@ -216,18 +204,6 @@
             this.MaGV.HeaderText = "Mã Giáo Viên";
             this.MaGV.Name = "MaGV";
             // 
-            // btnXoaGV
-            // 
-            this.btnXoaGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaGV.ForeColor = System.Drawing.Color.Red;
-            this.btnXoaGV.Location = new System.Drawing.Point(832, 83);
-            this.btnXoaGV.Name = "btnXoaGV";
-            this.btnXoaGV.Size = new System.Drawing.Size(83, 36);
-            this.btnXoaGV.TabIndex = 32;
-            this.btnXoaGV.Text = "Xóa";
-            this.btnXoaGV.UseVisualStyleBackColor = true;
-            this.btnXoaGV.Click += new System.EventHandler(this.btnXoaGV_Click);
-            // 
             // DGVGiaoVien
             // 
             this.DGVGiaoVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -241,6 +217,30 @@
             this.DGVGiaoVien.Size = new System.Drawing.Size(796, 350);
             this.DGVGiaoVien.TabIndex = 28;
             this.DGVGiaoVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVGiaoVien_CellClick);
+            // 
+            // btnThemGV
+            // 
+            this.btnThemGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemGV.ForeColor = System.Drawing.Color.Blue;
+            this.btnThemGV.Location = new System.Drawing.Point(832, 33);
+            this.btnThemGV.Name = "btnThemGV";
+            this.btnThemGV.Size = new System.Drawing.Size(72, 51);
+            this.btnThemGV.TabIndex = 30;
+            this.btnThemGV.Text = "Thêm";
+            this.btnThemGV.UseVisualStyleBackColor = true;
+            this.btnThemGV.Click += new System.EventHandler(this.btnThemGV_Click);
+            // 
+            // btnXoaGV
+            // 
+            this.btnXoaGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaGV.ForeColor = System.Drawing.Color.Red;
+            this.btnXoaGV.Location = new System.Drawing.Point(832, 93);
+            this.btnXoaGV.Name = "btnXoaGV";
+            this.btnXoaGV.Size = new System.Drawing.Size(72, 51);
+            this.btnXoaGV.TabIndex = 32;
+            this.btnXoaGV.Text = "Xóa";
+            this.btnXoaGV.UseVisualStyleBackColor = true;
+            this.btnXoaGV.Click += new System.EventHandler(this.btnXoaGV_Click);
             // 
             // UCGiaoVien
             // 
@@ -263,7 +263,7 @@
             this.Controls.Add(this.btnXoaGV);
             this.Controls.Add(this.DGVGiaoVien);
             this.Name = "UCGiaoVien";
-            this.Size = new System.Drawing.Size(1012, 507);
+            this.Size = new System.Drawing.Size(1004, 507);
             this.Load += new System.EventHandler(this.UCGiaoVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVGiaoVien)).EndInit();
             this.ResumeLayout(false);
