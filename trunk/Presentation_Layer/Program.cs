@@ -18,7 +18,7 @@ namespace Presentation_Layer
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new FormAutoSchedule());
             //Application.Run(new FormLapLich());
-            Application.Run(new FormDangNhapDev());
+            Application.Run(new FormDangNhap());
             
            
         }
