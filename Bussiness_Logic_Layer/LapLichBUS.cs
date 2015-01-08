@@ -18,17 +18,28 @@ namespace Bussiness_Logic_Layer
         private LopHocDAO lopHocDAO;
         List<LichDayVO> listLichDayCoPhong = new List<LichDayVO>();
         private List<LichDayVO> lichThucHanhNonPhong;
+
+        IComparer<PhongVO> comparerPhong = new MyOrderPhong();
         public LapLichBUS()
         {
             lapLichDAO = new LapLichDAO();
             phongDao = new PhongDAO();
             lopHocDAO = new LopHocDAO();
         }
-        public int insertLichDayThucHanh()
+
+        public List<LichDayVO> layLichDayThucHanhDaCoPhong()
+        {
+            return listLichDayCoPhong;
+        }
+
+
+        public int taoLichThucHanh()
         {
             int dem = 0, soLuongLTH = 0;
             lichThucHanhNonPhong = new List<LichDayVO>();
             DataTable dataTable = new DataTable();
+
+            // lay lich ly thuyet tu database len va map tao thanh List<LichDay> lythuyet
             dataTable = lapLichDAO.GetAllLichDayLyThuyet();
             if (dataTable != null)
             {
@@ -40,10 +51,7 @@ namespace Bussiness_Logic_Layer
                     lichDayVO.MaMH = dr[1].ToString();
                     lichDayVO.MaLop = dr[2].ToString();
                     lichDayVO.MaPhong = dr[3].ToString();
-                    //if (dr[4] != null)
-                    //    lichDayVO.Ngay = Convert.ToDateTime(dr[4]);
-                    //else
-                    //    lichDayVO.Ngay =DateTime.MinValue;
+                   
                     lichDayVO.Tuan = Convert.ToInt32(dr[5]);
                     lichDayVO.Thu = dr[6].ToString();
                     lichDayVO.Tiet = dr[7].ToString();
@@ -68,19 +76,24 @@ namespace Bussiness_Logic_Layer
                     dsLichDay.Remove(lichTam);
                     for (int i = dsLichDay.Count - 1; i >= 0; i--)
                     {
+                        // cung giao vien, cung mon hoc, cung lop, cung thu, cung tiet, KHAC TUAN
                         if (compareDailySchedule(dsLichDay[i], lichTam))
                         {
                             dsLichDayNho.Add(dsLichDay[i]);
                             dsLichDay.RemoveAt(i);
                         }
                     }
+                    // chuyen sang Tuan Thuc Hanh
+                    // vi du ly thuyet mon a, giao vien b, lop c, hoc thứ 2, tiet (1- 5) tuần 2, 3, 4, 6
+                    // -> tuan 1,5,7,8,9,10,11,12,13,14,15 (tuong ung tuan thuc hanh)
                     convertToTuanThucHanh(dsLichDayNho);
                 }
 
+                // so luong lich thuc hanh
                 soLuongLTH = lichThucHanhNonPhong.Count;
                 lichThucHanhNonPhong.Count();
                 //dem la so luong lichThucHanhNonPhong da duoc xep phong
-                dem = arrangePhong(lichThucHanhNonPhong);
+                dem = xepPhong(lichThucHanhNonPhong);
 
             }
             if (dem == 0)
@@ -91,10 +104,10 @@ namespace Bussiness_Logic_Layer
                 else
                     return 2;
         }
-        //sap xep phong trong list lichThucHanhNonPhong
 
+        //sap xep phong trong list lichThucHanhNonPhong
         //int chiSoLTH = 0;
-        private int arrangePhong(List<LichDayVO> lichThucHanhNonPhong)
+        private int xepPhong(List<LichDayVO> lichThucHanhNonPhong)
         {
             int soLichThucHanhNonPhong= lichThucHanhNonPhong.Count;
             List<PhongVO> listPhong = new List<PhongVO>();
@@ -102,15 +115,21 @@ namespace Bussiness_Logic_Layer
             listPhong = getListPhong();
             listLopHoc = getListLopHoc();
 
+
+
+            listPhong.Sort(comparerPhong);
+
             sapXepSLCuaLopHocGiamDan(listLopHoc);
             sapXepSoMayCuaPhongTangDan(listPhong);
+
+            List<PhongVO> listPhongTam = new List<PhongVO>();
             while (lichThucHanhNonPhong.Count > 0)
             {
                 List<LichDayVO> listLichDayNho = new List<LichDayVO>();
 
                 //list phong tam dung de luu danh sach phong tam thoi cua listPhong
-                List<PhongVO> listPhongTam = new List<PhongVO>();
-                listPhongTam= layListPhongTam(listPhong);
+                
+                listPhongTam= listPhong;
 
                 //
                 //tinhSoLuongPhongCanSapXep       
@@ -148,10 +167,7 @@ namespace Bussiness_Logic_Layer
                 pt.Add(listPhong[i]);
             return pt;
         }
-        public List<LichDayVO> layLichDayThucHanhDaCoPhong()
-        {
-            return listLichDayCoPhong;
-        }
+       
         void sapXepSLCuaLopHocGiamDan(List<LopVO> listLopHoc)
         {
             if (listLopHoc.Count > 1)
@@ -328,12 +344,14 @@ namespace Bussiness_Logic_Layer
         }
         private bool cungNhom(LichDayVO a, LichDayVO b)
         {
-            //neu a va b cung sang hoac chieu thì chúng chung nhóm
+            //neu a va b cung TUAN, THU, BUOI(cung sang hoac cung chieu) thì chúng chung nhóm
             if (a.Tuan == b.Tuan && a.Thu == b.Thu)
                 if ((isBuoiSang(a) && isBuoiSang(b)) || ((!isBuoiSang(a)) && (!isBuoiSang(b))))
                     return true;
             return false;
         }
+
+        // kiem tra xem lich day la sang hay chieu
         private bool isBuoiSang(LichDayVO LD)
         {
             string a = LD.Tiet.Split('-')[0];
@@ -341,44 +359,7 @@ namespace Bussiness_Logic_Layer
                 return true;
             return false;
         }
-        private List<PhongVO> getListPhong()
-        {
-            List<PhongVO> lPhong = new List<PhongVO>();
-            DataTable dt = new DataTable();
-            dt = phongDao.GetAllPhong();
-            if (dt != null)
-            {
-                foreach (DataRow r in dt.Rows)
-                {
-                    PhongVO phongVO = new PhongVO();
-                    phongVO.MaPhong = r[0].ToString();
-                    phongVO.TenPhong = r[1].ToString();
-                    phongVO.SoMay = Convert.ToInt32(r[2]);
-
-                    lPhong.Add(phongVO);
-                }
-            }
-            return lPhong;
-        }
-        private List<LopVO> getListLopHoc()
-        {
-            List<LopVO> lLopHoc = new List<LopVO>();
-            DataTable dt = new DataTable();
-            dt = lopHocDAO.GetAllLopHoc();
-            if (dt != null)
-            {
-                foreach (DataRow r in dt.Rows)
-                {
-                    LopVO lopHocVO = new LopVO();
-
-                    lopHocVO.MaLop = r[0].ToString();
-                    lopHocVO.TenLop = r[1].ToString();
-                    lopHocVO.SoLuongSV = Convert.ToInt32(r[2]);
-                    lLopHoc.Add(lopHocVO);
-                }
-            }
-            return lLopHoc;
-        }
+        
         // compare 2 dailySchedules
         //if 2 dailySchedules are same  (only different week)
         //return true, otherwise return false
@@ -440,6 +421,9 @@ namespace Bussiness_Logic_Layer
 
         }
 
+
+
+
         public DataTable getLichByMaGVAndWeek(String maGV, int week)
         {
             return lapLichDAO.getLichByMaGVAndWeek(maGV, week);
@@ -451,9 +435,49 @@ namespace Bussiness_Logic_Layer
         }
 
 
-        public void createSchedule()
-        {
+       
 
+
+
+
+        private List<PhongVO> getListPhong()
+        {
+            List<PhongVO> lPhong = new List<PhongVO>();
+            DataTable dt = new DataTable();
+            dt = phongDao.GetAllPhong();
+            if (dt != null)
+            {
+                foreach (DataRow r in dt.Rows)
+                {
+                    PhongVO phongVO = new PhongVO();
+                    phongVO.MaPhong = r[0].ToString();
+                    phongVO.TenPhong = r[1].ToString();
+                    phongVO.SoMay = Convert.ToInt32(r[2]);
+                    phongVO.GanNhau = Convert.ToInt32(r[3]);
+
+                    lPhong.Add(phongVO);
+                }
+            }
+            return lPhong;
+        }
+        private List<LopVO> getListLopHoc()
+        {
+            List<LopVO> lLopHoc = new List<LopVO>();
+            DataTable dt = new DataTable();
+            dt = lopHocDAO.GetAllLopHoc();
+            if (dt != null)
+            {
+                foreach (DataRow r in dt.Rows)
+                {
+                    LopVO lopHocVO = new LopVO();
+
+                    lopHocVO.MaLop = r[0].ToString();
+                    lopHocVO.TenLop = r[1].ToString();
+                    lopHocVO.SoLuongSV = Convert.ToInt32(r[2]);
+                    lLopHoc.Add(lopHocVO);
+                }
+            }
+            return lLopHoc;
         }
     }
 }
