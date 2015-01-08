@@ -30,6 +30,14 @@ namespace Value_Object_Layer
             set { soMay = value; }
         }
 
+        private int ganNhau;
+        public int GanNhau
+        {
+            get { return ganNhau; }
+            set { ganNhau = value; }
+        }
+
+
         public PhongVO()
         {
 
