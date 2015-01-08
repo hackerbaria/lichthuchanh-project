@@ -131,5 +131,12 @@ namespace Bussiness_Logic_Layer
 
             return _MonHocDAO.getMonHocByMa( ma);
         }
+
+        public String getNameMonHocByMa(String ma)
+        {
+            DataTable dt = new DataTable();
+            dt = _MonHocDAO.getMonHocByMa(ma);
+            return dt.Rows[0][1].ToString();
+        }
     }
 }
