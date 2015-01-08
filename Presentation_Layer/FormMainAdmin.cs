@@ -11,9 +11,9 @@ using DevExpress.XtraBars;
 
 namespace Presentation_Layer
 {
-    public partial class FormMainAddmin : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class FormMainAdmin : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public FormMainAddmin()
+        public FormMainAdmin()
         {
             InitializeComponent();
         }

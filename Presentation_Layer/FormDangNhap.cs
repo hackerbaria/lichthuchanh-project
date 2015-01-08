@@ -47,7 +47,7 @@ namespace Presentation_Layer
             Utils.Acount = user.TenDangNhap;
             if (user.Quyen == 1) 
             {
-                FormMainAddmin fm = new FormMainAddmin();
+                FormMainAdmin fm = new FormMainAdmin();
                 fm.ShowDialog();
             }
             else

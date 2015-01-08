@@ -1,6 +1,6 @@
 ﻿namespace Presentation_Layer
 {
-    partial class FormMainAddmin
+    partial class FormMainAdmin
     {
         /// <summary>
         /// Required designer variable.
