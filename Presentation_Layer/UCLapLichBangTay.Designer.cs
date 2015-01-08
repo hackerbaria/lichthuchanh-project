@@ -32,7 +32,6 @@
             this.txtTietEnd = new System.Windows.Forms.TextBox();
             this.txtTietStart = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.btnThemLich = new System.Windows.Forms.Button();
             this.cbbThu = new System.Windows.Forms.ComboBox();
             this.cbbTuan = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnThemLich = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label6
@@ -83,19 +83,6 @@
             this.label10.Size = new System.Drawing.Size(93, 24);
             this.label10.TabIndex = 66;
             this.label10.Text = "Giáo Viên";
-            // 
-            // btnThemLich
-            // 
-            this.btnThemLich.BackColor = System.Drawing.Color.Tomato;
-            this.btnThemLich.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemLich.ForeColor = System.Drawing.Color.Red;
-            this.btnThemLich.Location = new System.Drawing.Point(336, 335);
-            this.btnThemLich.Name = "btnThemLich";
-            this.btnThemLich.Size = new System.Drawing.Size(159, 44);
-            this.btnThemLich.TabIndex = 65;
-            this.btnThemLich.Text = "Thêm Lịch";
-            this.btnThemLich.UseVisualStyleBackColor = false;
-            this.btnThemLich.Click += new System.EventHandler(this.btnThemLich_Click);
             // 
             // cbbThu
             // 
@@ -234,16 +221,27 @@
             this.label2.TabIndex = 52;
             this.label2.Text = "Tiết :";
             // 
+            // btnThemLich
+            // 
+            this.btnThemLich.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemLich.Location = new System.Drawing.Point(354, 333);
+            this.btnThemLich.Name = "btnThemLich";
+            this.btnThemLich.Size = new System.Drawing.Size(139, 44);
+            this.btnThemLich.TabIndex = 71;
+            this.btnThemLich.Text = "Thêm Lịch";
+            this.btnThemLich.UseVisualStyleBackColor = true;
+            this.btnThemLich.Click += new System.EventHandler(this.btnThemLich_Click);
+            // 
             // UCLapLichBangTay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Controls.Add(this.btnThemLich);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtTietEnd);
             this.Controls.Add(this.txtTietStart);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.btnThemLich);
             this.Controls.Add(this.cbbThu);
             this.Controls.Add(this.cbbTuan);
             this.Controls.Add(this.label7);
@@ -270,7 +268,6 @@
         private System.Windows.Forms.TextBox txtTietEnd;
         private System.Windows.Forms.TextBox txtTietStart;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button btnThemLich;
         private System.Windows.Forms.ComboBox cbbThu;
         private System.Windows.Forms.ComboBox cbbTuan;
         private System.Windows.Forms.Label label7;
@@ -284,5 +281,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnThemLich;
     }
 }

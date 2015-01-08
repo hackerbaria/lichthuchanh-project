@@ -30,10 +30,6 @@
         {
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
-            this.txtSoDienThoai = new System.Windows.Forms.TextBox();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.txtTenGV = new System.Windows.Forms.TextBox();
-            this.txtMaGV = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,7 +43,15 @@
             this.DGVGiaoVien = new System.Windows.Forms.DataGridView();
             this.btnThemGV = new System.Windows.Forms.Button();
             this.btnXoaGV = new System.Windows.Forms.Button();
+            this.txtMaGV = new DevExpress.XtraEditors.TextEdit();
+            this.txtTenGV = new DevExpress.XtraEditors.TextEdit();
+            this.txtDiaChi = new DevExpress.XtraEditors.TextEdit();
+            this.txtSoDienThoai = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVGiaoVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaGV.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenGV.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoDienThoai.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHuy
@@ -73,46 +77,6 @@
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // txtSoDienThoai
-            // 
-            this.txtSoDienThoai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.txtSoDienThoai.Enabled = false;
-            this.txtSoDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoDienThoai.Location = new System.Drawing.Point(556, 93);
-            this.txtSoDienThoai.Name = "txtSoDienThoai";
-            this.txtSoDienThoai.Size = new System.Drawing.Size(244, 26);
-            this.txtSoDienThoai.TabIndex = 38;
-            // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.txtDiaChi.Enabled = false;
-            this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(556, 61);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(244, 26);
-            this.txtDiaChi.TabIndex = 39;
-            // 
-            // txtTenGV
-            // 
-            this.txtTenGV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.txtTenGV.Enabled = false;
-            this.txtTenGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenGV.Location = new System.Drawing.Point(166, 92);
-            this.txtTenGV.Name = "txtTenGV";
-            this.txtTenGV.Size = new System.Drawing.Size(224, 26);
-            this.txtTenGV.TabIndex = 40;
-            // 
-            // txtMaGV
-            // 
-            this.txtMaGV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.txtMaGV.Enabled = false;
-            this.txtMaGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaGV.Location = new System.Drawing.Point(166, 61);
-            this.txtMaGV.Name = "txtMaGV";
-            this.txtMaGV.Size = new System.Drawing.Size(224, 26);
-            this.txtMaGV.TabIndex = 41;
             // 
             // label5
             // 
@@ -242,17 +206,53 @@
             this.btnXoaGV.UseVisualStyleBackColor = true;
             this.btnXoaGV.Click += new System.EventHandler(this.btnXoaGV_Click);
             // 
+            // txtMaGV
+            // 
+            this.txtMaGV.Location = new System.Drawing.Point(167, 58);
+            this.txtMaGV.Name = "txtMaGV";
+            this.txtMaGV.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaGV.Properties.Appearance.Options.UseFont = true;
+            this.txtMaGV.Size = new System.Drawing.Size(223, 26);
+            this.txtMaGV.TabIndex = 44;
+            // 
+            // txtTenGV
+            // 
+            this.txtTenGV.Location = new System.Drawing.Point(167, 92);
+            this.txtTenGV.Name = "txtTenGV";
+            this.txtTenGV.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenGV.Properties.Appearance.Options.UseFont = true;
+            this.txtTenGV.Size = new System.Drawing.Size(223, 26);
+            this.txtTenGV.TabIndex = 44;
+            // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.Location = new System.Drawing.Point(556, 58);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi.Properties.Appearance.Options.UseFont = true;
+            this.txtDiaChi.Size = new System.Drawing.Size(244, 26);
+            this.txtDiaChi.TabIndex = 44;
+            // 
+            // txtSoDienThoai
+            // 
+            this.txtSoDienThoai.Location = new System.Drawing.Point(556, 90);
+            this.txtSoDienThoai.Name = "txtSoDienThoai";
+            this.txtSoDienThoai.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoDienThoai.Properties.Appearance.Options.UseFont = true;
+            this.txtSoDienThoai.Size = new System.Drawing.Size(244, 26);
+            this.txtSoDienThoai.TabIndex = 44;
+            // 
             // UCGiaoVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.Controls.Add(this.btnHuy);
-            this.Controls.Add(this.btnLuu);
+            this.Controls.Add(this.txtTenGV);
             this.Controls.Add(this.txtSoDienThoai);
             this.Controls.Add(this.txtDiaChi);
-            this.Controls.Add(this.txtTenGV);
             this.Controls.Add(this.txtMaGV);
+            this.Controls.Add(this.btnHuy);
+            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -266,6 +266,10 @@
             this.Size = new System.Drawing.Size(1004, 507);
             this.Load += new System.EventHandler(this.UCGiaoVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVGiaoVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaGV.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenGV.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoDienThoai.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,10 +279,6 @@
 
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.TextBox txtSoDienThoai;
-        private System.Windows.Forms.TextBox txtDiaChi;
-        private System.Windows.Forms.TextBox txtTenGV;
-        private System.Windows.Forms.TextBox txtMaGV;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -292,5 +292,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaGV;
         private System.Windows.Forms.Button btnXoaGV;
         private System.Windows.Forms.DataGridView DGVGiaoVien;
+        private DevExpress.XtraEditors.TextEdit txtMaGV;
+        private DevExpress.XtraEditors.TextEdit txtTenGV;
+        private DevExpress.XtraEditors.TextEdit txtDiaChi;
+        private DevExpress.XtraEditors.TextEdit txtSoDienThoai;
     }
 }

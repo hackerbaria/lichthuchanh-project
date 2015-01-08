@@ -34,13 +34,8 @@
             this.SoChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenMonHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaMH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtSoTiet = new System.Windows.Forms.TextBox();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
-            this.txtKhoa = new System.Windows.Forms.TextBox();
-            this.txtSoChi = new System.Windows.Forms.TextBox();
-            this.txtTenMH = new System.Windows.Forms.TextBox();
-            this.txtMaMH = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,6 +45,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnXoaMH = new System.Windows.Forms.Button();
             this.DGVMonHoc = new System.Windows.Forms.DataGridView();
+            this.txtMaMH = new System.Windows.Forms.TextBox();
+            this.txtTenMH = new System.Windows.Forms.TextBox();
+            this.txtSoChi = new System.Windows.Forms.TextBox();
+            this.txtSoTiet = new System.Windows.Forms.TextBox();
+            this.txtKhoa = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGVMonHoc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,16 +96,6 @@
             this.MaMH.Name = "MaMH";
             this.MaMH.Width = 120;
             // 
-            // txtSoTiet
-            // 
-            this.txtSoTiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.txtSoTiet.Enabled = false;
-            this.txtSoTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoTiet.Location = new System.Drawing.Point(516, 63);
-            this.txtSoTiet.Name = "txtSoTiet";
-            this.txtSoTiet.Size = new System.Drawing.Size(223, 26);
-            this.txtSoTiet.TabIndex = 63;
-            // 
             // btnHuy
             // 
             this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -130,51 +120,11 @@
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // txtKhoa
-            // 
-            this.txtKhoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.txtKhoa.Enabled = false;
-            this.txtKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKhoa.Location = new System.Drawing.Point(516, 99);
-            this.txtKhoa.Name = "txtKhoa";
-            this.txtKhoa.Size = new System.Drawing.Size(223, 26);
-            this.txtKhoa.TabIndex = 56;
-            // 
-            // txtSoChi
-            // 
-            this.txtSoChi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.txtSoChi.Enabled = false;
-            this.txtSoChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoChi.Location = new System.Drawing.Point(159, 128);
-            this.txtSoChi.Name = "txtSoChi";
-            this.txtSoChi.Size = new System.Drawing.Size(223, 26);
-            this.txtSoChi.TabIndex = 57;
-            // 
-            // txtTenMH
-            // 
-            this.txtTenMH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.txtTenMH.Enabled = false;
-            this.txtTenMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenMH.Location = new System.Drawing.Point(158, 96);
-            this.txtTenMH.Name = "txtTenMH";
-            this.txtTenMH.Size = new System.Drawing.Size(224, 26);
-            this.txtTenMH.TabIndex = 58;
-            // 
-            // txtMaMH
-            // 
-            this.txtMaMH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.txtMaMH.Enabled = false;
-            this.txtMaMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaMH.Location = new System.Drawing.Point(158, 65);
-            this.txtMaMH.Name = "txtMaMH";
-            this.txtMaMH.Size = new System.Drawing.Size(224, 26);
-            this.txtMaMH.TabIndex = 59;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(26, 99);
+            this.label5.Location = new System.Drawing.Point(26, 105);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 20);
             this.label5.TabIndex = 55;
@@ -184,7 +134,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(26, 69);
+            this.label4.Location = new System.Drawing.Point(26, 62);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(119, 20);
             this.label4.TabIndex = 54;
@@ -194,7 +144,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(26, 131);
+            this.label3.Location = new System.Drawing.Point(32, 147);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 20);
             this.label3.TabIndex = 53;
@@ -272,19 +222,61 @@
             this.DGVMonHoc.TabIndex = 46;
             this.DGVMonHoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVMonHoc_CellClick);
             // 
+            // txtMaMH
+            // 
+            this.txtMaMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaMH.Location = new System.Drawing.Point(159, 59);
+            this.txtMaMH.Name = "txtMaMH";
+            this.txtMaMH.Size = new System.Drawing.Size(223, 26);
+            this.txtMaMH.TabIndex = 64;
+            // 
+            // txtTenMH
+            // 
+            this.txtTenMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenMH.Location = new System.Drawing.Point(159, 104);
+            this.txtTenMH.Name = "txtTenMH";
+            this.txtTenMH.Size = new System.Drawing.Size(223, 26);
+            this.txtTenMH.TabIndex = 64;
+            // 
+            // txtSoChi
+            // 
+            this.txtSoChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoChi.Location = new System.Drawing.Point(159, 145);
+            this.txtSoChi.Name = "txtSoChi";
+            this.txtSoChi.Size = new System.Drawing.Size(223, 26);
+            this.txtSoChi.TabIndex = 64;
+            // 
+            // txtSoTiet
+            // 
+            this.txtSoTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoTiet.Location = new System.Drawing.Point(516, 60);
+            this.txtSoTiet.Name = "txtSoTiet";
+            this.txtSoTiet.Size = new System.Drawing.Size(223, 26);
+            this.txtSoTiet.TabIndex = 64;
+            this.txtSoTiet.TextChanged += new System.EventHandler(this.txtSoTiet_TextChanged);
+            // 
+            // txtKhoa
+            // 
+            this.txtKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKhoa.Location = new System.Drawing.Point(516, 102);
+            this.txtKhoa.Name = "txtKhoa";
+            this.txtKhoa.Size = new System.Drawing.Size(223, 26);
+            this.txtKhoa.TabIndex = 64;
+            this.txtKhoa.TextChanged += new System.EventHandler(this.txtSoTiet_TextChanged);
+            // 
             // UCMonHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtSoTiet);
-            this.Controls.Add(this.btnHuy);
-            this.Controls.Add(this.btnLuu);
-            this.Controls.Add(this.txtKhoa);
             this.Controls.Add(this.txtSoChi);
             this.Controls.Add(this.txtTenMH);
+            this.Controls.Add(this.txtKhoa);
+            this.Controls.Add(this.txtSoTiet);
             this.Controls.Add(this.txtMaMH);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.btnHuy);
+            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -311,13 +303,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SoChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenMonHoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaMH;
-        private System.Windows.Forms.TextBox txtSoTiet;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.TextBox txtKhoa;
-        private System.Windows.Forms.TextBox txtSoChi;
-        private System.Windows.Forms.TextBox txtTenMH;
-        private System.Windows.Forms.TextBox txtMaMH;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -327,5 +314,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnXoaMH;
         private System.Windows.Forms.DataGridView DGVMonHoc;
+        private System.Windows.Forms.TextBox txtMaMH;
+        private System.Windows.Forms.TextBox txtTenMH;
+        private System.Windows.Forms.TextBox txtSoChi;
+        private System.Windows.Forms.TextBox txtSoTiet;
+        private System.Windows.Forms.TextBox txtKhoa;
     }
 }

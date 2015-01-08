@@ -114,5 +114,7 @@ namespace Presentation_Layer
                     MessageBox.Show("Nhập sai tiết", "Thông Báo Thất Bại", MessageBoxButtons.OK , MessageBoxIcon.Error);
             }
         }
+
+        
     }
 }

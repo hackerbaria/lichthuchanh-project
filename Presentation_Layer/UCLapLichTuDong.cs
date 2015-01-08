@@ -53,16 +53,6 @@ namespace Presentation_Layer
                 string connectionString = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=""Excel 8.0;HDR=YES;IMEX=1;""", txtPath.Text);
                 OleDbConnection connection = new OleDbConnection();
                 connection.ConnectionString = connectionString;
-                //string query = String.Format("select * from [{0}$]", "T06");
-                //OleDbDataAdapter dataAdapter = new OleDbDataAdapter(query, connectionString);
-                //DataSet dataSet = new DataSet();
-                //dataAdapter.Fill(dataSet);
-                ////dataGridView1.DataSource = dataSet.Tables[0];
-                //DataTable dt = new DataTable();
-                //dt = dataSet.Tables[0];
-                //dataGridView1.DataSource = dt;
-
-
                 DataTable sheets = GetSchemaTable(connectionString);
 
                 foreach (DataRow r in sheets.Rows)
