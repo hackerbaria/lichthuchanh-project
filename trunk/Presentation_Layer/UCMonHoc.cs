@@ -193,5 +193,10 @@ namespace Presentation_Layer
         {
             loadMH();
         }
+
+        private void txtSoTiet_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

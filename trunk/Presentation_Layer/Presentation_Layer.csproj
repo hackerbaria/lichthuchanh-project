@@ -80,36 +80,6 @@
     <Compile Include="FormAutoSchedule.Designer.cs">
       <DependentUpon>FormAutoSchedule.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormGiaoVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormGiaoVien.Designer.cs">
-      <DependentUpon>FormGiaoVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormGiaoVienDN.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormGiaoVienDN.Designer.cs">
-      <DependentUpon>FormGiaoVienDN.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormLapLich.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormLapLich.Designer.cs">
-      <DependentUpon>FormLapLich.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormLopHoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormLopHoc.Designer.cs">
-      <DependentUpon>FormLopHoc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMain.Designer.cs">
-      <DependentUpon>FormMain.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormMonHoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,12 +91,6 @@
     </Compile>
     <Compile Include="FormPhongHoc.Designer.cs">
       <DependentUpon>FormPhongHoc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormXemLich.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormXemLich.Designer.cs">
-      <DependentUpon>FormXemLich.cs</DependentUpon>
     </Compile>
     <Compile Include="FormXemLichGiaoVien.cs">
       <SubType>Form</SubType>
@@ -211,29 +175,11 @@
     <EmbeddedResource Include="FormAutoSchedule.resx">
       <DependentUpon>FormAutoSchedule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormGiaoVien.resx">
-      <DependentUpon>FormGiaoVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormGiaoVienDN.resx">
-      <DependentUpon>FormGiaoVienDN.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormLapLich.resx">
-      <DependentUpon>FormLapLich.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormLopHoc.resx">
-      <DependentUpon>FormLopHoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMain.resx">
-      <DependentUpon>FormMain.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormMonHoc.resx">
       <DependentUpon>FormMonHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPhongHoc.resx">
       <DependentUpon>FormPhongHoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormXemLich.resx">
-      <DependentUpon>FormXemLich.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormXemLichGiaoVien.resx">
       <DependentUpon>FormXemLichGiaoVien.cs</DependentUpon>
@@ -310,6 +256,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon\login.ico" />
+    <None Include="Resources\changePassword.png" />
+    <None Include="Resources\ChangePass.png" />
     <None Include="Resources\onebit_33.png" />
     <None Include="Resources\onebit_31.png" />
     <None Include="Resources\onebit_241.png" />

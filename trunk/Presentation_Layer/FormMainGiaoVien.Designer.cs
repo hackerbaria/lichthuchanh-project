@@ -45,10 +45,12 @@
             this.btnLapLichTuDong = new DevExpress.XtraBars.BarButtonItem();
             this.btnLapLichBangTay = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.btnXemLichDay = new DevExpress.XtraBars.BarButtonItem();
+            this.btnChangePassword = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
@@ -210,9 +212,10 @@
             this.btnLapLichTuDong,
             this.btnXemLich,
             this.btnGioiThieu,
-            this.btnXemLichDay});
+            this.btnXemLichDay,
+            this.btnChangePassword});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 13;
+            this.ribbonControl1.MaxItemId = 14;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage2,
@@ -220,25 +223,6 @@
             this.ribbonPage3});
             this.ribbonControl1.Size = new System.Drawing.Size(981, 179);
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Above;
-            // 
-            // ribbonPage1
-            // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
-            this.ribbonPage1.Image = global::Presentation_Layer.Properties.Resources.calendar1;
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Xem Lịch Dạy";
-            // 
-            // ribbonPage3
-            // 
-            this.ribbonPage3.Image = global::Presentation_Layer.Properties.Resources.onebit_241;
-            this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "Cài Đặt";
-            // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnXemLichDay);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // btnXemLichDay
             // 
@@ -250,14 +234,48 @@
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.btnXemLichDay.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXemLichDay_ItemClick);
             // 
-            // RibbonForm1
+            // btnChangePassword
+            // 
+            this.btnChangePassword.Caption = "Đổi Mật Khẩu";
+            this.btnChangePassword.Id = 13;
+            this.btnChangePassword.LargeGlyph = global::Presentation_Layer.Properties.Resources.changePassword;
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1});
+            this.ribbonPage1.Image = global::Presentation_Layer.Properties.Resources.calendar1;
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "Xem Lịch Dạy";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnXemLichDay);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            // 
+            // ribbonPage3
+            // 
+            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup2});
+            this.ribbonPage3.Image = global::Presentation_Layer.Properties.Resources.onebit_241;
+            this.ribbonPage3.Name = "ribbonPage3";
+            this.ribbonPage3.Text = "Cài Đặt";
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnChangePassword);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            // 
+            // FormMainGiaoVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 620);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ribbonControl1);
-            this.Name = "RibbonForm1";
+            this.Name = "FormMainGiaoVien";
             this.Ribbon = this.ribbonControl1;
             this.Text = "Phần Mềm Xếp Lịch Thực Hành ";
             this.panel1.ResumeLayout(false);
@@ -289,6 +307,8 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
         private DevExpress.XtraBars.BarButtonItem btnXemLichDay;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.BarButtonItem btnChangePassword;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
 
     }
 }
