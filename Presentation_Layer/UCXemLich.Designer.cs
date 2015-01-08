@@ -29,8 +29,20 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
-            this.gv13 = new DevExpress.XtraTab.XtraTabControl();
-            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.tab6 = new DevExpress.XtraTab.XtraTabControl();
+            this.tabTuan15 = new DevExpress.XtraTab.XtraTabPage();
+            this.dgvTuan15 = new DevExpress.XtraGrid.GridControl();
+            this.gridView14 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn118 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn119 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn120 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn121 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn122 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn123 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn124 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn125 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn126 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.tabTuan1 = new DevExpress.XtraTab.XtraTabPage();
             this.gv1 = new DevExpress.XtraGrid.GridControl();
             this.dgvTuan1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Buoi = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -43,7 +55,7 @@
             this.Thu7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tabTuan2 = new DevExpress.XtraTab.XtraTabPage();
-            this.gv2 = new DevExpress.XtraGrid.GridControl();
+            this.dgvTuan2 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -55,7 +67,7 @@
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tabTuan3 = new DevExpress.XtraTab.XtraTabPage();
-            this.gv3 = new DevExpress.XtraGrid.GridControl();
+            this.dgvTuan3 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -67,7 +79,7 @@
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tabTuan4 = new DevExpress.XtraTab.XtraTabPage();
-            this.gv4 = new DevExpress.XtraGrid.GridControl();
+            this.dgvTuan4 = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -79,7 +91,7 @@
             this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tabTuan5 = new DevExpress.XtraTab.XtraTabPage();
-            this.gv5 = new DevExpress.XtraGrid.GridControl();
+            this.dgvTuan5 = new DevExpress.XtraGrid.GridControl();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn29 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -91,7 +103,7 @@
             this.gridColumn35 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn36 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tabTuan6 = new DevExpress.XtraTab.XtraTabPage();
-            this.gv6 = new DevExpress.XtraGrid.GridControl();
+            this.dgvTuan6 = new DevExpress.XtraGrid.GridControl();
             this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn37 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn38 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -103,7 +115,7 @@
             this.gridColumn44 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn45 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tabTuan7 = new DevExpress.XtraTab.XtraTabPage();
-            this.gv7 = new DevExpress.XtraGrid.GridControl();
+            this.dgvTuan7 = new DevExpress.XtraGrid.GridControl();
             this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn46 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn47 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -115,7 +127,7 @@
             this.gridColumn53 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn54 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tabTuan8 = new DevExpress.XtraTab.XtraTabPage();
-            this.gv8 = new DevExpress.XtraGrid.GridControl();
+            this.dgvTuan8 = new DevExpress.XtraGrid.GridControl();
             this.gridView7 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn55 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn56 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -127,7 +139,7 @@
             this.gridColumn62 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn63 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tabTuan9 = new DevExpress.XtraTab.XtraTabPage();
-            this.gv9 = new DevExpress.XtraGrid.GridControl();
+            this.dgvTuan9 = new DevExpress.XtraGrid.GridControl();
             this.gridView8 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn64 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn65 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -138,8 +150,8 @@
             this.gridColumn70 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn71 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn72 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.xcvcx = new DevExpress.XtraTab.XtraTabPage();
-            this.gv10 = new DevExpress.XtraGrid.GridControl();
+            this.tabTuan10 = new DevExpress.XtraTab.XtraTabPage();
+            this.dgvTuan10 = new DevExpress.XtraGrid.GridControl();
             this.gridView9 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn73 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn74 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -151,7 +163,7 @@
             this.gridColumn80 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn81 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tabTuan11 = new DevExpress.XtraTab.XtraTabPage();
-            this.gv11 = new DevExpress.XtraGrid.GridControl();
+            this.dgvTuan11 = new DevExpress.XtraGrid.GridControl();
             this.gridView10 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn82 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn83 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -163,7 +175,7 @@
             this.gridColumn89 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn90 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tabTuan12 = new DevExpress.XtraTab.XtraTabPage();
-            this.gv12 = new DevExpress.XtraGrid.GridControl();
+            this.dgvTuan12 = new DevExpress.XtraGrid.GridControl();
             this.gridView11 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn91 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn92 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -174,8 +186,8 @@
             this.gridColumn97 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn98 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn99 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.xtraTabPage13 = new DevExpress.XtraTab.XtraTabPage();
-            this.gridControl13 = new DevExpress.XtraGrid.GridControl();
+            this.tabTuan13 = new DevExpress.XtraTab.XtraTabPage();
+            this.dgvTuan13 = new DevExpress.XtraGrid.GridControl();
             this.gridView12 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn100 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn101 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -187,7 +199,7 @@
             this.gridColumn107 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn108 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tabTuan14 = new DevExpress.XtraTab.XtraTabPage();
-            this.gv14 = new DevExpress.XtraGrid.GridControl();
+            this.dgvTuan14 = new DevExpress.XtraGrid.GridControl();
             this.gridView13 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn109 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn110 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -198,73 +210,61 @@
             this.gridColumn115 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn116 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn117 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.tabTuan15 = new DevExpress.XtraTab.XtraTabPage();
-            this.gv15 = new DevExpress.XtraGrid.GridControl();
-            this.gridView14 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn118 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn119 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn120 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn121 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn122 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn123 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn124 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn125 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn126 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gv13)).BeginInit();
-            this.gv13.SuspendLayout();
-            this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tab6)).BeginInit();
+            this.tab6.SuspendLayout();
+            this.tabTuan15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView14)).BeginInit();
+            this.tabTuan1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTuan1)).BeginInit();
             this.tabTuan2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gv2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.tabTuan3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gv3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.tabTuan4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gv4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             this.tabTuan5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gv5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             this.tabTuan6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gv6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             this.tabTuan7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gv7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
             this.tabTuan8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gv8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).BeginInit();
             this.tabTuan9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gv9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView8)).BeginInit();
-            this.xcvcx.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gv10)).BeginInit();
+            this.tabTuan10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView9)).BeginInit();
             this.tabTuan11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gv11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView10)).BeginInit();
             this.tabTuan12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gv12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView11)).BeginInit();
-            this.xtraTabPage13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl13)).BeginInit();
+            this.tabTuan13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView12)).BeginInit();
             this.tabTuan14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gv14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView13)).BeginInit();
-            this.tabTuan15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gv15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView14)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.LightGray;
-            this.panel3.Controls.Add(this.gv13);
+            this.panel3.Controls.Add(this.tab6);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -272,15 +272,15 @@
             this.panel3.Size = new System.Drawing.Size(1047, 525);
             this.panel3.TabIndex = 12;
             // 
-            // gv13
+            // tab6
             // 
-            this.gv13.Location = new System.Drawing.Point(3, 67);
-            this.gv13.Name = "gv13";
-            this.gv13.SelectedTabPage = this.tabTuan15;
-            this.gv13.Size = new System.Drawing.Size(1040, 410);
-            this.gv13.TabIndex = 25;
-            this.gv13.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xtraTabPage1,
+            this.tab6.Location = new System.Drawing.Point(3, 67);
+            this.tab6.Name = "tab6";
+            this.tab6.SelectedTabPage = this.tabTuan15;
+            this.tab6.Size = new System.Drawing.Size(1040, 410);
+            this.tab6.TabIndex = 25;
+            this.tab6.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.tabTuan1,
             this.tabTuan2,
             this.tabTuan3,
             this.tabTuan4,
@@ -289,19 +289,114 @@
             this.tabTuan7,
             this.tabTuan8,
             this.tabTuan9,
-            this.xcvcx,
+            this.tabTuan10,
             this.tabTuan11,
             this.tabTuan12,
-            this.xtraTabPage13,
+            this.tabTuan13,
             this.tabTuan14,
             this.tabTuan15});
             // 
-            // xtraTabPage1
+            // tabTuan15
             // 
-            this.xtraTabPage1.Controls.Add(this.gv1);
-            this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1034, 382);
-            this.xtraTabPage1.Text = "Tuần 1";
+            this.tabTuan15.Controls.Add(this.dgvTuan15);
+            this.tabTuan15.Name = "tabTuan15";
+            this.tabTuan15.Size = new System.Drawing.Size(1034, 382);
+            this.tabTuan15.Text = "Tuần 15";
+            // 
+            // dgvTuan15
+            // 
+            this.dgvTuan15.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan15.MainView = this.gridView14;
+            this.dgvTuan15.Name = "dgvTuan15";
+            this.dgvTuan15.Size = new System.Drawing.Size(1034, 387);
+            this.dgvTuan15.TabIndex = 2;
+            this.dgvTuan15.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView14});
+            // 
+            // gridView14
+            // 
+            this.gridView14.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn118,
+            this.gridColumn119,
+            this.gridColumn120,
+            this.gridColumn121,
+            this.gridColumn122,
+            this.gridColumn123,
+            this.gridColumn124,
+            this.gridColumn125,
+            this.gridColumn126});
+            this.gridView14.GridControl = this.dgvTuan15;
+            this.gridView14.Name = "gridView14";
+            // 
+            // gridColumn118
+            // 
+            this.gridColumn118.Caption = "Buổi";
+            this.gridColumn118.Name = "gridColumn118";
+            this.gridColumn118.Visible = true;
+            this.gridColumn118.VisibleIndex = 0;
+            // 
+            // gridColumn119
+            // 
+            this.gridColumn119.Caption = "Phòng";
+            this.gridColumn119.Name = "gridColumn119";
+            this.gridColumn119.Visible = true;
+            this.gridColumn119.VisibleIndex = 2;
+            // 
+            // gridColumn120
+            // 
+            this.gridColumn120.Caption = "Thứ 2";
+            this.gridColumn120.Name = "gridColumn120";
+            this.gridColumn120.Visible = true;
+            this.gridColumn120.VisibleIndex = 1;
+            // 
+            // gridColumn121
+            // 
+            this.gridColumn121.Caption = "Thứ 3";
+            this.gridColumn121.Name = "gridColumn121";
+            this.gridColumn121.Visible = true;
+            this.gridColumn121.VisibleIndex = 3;
+            // 
+            // gridColumn122
+            // 
+            this.gridColumn122.Caption = "Thứ 4";
+            this.gridColumn122.Name = "gridColumn122";
+            this.gridColumn122.Visible = true;
+            this.gridColumn122.VisibleIndex = 4;
+            // 
+            // gridColumn123
+            // 
+            this.gridColumn123.Caption = "Thứ 5";
+            this.gridColumn123.Name = "gridColumn123";
+            this.gridColumn123.Visible = true;
+            this.gridColumn123.VisibleIndex = 5;
+            // 
+            // gridColumn124
+            // 
+            this.gridColumn124.Caption = "Thứ 6";
+            this.gridColumn124.Name = "gridColumn124";
+            this.gridColumn124.Visible = true;
+            this.gridColumn124.VisibleIndex = 6;
+            // 
+            // gridColumn125
+            // 
+            this.gridColumn125.Caption = "Thứ 7";
+            this.gridColumn125.Name = "gridColumn125";
+            this.gridColumn125.Visible = true;
+            this.gridColumn125.VisibleIndex = 7;
+            // 
+            // gridColumn126
+            // 
+            this.gridColumn126.Caption = "Chủ Nhật";
+            this.gridColumn126.Name = "gridColumn126";
+            this.gridColumn126.Visible = true;
+            this.gridColumn126.VisibleIndex = 8;
+            // 
+            // tabTuan1
+            // 
+            this.tabTuan1.Controls.Add(this.gv1);
+            this.tabTuan1.Name = "tabTuan1";
+            this.tabTuan1.Size = new System.Drawing.Size(1034, 382);
+            this.tabTuan1.Text = "Tuần 1";
             // 
             // gv1
             // 
@@ -393,19 +488,19 @@
             // 
             // tabTuan2
             // 
-            this.tabTuan2.Controls.Add(this.gv2);
+            this.tabTuan2.Controls.Add(this.dgvTuan2);
             this.tabTuan2.Name = "tabTuan2";
             this.tabTuan2.Size = new System.Drawing.Size(1034, 382);
             this.tabTuan2.Text = "Tuần 2";
             // 
-            // gv2
+            // dgvTuan2
             // 
-            this.gv2.Location = new System.Drawing.Point(0, 0);
-            this.gv2.MainView = this.gridView2;
-            this.gv2.Name = "gv2";
-            this.gv2.Size = new System.Drawing.Size(1034, 387);
-            this.gv2.TabIndex = 1;
-            this.gv2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvTuan2.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan2.MainView = this.gridView2;
+            this.dgvTuan2.Name = "dgvTuan2";
+            this.dgvTuan2.Size = new System.Drawing.Size(1034, 387);
+            this.dgvTuan2.TabIndex = 1;
+            this.dgvTuan2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
             // gridView2
@@ -420,7 +515,7 @@
             this.gridColumn7,
             this.gridColumn8,
             this.gridColumn9});
-            this.gridView2.GridControl = this.gv2;
+            this.gridView2.GridControl = this.dgvTuan2;
             this.gridView2.Name = "gridView2";
             // 
             // gridColumn1
@@ -488,19 +583,19 @@
             // 
             // tabTuan3
             // 
-            this.tabTuan3.Controls.Add(this.gv3);
+            this.tabTuan3.Controls.Add(this.dgvTuan3);
             this.tabTuan3.Name = "tabTuan3";
             this.tabTuan3.Size = new System.Drawing.Size(1034, 382);
             this.tabTuan3.Text = "Tuần 3";
             // 
-            // gv3
+            // dgvTuan3
             // 
-            this.gv3.Location = new System.Drawing.Point(0, 0);
-            this.gv3.MainView = this.gridView1;
-            this.gv3.Name = "gv3";
-            this.gv3.Size = new System.Drawing.Size(1034, 387);
-            this.gv3.TabIndex = 2;
-            this.gv3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvTuan3.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan3.MainView = this.gridView1;
+            this.dgvTuan3.Name = "dgvTuan3";
+            this.dgvTuan3.Size = new System.Drawing.Size(1034, 387);
+            this.dgvTuan3.TabIndex = 2;
+            this.dgvTuan3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
@@ -515,7 +610,7 @@
             this.gridColumn16,
             this.gridColumn17,
             this.gridColumn18});
-            this.gridView1.GridControl = this.gv3;
+            this.gridView1.GridControl = this.dgvTuan3;
             this.gridView1.Name = "gridView1";
             // 
             // gridColumn10
@@ -583,19 +678,19 @@
             // 
             // tabTuan4
             // 
-            this.tabTuan4.Controls.Add(this.gv4);
+            this.tabTuan4.Controls.Add(this.dgvTuan4);
             this.tabTuan4.Name = "tabTuan4";
             this.tabTuan4.Size = new System.Drawing.Size(1034, 382);
             this.tabTuan4.Text = "Tuần 4";
             // 
-            // gv4
+            // dgvTuan4
             // 
-            this.gv4.Location = new System.Drawing.Point(0, 0);
-            this.gv4.MainView = this.gridView3;
-            this.gv4.Name = "gv4";
-            this.gv4.Size = new System.Drawing.Size(1034, 387);
-            this.gv4.TabIndex = 2;
-            this.gv4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvTuan4.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan4.MainView = this.gridView3;
+            this.dgvTuan4.Name = "dgvTuan4";
+            this.dgvTuan4.Size = new System.Drawing.Size(1034, 387);
+            this.dgvTuan4.TabIndex = 2;
+            this.dgvTuan4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
             // 
             // gridView3
@@ -610,7 +705,7 @@
             this.gridColumn25,
             this.gridColumn26,
             this.gridColumn27});
-            this.gridView3.GridControl = this.gv4;
+            this.gridView3.GridControl = this.dgvTuan4;
             this.gridView3.Name = "gridView3";
             // 
             // gridColumn19
@@ -678,19 +773,19 @@
             // 
             // tabTuan5
             // 
-            this.tabTuan5.Controls.Add(this.gv5);
+            this.tabTuan5.Controls.Add(this.dgvTuan5);
             this.tabTuan5.Name = "tabTuan5";
             this.tabTuan5.Size = new System.Drawing.Size(1034, 382);
             this.tabTuan5.Text = "Tuần 5";
             // 
-            // gv5
+            // dgvTuan5
             // 
-            this.gv5.Location = new System.Drawing.Point(0, 0);
-            this.gv5.MainView = this.gridView4;
-            this.gv5.Name = "gv5";
-            this.gv5.Size = new System.Drawing.Size(1034, 387);
-            this.gv5.TabIndex = 2;
-            this.gv5.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvTuan5.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan5.MainView = this.gridView4;
+            this.dgvTuan5.Name = "dgvTuan5";
+            this.dgvTuan5.Size = new System.Drawing.Size(1034, 387);
+            this.dgvTuan5.TabIndex = 2;
+            this.dgvTuan5.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
             // 
             // gridView4
@@ -705,7 +800,7 @@
             this.gridColumn34,
             this.gridColumn35,
             this.gridColumn36});
-            this.gridView4.GridControl = this.gv5;
+            this.gridView4.GridControl = this.dgvTuan5;
             this.gridView4.Name = "gridView4";
             // 
             // gridColumn28
@@ -773,19 +868,19 @@
             // 
             // tabTuan6
             // 
-            this.tabTuan6.Controls.Add(this.gv6);
+            this.tabTuan6.Controls.Add(this.dgvTuan6);
             this.tabTuan6.Name = "tabTuan6";
             this.tabTuan6.Size = new System.Drawing.Size(1034, 382);
             this.tabTuan6.Text = "Tuần 6";
             // 
-            // gv6
+            // dgvTuan6
             // 
-            this.gv6.Location = new System.Drawing.Point(0, 0);
-            this.gv6.MainView = this.gridView5;
-            this.gv6.Name = "gv6";
-            this.gv6.Size = new System.Drawing.Size(1034, 387);
-            this.gv6.TabIndex = 2;
-            this.gv6.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvTuan6.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan6.MainView = this.gridView5;
+            this.dgvTuan6.Name = "dgvTuan6";
+            this.dgvTuan6.Size = new System.Drawing.Size(1034, 387);
+            this.dgvTuan6.TabIndex = 2;
+            this.dgvTuan6.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
             // 
             // gridView5
@@ -800,7 +895,7 @@
             this.gridColumn43,
             this.gridColumn44,
             this.gridColumn45});
-            this.gridView5.GridControl = this.gv6;
+            this.gridView5.GridControl = this.dgvTuan6;
             this.gridView5.Name = "gridView5";
             // 
             // gridColumn37
@@ -868,19 +963,19 @@
             // 
             // tabTuan7
             // 
-            this.tabTuan7.Controls.Add(this.gv7);
+            this.tabTuan7.Controls.Add(this.dgvTuan7);
             this.tabTuan7.Name = "tabTuan7";
             this.tabTuan7.Size = new System.Drawing.Size(1034, 382);
             this.tabTuan7.Text = "Tuần 7";
             // 
-            // gv7
+            // dgvTuan7
             // 
-            this.gv7.Location = new System.Drawing.Point(0, 0);
-            this.gv7.MainView = this.gridView6;
-            this.gv7.Name = "gv7";
-            this.gv7.Size = new System.Drawing.Size(1034, 387);
-            this.gv7.TabIndex = 2;
-            this.gv7.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvTuan7.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan7.MainView = this.gridView6;
+            this.dgvTuan7.Name = "dgvTuan7";
+            this.dgvTuan7.Size = new System.Drawing.Size(1034, 387);
+            this.dgvTuan7.TabIndex = 2;
+            this.dgvTuan7.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView6});
             // 
             // gridView6
@@ -895,7 +990,7 @@
             this.gridColumn52,
             this.gridColumn53,
             this.gridColumn54});
-            this.gridView6.GridControl = this.gv7;
+            this.gridView6.GridControl = this.dgvTuan7;
             this.gridView6.Name = "gridView6";
             // 
             // gridColumn46
@@ -963,19 +1058,19 @@
             // 
             // tabTuan8
             // 
-            this.tabTuan8.Controls.Add(this.gv8);
+            this.tabTuan8.Controls.Add(this.dgvTuan8);
             this.tabTuan8.Name = "tabTuan8";
             this.tabTuan8.Size = new System.Drawing.Size(1034, 382);
             this.tabTuan8.Text = "Tuần 8";
             // 
-            // gv8
+            // dgvTuan8
             // 
-            this.gv8.Location = new System.Drawing.Point(0, 0);
-            this.gv8.MainView = this.gridView7;
-            this.gv8.Name = "gv8";
-            this.gv8.Size = new System.Drawing.Size(1034, 387);
-            this.gv8.TabIndex = 2;
-            this.gv8.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvTuan8.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan8.MainView = this.gridView7;
+            this.dgvTuan8.Name = "dgvTuan8";
+            this.dgvTuan8.Size = new System.Drawing.Size(1034, 387);
+            this.dgvTuan8.TabIndex = 2;
+            this.dgvTuan8.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView7});
             // 
             // gridView7
@@ -990,7 +1085,7 @@
             this.gridColumn61,
             this.gridColumn62,
             this.gridColumn63});
-            this.gridView7.GridControl = this.gv8;
+            this.gridView7.GridControl = this.dgvTuan8;
             this.gridView7.Name = "gridView7";
             // 
             // gridColumn55
@@ -1058,19 +1153,19 @@
             // 
             // tabTuan9
             // 
-            this.tabTuan9.Controls.Add(this.gv9);
+            this.tabTuan9.Controls.Add(this.dgvTuan9);
             this.tabTuan9.Name = "tabTuan9";
             this.tabTuan9.Size = new System.Drawing.Size(1034, 382);
             this.tabTuan9.Text = "Tuần 9";
             // 
-            // gv9
+            // dgvTuan9
             // 
-            this.gv9.Location = new System.Drawing.Point(0, 0);
-            this.gv9.MainView = this.gridView8;
-            this.gv9.Name = "gv9";
-            this.gv9.Size = new System.Drawing.Size(1034, 387);
-            this.gv9.TabIndex = 2;
-            this.gv9.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvTuan9.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan9.MainView = this.gridView8;
+            this.dgvTuan9.Name = "dgvTuan9";
+            this.dgvTuan9.Size = new System.Drawing.Size(1034, 387);
+            this.dgvTuan9.TabIndex = 2;
+            this.dgvTuan9.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView8});
             // 
             // gridView8
@@ -1085,7 +1180,7 @@
             this.gridColumn70,
             this.gridColumn71,
             this.gridColumn72});
-            this.gridView8.GridControl = this.gv9;
+            this.gridView8.GridControl = this.dgvTuan9;
             this.gridView8.Name = "gridView8";
             // 
             // gridColumn64
@@ -1151,21 +1246,21 @@
             this.gridColumn72.Visible = true;
             this.gridColumn72.VisibleIndex = 8;
             // 
-            // xcvcx
+            // tabTuan10
             // 
-            this.xcvcx.Controls.Add(this.gv10);
-            this.xcvcx.Name = "xcvcx";
-            this.xcvcx.Size = new System.Drawing.Size(1034, 382);
-            this.xcvcx.Text = "Tuần 10";
+            this.tabTuan10.Controls.Add(this.dgvTuan10);
+            this.tabTuan10.Name = "tabTuan10";
+            this.tabTuan10.Size = new System.Drawing.Size(1034, 382);
+            this.tabTuan10.Text = "Tuần 10";
             // 
-            // gv10
+            // dgvTuan10
             // 
-            this.gv10.Location = new System.Drawing.Point(0, 0);
-            this.gv10.MainView = this.gridView9;
-            this.gv10.Name = "gv10";
-            this.gv10.Size = new System.Drawing.Size(1034, 387);
-            this.gv10.TabIndex = 2;
-            this.gv10.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvTuan10.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan10.MainView = this.gridView9;
+            this.dgvTuan10.Name = "dgvTuan10";
+            this.dgvTuan10.Size = new System.Drawing.Size(1034, 387);
+            this.dgvTuan10.TabIndex = 2;
+            this.dgvTuan10.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView9});
             // 
             // gridView9
@@ -1180,7 +1275,7 @@
             this.gridColumn79,
             this.gridColumn80,
             this.gridColumn81});
-            this.gridView9.GridControl = this.gv10;
+            this.gridView9.GridControl = this.dgvTuan10;
             this.gridView9.Name = "gridView9";
             // 
             // gridColumn73
@@ -1248,19 +1343,19 @@
             // 
             // tabTuan11
             // 
-            this.tabTuan11.Controls.Add(this.gv11);
+            this.tabTuan11.Controls.Add(this.dgvTuan11);
             this.tabTuan11.Name = "tabTuan11";
             this.tabTuan11.Size = new System.Drawing.Size(1034, 382);
             this.tabTuan11.Text = "Tuần 11";
             // 
-            // gv11
+            // dgvTuan11
             // 
-            this.gv11.Location = new System.Drawing.Point(0, 0);
-            this.gv11.MainView = this.gridView10;
-            this.gv11.Name = "gv11";
-            this.gv11.Size = new System.Drawing.Size(1034, 387);
-            this.gv11.TabIndex = 2;
-            this.gv11.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvTuan11.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan11.MainView = this.gridView10;
+            this.dgvTuan11.Name = "dgvTuan11";
+            this.dgvTuan11.Size = new System.Drawing.Size(1034, 387);
+            this.dgvTuan11.TabIndex = 2;
+            this.dgvTuan11.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView10});
             // 
             // gridView10
@@ -1275,7 +1370,7 @@
             this.gridColumn88,
             this.gridColumn89,
             this.gridColumn90});
-            this.gridView10.GridControl = this.gv11;
+            this.gridView10.GridControl = this.dgvTuan11;
             this.gridView10.Name = "gridView10";
             // 
             // gridColumn82
@@ -1343,19 +1438,19 @@
             // 
             // tabTuan12
             // 
-            this.tabTuan12.Controls.Add(this.gv12);
+            this.tabTuan12.Controls.Add(this.dgvTuan12);
             this.tabTuan12.Name = "tabTuan12";
             this.tabTuan12.Size = new System.Drawing.Size(1034, 382);
             this.tabTuan12.Text = "Tuần 12";
             // 
-            // gv12
+            // dgvTuan12
             // 
-            this.gv12.Location = new System.Drawing.Point(0, 0);
-            this.gv12.MainView = this.gridView11;
-            this.gv12.Name = "gv12";
-            this.gv12.Size = new System.Drawing.Size(1034, 387);
-            this.gv12.TabIndex = 2;
-            this.gv12.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvTuan12.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan12.MainView = this.gridView11;
+            this.dgvTuan12.Name = "dgvTuan12";
+            this.dgvTuan12.Size = new System.Drawing.Size(1034, 387);
+            this.dgvTuan12.TabIndex = 2;
+            this.dgvTuan12.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView11});
             // 
             // gridView11
@@ -1370,7 +1465,7 @@
             this.gridColumn97,
             this.gridColumn98,
             this.gridColumn99});
-            this.gridView11.GridControl = this.gv12;
+            this.gridView11.GridControl = this.dgvTuan12;
             this.gridView11.Name = "gridView11";
             // 
             // gridColumn91
@@ -1436,21 +1531,21 @@
             this.gridColumn99.Visible = true;
             this.gridColumn99.VisibleIndex = 8;
             // 
-            // xtraTabPage13
+            // tabTuan13
             // 
-            this.xtraTabPage13.Controls.Add(this.gridControl13);
-            this.xtraTabPage13.Name = "xtraTabPage13";
-            this.xtraTabPage13.Size = new System.Drawing.Size(1034, 382);
-            this.xtraTabPage13.Text = "Tuần 13";
+            this.tabTuan13.Controls.Add(this.dgvTuan13);
+            this.tabTuan13.Name = "tabTuan13";
+            this.tabTuan13.Size = new System.Drawing.Size(1034, 382);
+            this.tabTuan13.Text = "Tuần 13";
             // 
-            // gridControl13
+            // dgvTuan13
             // 
-            this.gridControl13.Location = new System.Drawing.Point(0, 0);
-            this.gridControl13.MainView = this.gridView12;
-            this.gridControl13.Name = "gridControl13";
-            this.gridControl13.Size = new System.Drawing.Size(1034, 387);
-            this.gridControl13.TabIndex = 2;
-            this.gridControl13.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvTuan13.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan13.MainView = this.gridView12;
+            this.dgvTuan13.Name = "dgvTuan13";
+            this.dgvTuan13.Size = new System.Drawing.Size(1034, 387);
+            this.dgvTuan13.TabIndex = 2;
+            this.dgvTuan13.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView12});
             // 
             // gridView12
@@ -1465,7 +1560,7 @@
             this.gridColumn106,
             this.gridColumn107,
             this.gridColumn108});
-            this.gridView12.GridControl = this.gridControl13;
+            this.gridView12.GridControl = this.dgvTuan13;
             this.gridView12.Name = "gridView12";
             // 
             // gridColumn100
@@ -1533,19 +1628,19 @@
             // 
             // tabTuan14
             // 
-            this.tabTuan14.Controls.Add(this.gv14);
+            this.tabTuan14.Controls.Add(this.dgvTuan14);
             this.tabTuan14.Name = "tabTuan14";
             this.tabTuan14.Size = new System.Drawing.Size(1034, 382);
             this.tabTuan14.Text = "Tuần 14";
             // 
-            // gv14
+            // dgvTuan14
             // 
-            this.gv14.Location = new System.Drawing.Point(0, 0);
-            this.gv14.MainView = this.gridView13;
-            this.gv14.Name = "gv14";
-            this.gv14.Size = new System.Drawing.Size(1034, 387);
-            this.gv14.TabIndex = 2;
-            this.gv14.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvTuan14.Location = new System.Drawing.Point(0, 0);
+            this.dgvTuan14.MainView = this.gridView13;
+            this.dgvTuan14.Name = "dgvTuan14";
+            this.dgvTuan14.Size = new System.Drawing.Size(1034, 387);
+            this.dgvTuan14.TabIndex = 2;
+            this.dgvTuan14.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView13});
             // 
             // gridView13
@@ -1560,7 +1655,7 @@
             this.gridColumn115,
             this.gridColumn116,
             this.gridColumn117});
-            this.gridView13.GridControl = this.gv14;
+            this.gridView13.GridControl = this.dgvTuan14;
             this.gridView13.Name = "gridView13";
             // 
             // gridColumn109
@@ -1626,101 +1721,6 @@
             this.gridColumn117.Visible = true;
             this.gridColumn117.VisibleIndex = 8;
             // 
-            // tabTuan15
-            // 
-            this.tabTuan15.Controls.Add(this.gv15);
-            this.tabTuan15.Name = "tabTuan15";
-            this.tabTuan15.Size = new System.Drawing.Size(1034, 382);
-            this.tabTuan15.Text = "Tuần 15";
-            // 
-            // gv15
-            // 
-            this.gv15.Location = new System.Drawing.Point(0, 0);
-            this.gv15.MainView = this.gridView14;
-            this.gv15.Name = "gv15";
-            this.gv15.Size = new System.Drawing.Size(1034, 387);
-            this.gv15.TabIndex = 2;
-            this.gv15.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView14});
-            // 
-            // gridView14
-            // 
-            this.gridView14.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn118,
-            this.gridColumn119,
-            this.gridColumn120,
-            this.gridColumn121,
-            this.gridColumn122,
-            this.gridColumn123,
-            this.gridColumn124,
-            this.gridColumn125,
-            this.gridColumn126});
-            this.gridView14.GridControl = this.gv15;
-            this.gridView14.Name = "gridView14";
-            // 
-            // gridColumn118
-            // 
-            this.gridColumn118.Caption = "Buổi";
-            this.gridColumn118.Name = "gridColumn118";
-            this.gridColumn118.Visible = true;
-            this.gridColumn118.VisibleIndex = 0;
-            // 
-            // gridColumn119
-            // 
-            this.gridColumn119.Caption = "Phòng";
-            this.gridColumn119.Name = "gridColumn119";
-            this.gridColumn119.Visible = true;
-            this.gridColumn119.VisibleIndex = 2;
-            // 
-            // gridColumn120
-            // 
-            this.gridColumn120.Caption = "Thứ 2";
-            this.gridColumn120.Name = "gridColumn120";
-            this.gridColumn120.Visible = true;
-            this.gridColumn120.VisibleIndex = 1;
-            // 
-            // gridColumn121
-            // 
-            this.gridColumn121.Caption = "Thứ 3";
-            this.gridColumn121.Name = "gridColumn121";
-            this.gridColumn121.Visible = true;
-            this.gridColumn121.VisibleIndex = 3;
-            // 
-            // gridColumn122
-            // 
-            this.gridColumn122.Caption = "Thứ 4";
-            this.gridColumn122.Name = "gridColumn122";
-            this.gridColumn122.Visible = true;
-            this.gridColumn122.VisibleIndex = 4;
-            // 
-            // gridColumn123
-            // 
-            this.gridColumn123.Caption = "Thứ 5";
-            this.gridColumn123.Name = "gridColumn123";
-            this.gridColumn123.Visible = true;
-            this.gridColumn123.VisibleIndex = 5;
-            // 
-            // gridColumn124
-            // 
-            this.gridColumn124.Caption = "Thứ 6";
-            this.gridColumn124.Name = "gridColumn124";
-            this.gridColumn124.Visible = true;
-            this.gridColumn124.VisibleIndex = 6;
-            // 
-            // gridColumn125
-            // 
-            this.gridColumn125.Caption = "Thứ 7";
-            this.gridColumn125.Name = "gridColumn125";
-            this.gridColumn125.Visible = true;
-            this.gridColumn125.VisibleIndex = 7;
-            // 
-            // gridColumn126
-            // 
-            this.gridColumn126.Caption = "Chủ Nhật";
-            this.gridColumn126.Name = "gridColumn126";
-            this.gridColumn126.Visible = true;
-            this.gridColumn126.VisibleIndex = 8;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -1741,53 +1741,53 @@
             this.Load += new System.EventHandler(this.UCXemLich_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gv13)).EndInit();
-            this.gv13.ResumeLayout(false);
-            this.xtraTabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tab6)).EndInit();
+            this.tab6.ResumeLayout(false);
+            this.tabTuan15.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView14)).EndInit();
+            this.tabTuan1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gv1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTuan1)).EndInit();
             this.tabTuan2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gv2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.tabTuan3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gv3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.tabTuan4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gv4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             this.tabTuan5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gv5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             this.tabTuan6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gv6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             this.tabTuan7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gv7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
             this.tabTuan8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gv8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).EndInit();
             this.tabTuan9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gv9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView8)).EndInit();
-            this.xcvcx.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gv10)).EndInit();
+            this.tabTuan10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView9)).EndInit();
             this.tabTuan11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gv11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView10)).EndInit();
             this.tabTuan12.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gv12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView11)).EndInit();
-            this.xtraTabPage13.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl13)).EndInit();
+            this.tabTuan13.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView12)).EndInit();
             this.tabTuan14.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gv14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuan14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView13)).EndInit();
-            this.tabTuan15.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gv15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView14)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1796,8 +1796,8 @@
 
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraTab.XtraTabControl gv13;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
+        private DevExpress.XtraTab.XtraTabControl tab6;
+        private DevExpress.XtraTab.XtraTabPage tabTuan1;
         private DevExpress.XtraTab.XtraTabPage tabTuan2;
         private DevExpress.XtraGrid.GridControl gv1;
         private DevExpress.XtraGrid.Views.Grid.GridView dgvTuan1;
@@ -1810,7 +1810,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn Thu6;
         private DevExpress.XtraGrid.Columns.GridColumn Thu7;
         private DevExpress.XtraGrid.Columns.GridColumn CN;
-        private DevExpress.XtraGrid.GridControl gv2;
+        private DevExpress.XtraGrid.GridControl dgvTuan2;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
@@ -1822,7 +1822,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraTab.XtraTabPage tabTuan3;
-        private DevExpress.XtraGrid.GridControl gv3;
+        private DevExpress.XtraGrid.GridControl dgvTuan3;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
@@ -1834,7 +1834,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
         private DevExpress.XtraTab.XtraTabPage tabTuan4;
-        private DevExpress.XtraGrid.GridControl gv4;
+        private DevExpress.XtraGrid.GridControl dgvTuan4;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
@@ -1846,7 +1846,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn26;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn27;
         private DevExpress.XtraTab.XtraTabPage tabTuan5;
-        private DevExpress.XtraGrid.GridControl gv5;
+        private DevExpress.XtraGrid.GridControl dgvTuan5;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn28;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn29;
@@ -1858,7 +1858,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn35;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn36;
         private DevExpress.XtraTab.XtraTabPage tabTuan6;
-        private DevExpress.XtraGrid.GridControl gv6;
+        private DevExpress.XtraGrid.GridControl dgvTuan6;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn37;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn38;
@@ -1870,7 +1870,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn44;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn45;
         private DevExpress.XtraTab.XtraTabPage tabTuan7;
-        private DevExpress.XtraGrid.GridControl gv7;
+        private DevExpress.XtraGrid.GridControl dgvTuan7;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn46;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn47;
@@ -1882,7 +1882,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn53;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn54;
         private DevExpress.XtraTab.XtraTabPage tabTuan8;
-        private DevExpress.XtraGrid.GridControl gv8;
+        private DevExpress.XtraGrid.GridControl dgvTuan8;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn55;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn56;
@@ -1894,7 +1894,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn62;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn63;
         private DevExpress.XtraTab.XtraTabPage tabTuan9;
-        private DevExpress.XtraGrid.GridControl gv9;
+        private DevExpress.XtraGrid.GridControl dgvTuan9;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn64;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn65;
@@ -1905,8 +1905,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn70;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn71;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn72;
-        private DevExpress.XtraTab.XtraTabPage xcvcx;
-        private DevExpress.XtraGrid.GridControl gv10;
+        private DevExpress.XtraTab.XtraTabPage tabTuan10;
+        private DevExpress.XtraGrid.GridControl dgvTuan10;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView9;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn73;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn74;
@@ -1918,7 +1918,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn80;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn81;
         private DevExpress.XtraTab.XtraTabPage tabTuan11;
-        private DevExpress.XtraGrid.GridControl gv11;
+        private DevExpress.XtraGrid.GridControl dgvTuan11;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView10;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn82;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn83;
@@ -1930,7 +1930,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn89;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn90;
         private DevExpress.XtraTab.XtraTabPage tabTuan12;
-        private DevExpress.XtraGrid.GridControl gv12;
+        private DevExpress.XtraGrid.GridControl dgvTuan12;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn91;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn92;
@@ -1941,8 +1941,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn97;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn98;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn99;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage13;
-        private DevExpress.XtraGrid.GridControl gridControl13;
+        private DevExpress.XtraTab.XtraTabPage tabTuan13;
+        private DevExpress.XtraGrid.GridControl dgvTuan13;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView12;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn100;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn101;
@@ -1954,7 +1954,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn107;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn108;
         private DevExpress.XtraTab.XtraTabPage tabTuan14;
-        private DevExpress.XtraGrid.GridControl gv14;
+        private DevExpress.XtraGrid.GridControl dgvTuan14;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView13;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn109;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn110;
@@ -1966,7 +1966,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn116;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn117;
         private DevExpress.XtraTab.XtraTabPage tabTuan15;
-        private DevExpress.XtraGrid.GridControl gv15;
+        private DevExpress.XtraGrid.GridControl dgvTuan15;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView14;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn118;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn119;
