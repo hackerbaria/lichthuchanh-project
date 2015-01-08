@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnExport = new System.Windows.Forms.Button();
-            this.btnLoadData = new System.Windows.Forms.Button();
+            this.btnXuLi = new System.Windows.Forms.Button();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.txtPath = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,16 +46,16 @@
             this.btnExport.UseVisualStyleBackColor = true;
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
-            // btnLoadData
+            // btnXuLi
             // 
-            this.btnLoadData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoadData.Location = new System.Drawing.Point(577, 154);
-            this.btnLoadData.Name = "btnLoadData";
-            this.btnLoadData.Size = new System.Drawing.Size(97, 43);
-            this.btnLoadData.TabIndex = 30;
-            this.btnLoadData.Text = "Xử Lí Lịch";
-            this.btnLoadData.UseVisualStyleBackColor = true;
-            this.btnLoadData.Click += new System.EventHandler(this.btnLoadData_Click);
+            this.btnXuLi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXuLi.Location = new System.Drawing.Point(577, 154);
+            this.btnXuLi.Name = "btnXuLi";
+            this.btnXuLi.Size = new System.Drawing.Size(97, 43);
+            this.btnXuLi.TabIndex = 30;
+            this.btnXuLi.Text = "Xử Lí Lịch";
+            this.btnXuLi.UseVisualStyleBackColor = true;
+            this.btnXuLi.Click += new System.EventHandler(this.btnXuLi_Click);
             // 
             // btnBrowse
             // 
@@ -95,7 +95,7 @@
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExport);
-            this.Controls.Add(this.btnLoadData);
+            this.Controls.Add(this.btnXuLi);
             this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.txtPath);
             this.Name = "UCLapLichTuDong";
@@ -108,7 +108,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnExport;
-        private System.Windows.Forms.Button btnLoadData;
+        private System.Windows.Forms.Button btnXuLi;
         private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.TextBox txtPath;
         private System.Windows.Forms.Label label1;

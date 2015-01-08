@@ -45,14 +45,15 @@ namespace Presentation_Layer
             }
         }
 
-        private void btnLoadData_Click(object sender, EventArgs e)
+        private void btnXuLi_Click(object sender, EventArgs e)
         {
             if (System.IO.File.Exists(txtPath.Text))
             {
                 DataSet ds = new DataSet();
-                string connectionString = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=""Excel 8.0;HDR=YES;IMEX=1;""", txtPath.Text);
+                string connectionString = String.Format(@"Provider=Microsoft.ACE.OLEDB.15.0;Data Source={0};Extended Properties=""Excel 8.0;HDR=YES;IMEX=1;""", txtPath.Text);
                 OleDbConnection connection = new OleDbConnection();
                 connection.ConnectionString = connectionString;
+
                 DataTable sheets = GetSchemaTable(connectionString);
 
                 foreach (DataRow r in sheets.Rows)
@@ -67,7 +68,7 @@ namespace Presentation_Layer
 
 
                 }
-                int lapLich = lapLichBUS.insertLichDayThucHanh();
+                int lapLich = lapLichBUS.taoLichThucHanh();
                 if (lapLich == 0)
                     MessageBox.Show("khong them duoc");
                 else
@@ -81,6 +82,8 @@ namespace Presentation_Layer
                 MessageBox.Show("No File is Selected");
             }
         }
+
+        
         private void importExelToSQL(DataTable dt)
         {
             if (dt != null)
@@ -126,8 +129,7 @@ namespace Presentation_Layer
                                 LichDayVO LD = new LichDayVO();
                                 LD.MaGV = gv.MaGV;
                                 LD.MaMH = mh.MaMH;
-                                LD.MaLop = lh.MaLop;
-                                //LD.Thu = dt.Rows[1].ItemArray[3].ToString();             
+                                LD.MaLop = lh.MaLop;       
                                 LD.Thu = j - 1 + "";
                                 LD.Tiet = tiet;
 
@@ -154,5 +156,7 @@ namespace Presentation_Layer
         {
             Bussiness_Logic_Layer.ExportScheduleToExcel excell_app = new Bussiness_Logic_Layer.ExportScheduleToExcel();
         }
+
+       
     }
 }
