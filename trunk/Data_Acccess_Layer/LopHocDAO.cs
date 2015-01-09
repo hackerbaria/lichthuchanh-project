@@ -36,7 +36,7 @@ namespace Data_Acccess_Layer
 
         public DataTable getLopByMa(String maLH)
         {
-            string query = string.Format("select * from Lop where @MaLop = @MaLop");
+            string query = string.Format("select * from Lop where MaLop = @MaLop");
             SqlParameter[] sqlParameters = new SqlParameter[1];
 
             sqlParameters[0] = new SqlParameter("@MaLop", SqlDbType.NVarChar);
