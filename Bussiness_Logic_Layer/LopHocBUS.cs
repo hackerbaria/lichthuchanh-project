@@ -11,11 +11,11 @@ namespace Bussiness_Logic_Layer
 {
     public class LopHocBUS
     {
-        private LopHocDAO _LopHocDAO;
+        private LopHocDAO _LopHocDAO = new LopHocDAO();
         
         public LopHocBUS()
         {
-            _LopHocDAO = new LopHocDAO();
+            
         }
 
         public DataTable getAllLopHoc()
@@ -38,6 +38,25 @@ namespace Bussiness_Logic_Layer
 
             return lopHocVO;
         }
+
+        public LopVO getLopHocByMa(String ma)
+        {
+            LopVO lopHocVO = new LopVO();
+            DataTable dataTable = new DataTable();
+            dataTable = _LopHocDAO.getLopByMa(ma);
+            if (dataTable != null)
+            {
+                foreach (DataRow dr in dataTable.Rows)
+                {
+                    lopHocVO.MaLop = dr[0].ToString();
+                    lopHocVO.TenLop = dr[1].ToString();
+                    lopHocVO.SoLuongSV = Int32.Parse(dr[2].ToString());
+                }
+            }
+
+            return lopHocVO;
+        }
+
         public bool themLopHoc(LopVO LH)
         {
        

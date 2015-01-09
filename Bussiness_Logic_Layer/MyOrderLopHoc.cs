@@ -11,10 +11,10 @@ namespace Bussiness_Logic_Layer
     {
         public int Compare(LopVO x, LopVO y)
         {
-            int compareSoSV = x.SoLuongSV.CompareTo(y.SoLuongSV);
+            int compareSoSV = y.SoLuongSV.CompareTo(x.SoLuongSV);
             if (compareSoSV == 0)
             {
-                return x.MaLop.CompareTo(y.MaLop);
+                return y.MaLop.CompareTo(x.MaLop);
             }
             return compareSoSV;
         }
