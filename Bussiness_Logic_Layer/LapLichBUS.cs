@@ -13,18 +13,23 @@ namespace Bussiness_Logic_Layer
     {
         int demSoLichDayDcXep=0;
         int demSoLichDayTaoThem = 0;
+        private LopHocBUS lophocBus = new LopHocBUS();
         private LapLichDAO lapLichDAO;
         private PhongDAO phongDao;
         private LopHocDAO lopHocDAO;
         List<LichDayVO> listLichDayCoPhong = new List<LichDayVO>();
         private List<LichDayVO> lichThucHanhNonPhong;
+        List<PhongVO> listPhong = new List<PhongVO>();
+        List<PhongVO> listPhongTam = new List<PhongVO>();
 
         IComparer<PhongVO> comparerPhong = new MyOrderPhong();
+        IComparer<LopVO> comparerLop = new MyOrderLopHoc();
         public LapLichBUS()
         {
             lapLichDAO = new LapLichDAO();
             phongDao = new PhongDAO();
             lopHocDAO = new LopHocDAO();
+            listPhong = getListPhong();
         }
 
         public List<LichDayVO> layLichDayThucHanhDaCoPhong()
@@ -110,44 +115,30 @@ namespace Bussiness_Logic_Layer
         private int xepPhong(List<LichDayVO> lichThucHanhNonPhong)
         {
             int soLichThucHanhNonPhong= lichThucHanhNonPhong.Count;
-            List<PhongVO> listPhong = new List<PhongVO>();
-            List<LopVO> listLopHoc = new List<LopVO>();
-            listPhong = getListPhong();
-            listLopHoc = getListLopHoc();
+            
+            
 
-
-
+            // sap xep phong theo so luong may tang dan
             listPhong.Sort(comparerPhong);
 
-            sapXepSLCuaLopHocGiamDan(listLopHoc);
-            sapXepSoMayCuaPhongTangDan(listPhong);
-
-            List<PhongVO> listPhongTam = new List<PhongVO>();
+            
+            List<LichDayVO> listLichDayNho = new List<LichDayVO>();
             while (lichThucHanhNonPhong.Count > 0)
             {
-                List<LichDayVO> listLichDayNho = new List<LichDayVO>();
-
-                //list phong tam dung de luu danh sach phong tam thoi cua listPhong
-                
+                listPhongTam.Clear();
+                listLichDayNho.Clear();
+                //list phong tam dung de luu danh sach phong tam thoi cua listPhong                
                 listPhongTam= listPhong;
 
-                //
-                //tinhSoLuongPhongCanSapXep       
-
-                //sapXepLichDayGiamDanTheoSL(list)
-
                 //gom nhom nho cho Lich Thu Hanh giong nhau-> chung tuan, thu, buoi(sang hoac chieu)
-                gomNhom(lichThucHanhNonPhong, listLichDayNho);
+                listLichDayNho = gomNhom();
 
                 //gan phong cho nhom nho
-                ganPhongChoNhom(listLichDayNho, listPhongTam, listLopHoc);
+                ganPhongChoNhom(listLichDayNho);
                 //insert Lich Day Nho Vao Lich Thuc Hanh trong CSDL
                 //dem = insertToSQLLichThucHanh(listLichDayNho, dem);
 
-            }
-
-            //List<LichDayVO> listAA = new List<LichDayVO>();
-            //listAA = layLichDayThucHanhDaCoPhong();
+            }          
 
             if (demSoLichDayDcXep == soLichThucHanhNonPhong + demSoLichDayTaoThem)
             {
@@ -160,105 +151,100 @@ namespace Bussiness_Logic_Layer
 
 
         }
-        List<PhongVO> layListPhongTam(List<PhongVO> listPhong)
-        {
-            List<PhongVO> pt = new List<PhongVO>();
-            for (int i = 0; i < listPhong.Count; i++)
-                pt.Add(listPhong[i]);
-            return pt;
-        }
-       
-        void sapXepSLCuaLopHocGiamDan(List<LopVO> listLopHoc)
-        {
-            if (listLopHoc.Count > 1)
-            {
-                for (int i = 0; i < listLopHoc.Count; i++)
-                    for (int j = 1; j < listLopHoc.Count; j++)
-                        if (listLopHoc[i].SoLuongSV < listLopHoc[j].SoLuongSV)
-                        {
-                            LopVO lh = new LopVO();
-                            lh = listLopHoc[i];
-                            listLopHoc[i] = listLopHoc[j];
-                            listLopHoc[j] = lh;
-                            //listLopHoc.Sort()
-                        }
-            }
-        }
-        void sapXepSoMayCuaPhongTangDan(List<PhongVO> listPhong)
-        {
-            if(listPhong.Count>1)
-            {
-                for (int i = 0; i <listPhong.Count; i++)
-                    for (int j = 1; j <listPhong.Count; j++)
-                        if (listPhong[i].SoMay > listPhong[j].SoMay)
-                        {
-                            PhongVO p = new PhongVO();
-                            p = listPhong[i];
-                            listPhong[i] = listPhong[j];
-                            listPhong[j] = p;
-                        }
-            }
-        }
+        
+        
         //gom nhom nho cho nhung Lich Thu Hanh giong nhau-> chung tuan, thu, buoi(sang hoac chieu)
-        private void gomNhom(List<LichDayVO> lichThucHanhNonPhong, List<LichDayVO> listLichDayNho)
+        private List<LichDayVO> gomNhom()
         {
-            LichDayVO lichDayTam = new LichDayVO();
-            lichDayTam = lichThucHanhNonPhong[0];
-            listLichDayNho.Add(lichDayTam);
-            lichThucHanhNonPhong.Remove(lichDayTam);
+            List<LichDayVO> listLichDayOutput = new List<LichDayVO>();
+            listLichDayOutput.Add(lichThucHanhNonPhong[0]);
+            lichThucHanhNonPhong.Remove(lichThucHanhNonPhong[0]);
 
             for (int j = lichThucHanhNonPhong.Count - 1; j >= 0; j--)
             {
-                if (cungNhom(lichThucHanhNonPhong[j], lichDayTam))
+                if (cungNhom(lichThucHanhNonPhong[j], listLichDayOutput[0]))
                 {
-                    listLichDayNho.Add(lichThucHanhNonPhong[j]);
+                    listLichDayOutput.Add(lichThucHanhNonPhong[j]);
                     lichThucHanhNonPhong.RemoveAt(j);
                 }
             }
+            return listLichDayOutput;
         }
-        //gan phong cho nhom nho
-        private void ganPhongChoNhom(List<LichDayVO> listLichDayNho, List<PhongVO> listPhongTam, List<LopVO> listLopHoc)
-        {
-            for (int i = 0; i < listLopHoc.Count; i++)
-            {
-                if (listPhongTam.Count <= 0)
-                    break;
-                for (int j = 0; j < listLichDayNho.Count; j++)
-                    if (listLichDayNho[j].MaLop == listLopHoc[i].MaLop)
-                    {
-                        PhongVO phongDuSoMay = new PhongVO();
-                        phongDuSoMay = kiemPhongDuSoMay(listLopHoc[i], listPhongTam, listLichDayNho[j]);
-                        //kiem dc phong du so may
-                        if (phongDuSoMay != null)//?
-                        {
-                            //
-                            listLichDayNho[j].MaPhong = phongDuSoMay.MaPhong;
-                            listPhongTam.Remove(phongDuSoMay);                   
-                            listLichDayCoPhong.Add(listLichDayNho[j]);
-                            lichThucHanhNonPhong.Remove(listLichDayNho[j]);
-                            //so lich day da dc xep phong tang len
-                            demSoLichDayDcXep++;
 
-                            //if(lapLichDAO.insertLapLichThucHanh(listLichDayNho[j]))
-                            //    demSoLanInsertLTH++;
-                        }
-                        //ko kiem dc phong du so may nen phai ghep phong cho du
-                        else
+        // lay ra danh sach LopHoc tuong voi List Lich Day.
+        private List<LopVO> getListLopHoc(List<LichDayVO> listLichDay)
+        {
+            List<LopVO> listOutPut = new List<LopVO>();
+            
+            
+            foreach (LichDayVO lich in listLichDay)
+            {
+                LopVO lopVO = new LopVO();
+                String ma = lich.MaLop;
+                lopVO = lophocBus.getLopHocByMa(ma);
+                listOutPut.Add(lopVO);
+            }
+            // sap xep lop theo so luong sinh vien giam dan.
+            listOutPut.Sort(comparerLop);
+            return listOutPut;
+        }
+        //gan phong cho cac Lich Day trong 1 BUOI(sang or chieu).
+        private void ganPhongChoNhom(List<LichDayVO> listLichDay)
+        {
+            List<LopVO> listLopHoc = new List<LopVO>();
+
+            // lay danh sach cac lop hoc tuong ung dua vao lich day
+            // va sap xep lop hoc giam dan theo so luong sinh vien.
+            listLopHoc = getListLopHoc(listLichDay);
+
+            List<LichDayVO> lichDayCoPhongTemp = new List<LichDayVO>();
+            while (listPhongTam.Count > 0)
+            {
+                for (int i = 0; i < listLopHoc.Count; i++)
+                {
+                    for (int j = 0; j < listLichDay.Count; j++)
+
+                        // lay LichDay co so sinh vien it nhat trong nhom
+                        if (listLichDay[j].MaLop.Equals(listLopHoc[i].MaLop))
                         {
-                            //tao 1 list bao gom cac phong duoc ghep
-                            List<PhongVO> listCacPhongDanhCho1LTH = new List<PhongVO>();
-                            listCacPhongDanhCho1LTH = kiemThemPhongDuSoMay(listLopHoc[i], listPhongTam);
-                            //demSoLichDayTaoThem = demSoLichDayTaoThem + (SoPhongGhep-1:lich day co san trong listLichDayNonPhong) 
-                            demSoLichDayTaoThem = demSoLichDayTaoThem + listCacPhongDanhCho1LTH.Count - 1;
-                            if (listCacPhongDanhCho1LTH.Count > 1)
+                            PhongVO phongDuSoMay = new PhongVO();
+                            phongDuSoMay = kiemPhongDuSoMay(listLopHoc[i], listLichDay[j]);
+                            //kiem dc phong du so may
+                            if (phongDuSoMay != null)//?
                             {
-                                //gan nhieu phong cho 1 lichthucHanh
-                                addLichThucHanhCungThay(listLichDayNho[j], listCacPhongDanhCho1LTH);
-                                removeInListPhongTam(listPhongTam,listCacPhongDanhCho1LTH);
+                                //
+                                listLichDay[j].MaPhong = phongDuSoMay.MaPhong;
+                                listPhongTam.Remove(phongDuSoMay);
+                                listLichDayCoPhong.Add(listLichDay[j]);
+                                lichThucHanhNonPhong.Remove(listLichDay[j]);
+
+                                ////lichDayCoPhongTemp.Add(listLichDay[j]);
+                                //so lich day da dc xep phong tang len
+                                demSoLichDayDcXep++;
+
+                                //if(lapLichDAO.insertLapLichThucHanh(listLichDayNho[j]))
+                                //    demSoLanInsertLTH++;
+                            }
+                            //ko kiem dc phong du so may nen phai ghep phong cho du
+                            else
+                            {
+                                //tao 1 list bao gom cac phong duoc ghep
+                                List<PhongVO> listCacPhongDanhCho1LTH = new List<PhongVO>();
+                                listCacPhongDanhCho1LTH = kiemThemPhongDuSoMay(listLopHoc[i], listPhongTam);
+                                //demSoLichDayTaoThem = demSoLichDayTaoThem + (SoPhongGhep-1:lich day co san trong listLichDayNonPhong) 
+                                demSoLichDayTaoThem = demSoLichDayTaoThem + listCacPhongDanhCho1LTH.Count - 1;
+                                if (listCacPhongDanhCho1LTH.Count > 1)
+                                {
+                                    //gan nhieu phong cho 1 lichthucHanh
+                                    addLichThucHanhCungThay(listLichDay[j], listCacPhongDanhCho1LTH);
+                                    removeInListPhongTam(listPhongTam, listCacPhongDanhCho1LTH);
+                                }
                             }
                         }
-                    }
+                }
+
             }
+            
         }
         private void removeInListPhongTam(List<PhongVO> listPhongTam,List<PhongVO> listCacPhongDanhCho1LTH)
         {
@@ -304,7 +290,7 @@ namespace Bussiness_Logic_Layer
             }
             return listCacPhongDanhCho1LTH;
         }
-        private PhongVO kiemPhongDuSoMay(LopVO lopHocVO, List<PhongVO> listPhongTam, LichDayVO lichDayNho)
+        private PhongVO kiemPhongDuSoMay(LopVO lopHocVO, LichDayVO lichDayNho)
         {
             for (int k = 0; k < listPhongTam.Count; k++)
             {
@@ -478,6 +464,27 @@ namespace Bussiness_Logic_Layer
                 }
             }
             return lLopHoc;
+        }
+
+        // kiem tra xem 2 LichDay co overlap gio nhau khong?
+        // ex: LichDay A: 1 - 4, LichDay B: 1 - 3 => true
+
+        private bool checkOverlap(LichDayVO a, LichDayVO b)
+        {
+            String[] arrayA = a.Tiet.Split('-');
+            // tiet bat dau cua LichDay A
+            int startA = Int32.Parse(arrayA[0]);
+            // tiet ket thuc cua LichDay A
+            int endA = Int32.Parse(arrayA[1]);
+
+            String[] arrayB = b.Tiet.Split('-');
+            // tiet bat dau cua LichDay A
+            int startB = Int32.Parse(arrayB[0]);
+            // tiet ket thuc cua LichDay A
+            int endB = Int32.Parse(arrayB[1]);
+
+            return ((startA <= endB)  &&  (endA >= startB));
+            
         }
     }
 }
