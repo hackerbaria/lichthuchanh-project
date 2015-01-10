@@ -118,7 +118,7 @@ namespace Bussiness_Logic_Layer
             
             
 
-            // sap xep phong theo so luong may tang dan
+            // sap xep phong theo so luong may giam dan
             listPhong.Sort(comparerPhong);
 
             
@@ -128,12 +128,12 @@ namespace Bussiness_Logic_Layer
                 listPhongTam.Clear();
                 listLichDayNho.Clear();
                 //list phong tam dung de luu danh sach phong tam thoi cua listPhong                
-                listPhongTam= listPhong;
+                listPhongTam = listPhong.ToList();
 
                 //gom nhom nho cho Lich Thu Hanh giong nhau-> chung tuan, thu, buoi(sang hoac chieu)
                 listLichDayNho = gomNhom();
 
-                //gan phong cho nhom nho
+                //gan phong cho tung nhom (1 NHOM = cung TUAN,THU,BUOI) 
                 ganPhongChoNhom(listLichDayNho);
                 //insert Lich Day Nho Vao Lich Thuc Hanh trong CSDL
                 //dem = insertToSQLLichThucHanh(listLichDayNho, dem);
@@ -198,11 +198,16 @@ namespace Bussiness_Logic_Layer
             listLopHoc = getListLopHoc(listLichDay);
 
             List<LichDayVO> lichDayCoPhongTemp = new List<LichDayVO>();
-            while (listPhongTam.Count > 0)
+            List<LichDayVO> lichDayTemp = new List<LichDayVO>();
+            lichDayTemp =   listLichDay;
+           
+            // so luong lich day cua buoi dang can xep PHONG.
+            int soluongLichDay = listLichDay.Count;
+            while (listPhongTam.Count > 0 && listLichDay.Count > 0)
             {
-                for (int i = 0; i < listLopHoc.Count; i++)
+                for (int i = 0; i < listLopHoc.Count; i++) 
                 {
-                    for (int j = 0; j < listLichDay.Count; j++)
+                    for (int j = 0; j < soluongLichDay; j++)
 
                         // lay LichDay co so sinh vien it nhat trong nhom
                         if (listLichDay[j].MaLop.Equals(listLopHoc[i].MaLop))
@@ -216,11 +221,12 @@ namespace Bussiness_Logic_Layer
                                 listLichDay[j].MaPhong = phongDuSoMay.MaPhong;
                                 listPhongTam.Remove(phongDuSoMay);
                                 listLichDayCoPhong.Add(listLichDay[j]);
-                                lichThucHanhNonPhong.Remove(listLichDay[j]);
+                                listLichDay.Remove(listLichDay[j]);
 
                                 ////lichDayCoPhongTemp.Add(listLichDay[j]);
                                 //so lich day da dc xep phong tang len
                                 demSoLichDayDcXep++;
+                                break;
 
                                 //if(lapLichDAO.insertLapLichThucHanh(listLichDayNho[j]))
                                 //    demSoLanInsertLTH++;
@@ -264,6 +270,7 @@ namespace Bussiness_Logic_Layer
             for (int i = 0; i < listCacPhongDanhCho1LTH.Count; i++)
             {
                 LichDayVO lichDayTam = new LichDayVO();
+                lichDayTam.MaGV = lichCungThay.MaGV;
                 lichDayTam.MaLop = lichCungThay.MaLop;
                 lichDayTam.MaMH = lichCungThay.MaMH;
                 lichDayTam.MaPhong = listCacPhongDanhCho1LTH[i].MaPhong;
@@ -298,8 +305,7 @@ namespace Bussiness_Logic_Layer
                 {
                     return listPhongTam[k];
                 }
-            }
-            //return false;
+            }           
             return null;
         }
 
