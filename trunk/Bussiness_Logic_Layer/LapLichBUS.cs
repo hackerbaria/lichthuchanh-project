@@ -99,6 +99,8 @@ namespace Bussiness_Logic_Layer
                 lichThucHanhNonPhong.Count();
                 //dem la so luong lichThucHanhNonPhong da duoc xep phong
                 dem = xepPhong(lichThucHanhNonPhong);
+                listLichDayCoPhong.Count();
+                insertToSQLLichThucHanh();
 
             }
             if (dem == 0)
@@ -140,13 +142,13 @@ namespace Bussiness_Logic_Layer
 
             }          
 
-            if (demSoLichDayDcXep == soLichThucHanhNonPhong + demSoLichDayTaoThem)
-            {
-                if (insertToSQLLichThucHanh())
-                {
-                    return soLichThucHanhNonPhong;
-                }
-            }
+            //if (demSoLichDayDcXep == soLichThucHanhNonPhong + demSoLichDayTaoThem)
+            //{
+            //    if (insertToSQLLichThucHanh())
+            //    {
+            //        return soLichThucHanhNonPhong;
+            //    }
+            //}
             return demSoLichDayDcXep;
 
 
@@ -207,7 +209,7 @@ namespace Bussiness_Logic_Layer
             while (listPhongTam.Count > 0 && listLichDay.Count > 0)
             {
                 LichDayVO temp = new LichDayVO();
-                for (int i = 0; i < listLopHoc.Count; i++)
+                for (int i = 0; i < listLopHoc.Count; ++i)
                 {
                     temp = getLichDayByMaTrong1List(listLichDay, listLopHoc[i].MaLop);
                     phongDuSoMay = kiemPhongDuSoMay(listLopHoc[i], temp);
@@ -235,8 +237,10 @@ namespace Bussiness_Logic_Layer
                         {
                             //gan nhieu phong cho 1 lichthucHanh
                             addLichThucHanhCungThay(temp, listCacPhongDanhCho1LTH);
+                            lichThucHanhNonPhong.Remove(temp);
                             removeInListPhongTam(listPhongTam, listCacPhongDanhCho1LTH);
                         }
+                        listLichDay.Remove(temp);
                     }
                     
                     
@@ -260,7 +264,7 @@ namespace Bussiness_Logic_Layer
         }
         private void addLichThucHanhCungThay(LichDayVO lichCungThay, List<PhongVO> listCacPhongDanhCho1LTH)
         {
-
+            
             for (int i = 0; i < listCacPhongDanhCho1LTH.Count; i++)
             {
                 LichDayVO a = new LichDayVO();
@@ -276,7 +280,7 @@ namespace Bussiness_Logic_Layer
                 listLichDayCoPhong.Add(a);
                 demSoLichDayDcXep++;
             }
-            lichThucHanhNonPhong.Remove(lichCungThay);
+           
         }
         private List<PhongVO> kiemThemPhongDuSoMay(LopVO lopHocVO, List<PhongVO> listPhongTam)
         {
