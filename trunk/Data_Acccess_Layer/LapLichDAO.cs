@@ -130,7 +130,7 @@ namespace Data_Acccess_Layer
 
         public DataTable getLichByMaGVAndWeek(String maGV, int week)
         {
-            string query = string.Format("select * from LichDayLyThuyet where MaGV = @MaGV and Tuan = @Tuan");
+            string query = string.Format("select * from LichDayThucHanh where MaGV = @MaGV and Tuan = @Tuan");
             SqlParameter[] sqlParameters = new SqlParameter[2];
 
             sqlParameters[0] = new SqlParameter("@MaGV", SqlDbType.VarChar);
@@ -144,7 +144,7 @@ namespace Data_Acccess_Layer
 
         public DataTable getLichByWeek(int week)
         {
-            string query = string.Format("select * from LichDayLyThuyet where Tuan = @Tuan");
+            string query = string.Format("select * from LichDayThucHanh where Tuan = @Tuan");
             SqlParameter[] sqlParameters = new SqlParameter[1];
 
 
