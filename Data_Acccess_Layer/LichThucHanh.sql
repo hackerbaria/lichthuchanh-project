@@ -107,12 +107,12 @@ create table LichDayThucHanh
 	MaGV varchar(10) not null foreign key references GiaoVien(MaGV),
 	MaMH varchar(10) not null foreign key references MonHoc(MaMH),
 	MaLop varchar(10) not null foreign key references Lop(MaLop),
-	MaPhong varchar(10) null foreign key references Phong(MaPhong),
+	MaPhong varchar(10) not null foreign key references Phong(MaPhong),
 	Ngay date null,
 	Tuan int not null,
 	Thu nvarchar(20) not null,
 	Tiet nvarchar(20) not null,
-	constraint PK_KhoaChinh2 primary key(MaGV,MaMH,MaLop,Tuan,Thu,Tiet)
+	constraint PK_KhoaChinh2 primary key(MaGV,MaMH,MaLop,Tuan,Thu,Tiet, MaPhong)
 )
 
 
