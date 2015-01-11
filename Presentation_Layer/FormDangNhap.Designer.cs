@@ -163,7 +163,7 @@
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.label1);
             this.Name = "FormDangNhap";
-            this.Text = "Form1";
+            this.Text = "Đăng Nhập";
             this.Load += new System.EventHandler(this.FormDangNhapDev_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtTenDangNhap.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).EndInit();
