@@ -89,6 +89,7 @@ insert into Account(TenDangNhap,MatKhau,Quyen) values('doan','doan',2)
 insert into Account(TenDangNhap,MatKhau,Quyen) values('van','van',2)
 insert into Account(TenDangNhap,MatKhau,Quyen) values('trung','trung',2)
 insert into Account(TenDangNhap,MatKhau,Quyen) values('khoan','khoan',2)
+insert into Account(TenDangNhap,MatKhau,Quyen) values('dao','dao',2)
 
 create table LichDayLyThuyet
 (
