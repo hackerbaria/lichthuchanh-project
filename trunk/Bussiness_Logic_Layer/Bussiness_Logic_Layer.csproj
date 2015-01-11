@@ -46,6 +46,8 @@
     <Compile Include="LapLichBUS.cs" />
     <Compile Include="LopHocBUS.cs" />
     <Compile Include="MonHocBUS.cs" />
+    <Compile Include="MyOrderLopHoc.cs" />
+    <Compile Include="MyOrderPhong.cs" />
     <Compile Include="PhongBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserBUS.cs" />
