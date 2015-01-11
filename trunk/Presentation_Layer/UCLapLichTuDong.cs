@@ -69,17 +69,19 @@ namespace Presentation_Layer
 
                 }
                 int lapLich = lapLichBUS.taoLichThucHanh();
-                if (lapLich == 0)
-                    MessageBox.Show("khong them duoc");
-                else
-                    if (lapLich == 1)
-                        MessageBox.Show("Da Them Vao Lich Thuc Hanh");
-                    else
-                        MessageBox.Show("Them Chua Het");
+                MessageBox.Show("Đã Xếp Lịch Thực Hành Thành Công", "Successful",MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //if (lapLich == 0)
+                //    MessageBox.Show("khong them duoc");
+                //else
+                //    if (lapLich == 1)
+                //        MessageBox.Show("Da Them Vao Lich Thuc Hanh");
+                //    else
+                //        MessageBox.Show("Them Chua Het");
             }
             else
             {
-                MessageBox.Show("No File is Selected");
+                MessageBox.Show("Không có File Excel thích hợp", "Fail", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
             }
         }
 

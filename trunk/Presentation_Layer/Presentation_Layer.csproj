@@ -74,12 +74,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormAutoSchedule.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormAutoSchedule.Designer.cs">
-      <DependentUpon>FormAutoSchedule.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormMonHoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,12 +85,6 @@
     </Compile>
     <Compile Include="FormPhongHoc.Designer.cs">
       <DependentUpon>FormPhongHoc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormXemLichGiaoVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormXemLichGiaoVien.Designer.cs">
-      <DependentUpon>FormXemLichGiaoVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -172,17 +160,11 @@
     <Compile Include="UCXemLichGiaoVien.Designer.cs">
       <DependentUpon>UCXemLichGiaoVien.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FormAutoSchedule.resx">
-      <DependentUpon>FormAutoSchedule.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormMonHoc.resx">
       <DependentUpon>FormMonHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPhongHoc.resx">
       <DependentUpon>FormPhongHoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormXemLichGiaoVien.resx">
-      <DependentUpon>FormXemLichGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
