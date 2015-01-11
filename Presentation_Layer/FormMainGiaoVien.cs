@@ -19,11 +19,29 @@ namespace Presentation_Layer
         }
         private void btnXemLichDay_ItemClick(object sender, ItemClickEventArgs e)
         {
-            UCXemLichGiaoVien xlgv = new UCXemLichGiaoVien();
+            UCXemLichGiaoVien xl = new UCXemLichGiaoVien();
+
+            //SuspendLayout();
+
+            //int panelWidth = 1024;
+            //int panelHeight = 768;
+
+            //panel1.Size = new Size(panelWidth, panelHeight);
+
+            //panel1.Location = new Point(ClientSize.Width / 2 - panelWidth / 2, ClientSize.Height / 2 - panelHeight / 2);
+            //panel1.Anchor = AnchorStyles.None;
+            //panel1.Dock = DockStyle.None;
+
+            //panel1.Controls.Add(xl);
+            //ResumeLayout();
+
+
+
+
             panel1.Controls.Clear();
-            xlgv.Dock = System.Windows.Forms.DockStyle.Fill;
+            xl.Dock = System.Windows.Forms.DockStyle.Fill;
             //ql.Dock = System.Windows.Forms.DockStyle.Bottom;
-            panel1.Controls.Add(xlgv);
+            panel1.Controls.Add(xl);
         }
     }
 }

@@ -34,8 +34,8 @@ namespace Presentation_Layer
             user.TenDangNhap = Utils.Acount;
 
             dt = giaovienBUS.getGiaoVienByAccount(user);
-            lblMa.Text = dt.Rows[0][0] + "";
-            lblTen.Text = dt.Rows[0][1] + "";
+            //lblMa.Text = dt.Rows[0][0] + "";
+            //lblTen.Text = dt.Rows[0][1] + "";
             //set data to ComboBox Phong Hoc
             DataTable dtPhong = new DataTable();
             dtPhong = phongBUS.getAllPhong();
@@ -146,6 +146,11 @@ namespace Presentation_Layer
         }
 
         private void dgvTuan1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void lblMa_Click(object sender, EventArgs e)
         {
 
         }
