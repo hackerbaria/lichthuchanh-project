@@ -11,7 +11,7 @@ using Bussiness_Logic_Layer;
 
 namespace Presentation_Layer
 {
-    public partial class FormDangNhap : SplashScreen
+    public partial class FormDangNhap : Form
     {
         private UserBUS _userBUS;
         public FormDangNhap()
@@ -20,18 +20,18 @@ namespace Presentation_Layer
             _userBUS = new UserBUS();
         }
 
-        #region Overrides
+        //#region Overrides
 
-        public override void ProcessCommand(Enum cmd, object arg)
-        {
-            base.ProcessCommand(cmd, arg);
-        }
+        //public override void ProcessCommand(Enum cmd, object arg)
+        //{
+        //    base.ProcessCommand(cmd, arg);
+        //}
 
-        #endregion
+        //#endregion
 
-        public enum SplashScreenCommand
-        {
-        }
+        //public enum SplashScreenCommand
+        //{
+        //}
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
