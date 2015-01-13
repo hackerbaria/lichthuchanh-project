@@ -21,6 +21,47 @@ namespace Data_Acccess_Layer
 
             return conn.executeSelectQueryNoParam(query);
         }
+
+        public DataTable GetAllLichDayThucHanh()
+        {
+            string query = string.Format("select * from LichDayThucHanh");
+
+            return conn.executeSelectQueryNoParam(query);
+        }
+
+        public bool xoaLich()
+        {
+            try
+            {
+                string query = string.Format("delete * from LichDayLyThuyet");
+                string query2 = string.Format("delete * from LichDayThucHanh");
+                conn.executeSelectQueryNoParam(query);
+                conn.executeSelectQueryNoParam(query2);
+                return true;
+            } catch(Exception e)
+            {
+                return false;
+            }
+        }
+
+        public DataTable getLichDayTuongTu(LichDayVO lichDay)
+        {
+            DataTable dt = new DataTable();
+            string query = string.Format("select * from LichDayThucHanh where Tuan = @Tuan and Thu = @Thu and MaPhong = @MaPhong");
+            SqlParameter[] sqlParameters = new SqlParameter[3];
+
+            sqlParameters[0] = new SqlParameter("@Tuan", SqlDbType.Int);
+            sqlParameters[0].Value = lichDay.Tuan;
+
+            sqlParameters[1] = new SqlParameter("@Thu", SqlDbType.VarChar);
+            sqlParameters[1].Value = lichDay.Thu;
+
+            sqlParameters[2] = new SqlParameter("@MaPhong", SqlDbType.VarChar);
+            sqlParameters[2].Value = lichDay.MaPhong;
+
+
+            return  conn.executeSelectQuery(query, sqlParameters);
+        }
         
         public bool insertLapLich(LichDayVO ld)
         {
