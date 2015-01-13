@@ -5,6 +5,7 @@ using System.Text;
 using Microsoft.Office.Interop.Excel;
 using Value_Object_Layer;
 using System.Data;
+using Data_Acccess_Layer;
 
 namespace Bussiness_Logic_Layer
 {
@@ -27,6 +28,8 @@ namespace Bussiness_Logic_Layer
 
         private LopHocBUS lopHocBUS = new LopHocBUS();
 
+        private LapLichDAO lapLichDAO = new LapLichDAO();
+
         private List<LichDayVO> listResult = new List<LichDayVO>();
         LapLichBUS lapLichBUS = new LapLichBUS();
 
@@ -42,7 +45,32 @@ namespace Bussiness_Logic_Layer
         {
             try
             {
-                listResult = lapLichBUS.layLichDayThucHanhDaCoPhong();
+                //listResult = lapLichBUS.layLichDayThucHanhDaCoPhong();
+
+                System.Data.DataTable dtLichThucHanh = new System.Data.DataTable();
+                dtLichThucHanh = lapLichDAO.GetAllLichDayThucHanh();
+
+                if (dtLichThucHanh != null && dtLichThucHanh.Rows.Count != 0)
+                {                    
+                    foreach (DataRow dr in dtLichThucHanh.Rows)
+                    {
+                        LichDayVO lichDayVO = new LichDayVO();
+                        lichDayVO.MaGV = dr[0].ToString();
+                        lichDayVO.MaMH = dr[1].ToString();
+                        lichDayVO.MaLop = dr[2].ToString();
+                        lichDayVO.MaPhong = dr[3].ToString();
+
+                        lichDayVO.Tuan = Convert.ToInt32(dr[5]);
+                        lichDayVO.Thu = dr[6].ToString();
+                        lichDayVO.Tiet = dr[7].ToString();
+
+                        listResult.Add(lichDayVO);
+                    }
+
+                    
+                }
+
+
 
                 listPhong = getListPhong();
                 Console.Write(listPhong.Count);
@@ -158,15 +186,20 @@ namespace Bussiness_Logic_Layer
                     addDataToExcel(workSheet, temp);
                 }
 
+                
                 string fileName = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)
                                         + "\\LichThucHanhKhoaCNTT.xlsx";
-                oWB.SaveAs(fileName, Microsoft.Office.Interop.Excel.XlFileFormat.xlOpenXMLWorkbook,
-                    missing, missing, missing, missing,
-                    Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlNoChange,
-                    missing, missing, missing, missing, missing);
-                oWB.Close(missing, missing, missing);
+                //oWB.SaveAs(fileName, Microsoft.Office.Interop.Excel.XlFileFormat.xlOpenXMLWorkbook,
+                //    missing, missing, missing, missing,
+                //    Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlNoChange,
+                //    missing, missing, missing, missing, missing);
+                //oWB.Close(missing, missing, missing);
+                
+                oXL.Visible = true;
                 oXL.UserControl = true;
-                oXL.Quit();
+                //oXL.Quit();
+
+                
 
 
                 

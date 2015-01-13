@@ -355,6 +355,8 @@ namespace Bussiness_Logic_Layer
 
         }
 
+
+
         //convert from weeks of concept schedule to weeks of practice schedule.
         private void convertToTuanThucHanh(List<LichDayVO> inputList)
         {
@@ -380,14 +382,52 @@ namespace Bussiness_Logic_Layer
         }
         public bool themLapLich(LichDayVO LL)
         {
+            DataTable dt = new DataTable();
+            dt = lapLichDAO.getLichDayTuongTu(LL);
+            if (dt != null && dt.Rows.Count != 0)
+            {
+                List<LichDayVO> dsLichDay = new List<LichDayVO>();
+                foreach (DataRow dr in dt.Rows)
+                {
+                    LichDayVO lichDayVO = new LichDayVO();
+                    lichDayVO.MaGV = dr[0].ToString();
+                    lichDayVO.MaMH = dr[1].ToString();
+                    lichDayVO.MaLop = dr[2].ToString();
+                    lichDayVO.MaPhong = dr[3].ToString();
+
+                    lichDayVO.Tuan = Convert.ToInt32(dr[5]);
+                    lichDayVO.Thu = dr[6].ToString();
+                    lichDayVO.Tiet = dr[7].ToString();
+
+                    dsLichDay.Add(lichDayVO);
+                }
+
+                if (checkExits(LL, dsLichDay))
+                    return false;
+            }
 
 
-            if (lapLichDAO.insertLapLich(LL) == true)
+
+            if (lapLichDAO.insertLapLichThucHanh(LL) == true)
                 return true;
             else
                 return false;
 
         }
+
+        private bool checkExits(LichDayVO lichday, List<LichDayVO> lichDayDBList)
+        {
+            
+            foreach (LichDayVO lich in lichDayDBList)
+            {
+                if (checkOverlap(lich, lichday))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public bool themLapLichBoPhong(LichDayVO LL)
         {
 
@@ -490,6 +530,11 @@ namespace Bussiness_Logic_Layer
                 }
             }
             return null;
+        }
+
+        public bool xoaLich()
+        {
+            return lapLichDAO.xoaLich();
         }
     }
 }
