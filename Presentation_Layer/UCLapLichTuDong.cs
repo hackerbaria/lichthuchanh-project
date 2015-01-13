@@ -47,6 +47,8 @@ namespace Presentation_Layer
 
         private void btnXuLi_Click(object sender, EventArgs e)
         {
+            lapLichBUS.xoaLich();
+
             if (System.IO.File.Exists(txtPath.Text))
             {
                 DataSet ds = new DataSet();
