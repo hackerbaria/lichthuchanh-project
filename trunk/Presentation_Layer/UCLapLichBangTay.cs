@@ -92,6 +92,8 @@ namespace Presentation_Layer
                 MessageBox.Show("Hãy điền tiết bắt đầu và kết thúc cho đầy đủ", "Thông Báo");
             else
             {
+
+
                 int start = Convert.ToInt32(txtTietStart.Text);
                 int end = Convert.ToInt32(txtTietEnd.Text);
                 if (start <= end)
@@ -105,10 +107,13 @@ namespace Presentation_Layer
                     oneSchedule.Thu = Convert.ToString(((Item)cbbThu.SelectedItem).Value);
                     oneSchedule.Tuan = ((Item)cbbTuan.SelectedItem).Value;
                     oneSchedule.Tiet = txtTietStart.Text + "-" + txtTietEnd.Text;
+
+
+
                     if (lapLichBUS.themLapLich(oneSchedule))
                         MessageBox.Show("Lập Lịch Thành Công", "Thông Báo Thành Công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
-                        MessageBox.Show("Lập Lịch Không Thành Công", "Thông Báo Thất Bại", MessageBoxButtons.OK , MessageBoxIcon.Error);
+                        MessageBox.Show("Lịch Đã Trùng", "Thông Báo Thất Bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                     MessageBox.Show("Nhập sai tiết", "Thông Báo Thất Bại", MessageBoxButtons.OK , MessageBoxIcon.Error);
