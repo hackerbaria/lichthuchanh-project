@@ -415,14 +415,13 @@ namespace Bussiness_Logic_Layer
 
         }
 
-        private bool checkExits(LichDayVO lichday, List<LichDayVO> lichDayDBList)
-        {
+        private bool checkExits(LichDayVO lichday, List<LichDayVO> lichDayDBList)        {
             
             foreach (LichDayVO lich in lichDayDBList)
             {
                 if (checkOverlap(lich, lichday))
                 {
-                    return true;
+                        return true;
                 }
             }
             return false;
