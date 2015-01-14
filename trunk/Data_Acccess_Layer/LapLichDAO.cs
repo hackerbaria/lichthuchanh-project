@@ -22,6 +22,8 @@ namespace Data_Acccess_Layer
             return conn.executeSelectQueryNoParam(query);
         }
 
+       
+
         public DataTable GetAllLichDayThucHanh()
         {
             string query = string.Format("select * from LichDayThucHanh");
