@@ -535,5 +535,44 @@ namespace Bussiness_Logic_Layer
         {
             return lapLichDAO.xoaLich();
         }
+
+        public bool checkSVPhong(String maLop, String maPhong)
+        {
+            DataTable dtLop = new DataTable();
+            dtLop = lopHocDAO.getLopByMa(maLop);
+
+            int soSV = 0;
+            int soMay = 0;
+
+            if (dtLop != null)
+            {
+                foreach (DataRow r in dtLop.Rows)
+                {                  
+
+                    
+                    soSV = Convert.ToInt32(r[2]);
+                   
+                }
+            }
+
+            DataTable dtPhong = new DataTable();
+            dtPhong = phongDao.getPhongByMa(maPhong);
+            if (dtPhong != null)
+            {
+                foreach (DataRow r in dtPhong.Rows)
+                {
+                    soMay = Convert.ToInt32(r[2]);
+
+                }
+            }
+
+            if (soMay >= soSV)
+            {
+                return true;
+            }
+            return false;
+
+
+        }
     }
 }
