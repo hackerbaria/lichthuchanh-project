@@ -98,5 +98,15 @@ namespace Data_Acccess_Layer
                 return false;
             }
         }
+
+        public DataTable getPhongByMa(String Ma)
+        {
+            string query = string.Format("select * from Phong where MaPhong = @MaPhong");
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            sqlParameters[0] = new SqlParameter("@MaPhong", SqlDbType.NVarChar);
+            sqlParameters[0].Value = Convert.ToString(Ma);
+            return conn.executeSelectQuery(query,sqlParameters);
+        }
     }
 }
