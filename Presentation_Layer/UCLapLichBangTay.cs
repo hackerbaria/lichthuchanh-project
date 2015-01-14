@@ -20,6 +20,7 @@ namespace Presentation_Layer
         private PhongBUS phongBUS = new PhongBUS();
         private LapLichBUS lapLichBUS = new LapLichBUS();
 
+
         private GiaoVienVO GV = new GiaoVienVO();
         public UCLapLichBangTay()
         {
@@ -92,33 +93,43 @@ namespace Presentation_Layer
                 MessageBox.Show("Hãy điền tiết bắt đầu và kết thúc cho đầy đủ", "Thông Báo");
             else
             {
-
-
-                int start = Convert.ToInt32(txtTietStart.Text);
-                int end = Convert.ToInt32(txtTietEnd.Text);
-                if (start <= end)
+                if (!lapLichBUS.checkSVPhong(cbbLop.SelectedValue + "", cbbPhong.SelectedValue + ""))
                 {
-                    LichDayVO oneSchedule = new LichDayVO();
-                    oneSchedule.MaGV = cbbGiaoVien.SelectedValue + "";
-                    oneSchedule.MaLop = cbbLop.SelectedValue + "";
-                    oneSchedule.MaMH = cbbMon.SelectedValue + "";
-                    oneSchedule.MaPhong = cbbPhong.SelectedValue + "";
-
-                    oneSchedule.Thu = Convert.ToString(((Item)cbbThu.SelectedItem).Value);
-                    oneSchedule.Tuan = ((Item)cbbTuan.SelectedItem).Value;
-                    oneSchedule.Tiet = txtTietStart.Text + "-" + txtTietEnd.Text;
-
-
-
-                    if (lapLichBUS.themLapLich(oneSchedule))
-                        MessageBox.Show("Lập Lịch Thành Công", "Thông Báo Thành Công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    else
-                        MessageBox.Show("Lịch Đã Trùng", "Thông Báo Thất Bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Số Lượng Máy của Phòng Thực Hành nhỏ hơn Số Lượng Sinh Viên", "Thông Báo Thất Bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("Nhập sai tiết", "Thông Báo Thất Bại", MessageBoxButtons.OK , MessageBoxIcon.Error);
+                {
+                    int start = Convert.ToInt32(txtTietStart.Text);
+                    int end = Convert.ToInt32(txtTietEnd.Text);
+                    if (start <= end)
+                    {
+                        LichDayVO oneSchedule = new LichDayVO();
+                        oneSchedule.MaGV = cbbGiaoVien.SelectedValue + "";
+                        oneSchedule.MaLop = cbbLop.SelectedValue + "";
+                        oneSchedule.MaMH = cbbMon.SelectedValue + "";
+                        oneSchedule.MaPhong = cbbPhong.SelectedValue + "";
+
+                        oneSchedule.Thu = Convert.ToString(((Item)cbbThu.SelectedItem).Value);
+                        oneSchedule.Tuan = ((Item)cbbTuan.SelectedItem).Value;
+                        oneSchedule.Tiet = txtTietStart.Text + "-" + txtTietEnd.Text;
+
+
+
+                        if (lapLichBUS.themLapLich(oneSchedule))
+                            MessageBox.Show("Lập Lịch Thành Công", "Thông Báo Thành Công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        else
+                            MessageBox.Show("Lịch Đã Trùng", "Thông Báo Thất Bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                        MessageBox.Show("Nhập sai tiết", "Thông Báo Thất Bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                
             }
         }
+
+
+        
 
         
     }
